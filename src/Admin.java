@@ -4,7 +4,7 @@ import java.util.*;
 public class Admin {
 	String ID;
 	String password;
-
+	//string Test;;
 	ArrayList<Model> ModelList = new ArrayList<Model>();
 	ArrayList<Plan> PlanList = new ArrayList<Plan>();
 	
