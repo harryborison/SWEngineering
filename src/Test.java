@@ -36,13 +36,10 @@ public class Test {
 		while (ModelIn.hasNext()) {
 			line = ModelIn.nextLine();
 			String[] split = line.split("\t");
-			Model m = new Model(split[0], split[1], split[2],Double.parseDouble(split[4]), split[5], Integer.parseInt(split[3]), Integer.parseInt(split[6]),
-					Integer.parseInt(split[7]), Integer.parseInt(split[8]), Integer.parseInt(split[9]), Integer.parseInt(split[10]), Integer.parseInt(split[11]),Double.parseDouble(split[12]),split[13],
-					false);
-			if (split[14].equals("x"))
-				m.setHome(false);
-			else
-				m.setHome(true);
+			Model m = new Model(split[0], split[1], Integer.parseInt(split[2]),Double.parseDouble(split[3]), split[4], Integer.parseInt(split[5]), Integer.parseInt(split[6]),
+					Integer.parseInt(split[7]), Integer.parseInt(split[8]), Integer.parseInt(split[9]), split[10] , Integer.parseInt(split[11]),split[12],split[13],
+					Integer.parseInt(split[14]),split[15],split[16],Integer.parseInt(split[17]));
+			
 			ModelList.add(m);
 		}
 		ModelIn.close();
@@ -424,7 +421,7 @@ public class Test {
 
 				System.out.println("사이즈 : ");
 				size = keyboard.nextDouble();
-
+/*
 				Model NewModel = new Model(name, manufacture, cpu_name, size, os, price, storage, ram, camera_front,
 						camera_back, weight, battery, cpu_rate, led, home);
 
@@ -434,7 +431,7 @@ public class Test {
 					System.out.println("이미 존재하는 모델입니다");
 					System.exit(0);
 				}
-
+*/
 			} else if (admin_menu.equals("2")) {// 요금제 추가
 				System.out.println("요금제 추가 메뉴입니다.");
 				System.out.println("추가하려는 모델의 정보를 입력합니다.");
