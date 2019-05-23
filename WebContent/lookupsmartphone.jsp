@@ -41,7 +41,7 @@
 <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="index.html">HOME</a>
+      <a class="navbar-brand js-scroll-trigger" href="home.html">HOME</a>
       
     </div>
   </nav>
@@ -85,9 +85,7 @@
               
               
             <tr> 
-                
-          
-                
+              
               <td class="body-item mbr-fonts-style display-7">Caren Rials</td><td class="body-item mbr-fonts-style display-7">35</td><td class="body-item mbr-fonts-style display-7">2013-04-12</td><td class="body-item mbr-fonts-style display-7">$445.500</td><td class="body-item mbr-fonts-style display-7">$445.500</td></tr><tr>
                 
                 
