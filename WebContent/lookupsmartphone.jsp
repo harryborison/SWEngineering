@@ -64,8 +64,8 @@
       <div class="table-wrapper">
         <div class="container">
           <div class="row search">
-            <div class="col-md-6"></div>
-            <div class="col-md-6">
+            <div class="col-md-7"></div>
+            <div class="col-md-7">
                 <div class="dataTables_filter">
                   <label class="searchInfo mbr-fonts-style display-7"><strong>검색</strong></label>
                   <input class="form-control input-sm" disabled="">
@@ -85,6 +85,7 @@
               <th class="head-item mbr-fonts-style display-7">휴대폰 이름</th><th class="head-item mbr-fonts-style display-7">
                       제조사</th><th class="head-item mbr-fonts-style display-7">
                       용량</th><th class="head-item mbr-fonts-style display-7">&nbsp;가격</th><th class="head-item mbr-fonts-style display-7">출시일</th>
+                      <th class="head-item mbr-fonts-style display-7">상세보기</th>
                       </tr>
             </thead>
 
@@ -114,7 +115,8 @@
 	          			+"<td class=\"body-item mbr-fonts-style display-7\">"+result.getString(2)+"</td>"
 	         			+"<td class = \"body-item mbr-fonts-style display-7\">"+Integer.parseInt(result.getString(6))+"</td>"
 	         			+"<td class = \"body-item mbr-fonts-style display-7\">"+Integer.parseInt(result.getString(3))+"</td>"
-	         			+"<td class = \"body-item mbr-fonts-style display7\">"+Integer.parseInt(result.getString(15))+"</td></tr>"); 
+	         			+"<td class = \"body-item mbr-fonts-style display-7\">"+Integer.parseInt(result.getString(15))+"</td>"
+	         			+"<td class = \"body-item mbr-fonts-style display7\">"+"상세보기"+"</td></tr>"); 
 			}
 			
 			result.close();
@@ -135,7 +137,7 @@
         </div>
         <div class="container table-info-container">
           <div class="row info">
-            <div class="col-md-6">
+            <div class="col-md-7">
               <div class="dataTables_info mbr-fonts-style display-7">
                 <span class="infoBefore">Showing</span>
                 <span class="inactive infoRows"></span>
@@ -145,7 +147,7 @@
                 <span class="infoFilteredAfter"> total entries)</span>
               </div>
             </div>
-            <div class="col-md-6"></div>
+            <div class="col-md-7"></div>
           </div>
         </div>
       </div>
