@@ -1,3 +1,10 @@
+<%@ page import ="java.util.*" %>
+<%@ page import ="java.io.*" %>
+<%@ page import ="java.sql.*" %>  
+<%@ page import="javaCode.DBTest"%>
+<%@ page import="javaCode.DBCon"%>
+
+
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -10,7 +17,7 @@
   <link rel="shortcut icon" href="assets3/images/logo4.png" type="image/x-icon">
   <meta name="description" content="">
   
-  <title>Home</title>
+  <title>상세보기</title>
   <link rel="stylesheet" href="assets3/tether/tether.min.css">
   <link rel="stylesheet" href="assets3/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets3/bootstrap/css/bootstrap-grid.min.css">
@@ -22,29 +29,58 @@
   
 </head>
 <body>
+<%!
+	String phoneName, company, phonePrice, screenSize, os, capacity, ram, frontCamera, 
+	rearCamera, weight, phoneSize, betteryCapacity, speed, resolution, releaseYear, adURL;
+%>
+
+<%
+	request.setCharacterEncoding("EUC-KR");
+
+	phoneName = request.getParameter("phoneName");
+ 	
+	ResultSet result = null;
+	String query = null;
+	  // 쿼리를 실행하기 위한 Statement 객체 생성 
+	  Connection connection = DBCon.getmyConnection();
+	  Statement statement =connection.createStatement();
+	// 쿼리문 작성 
+query = "SELECT * from phoneInfo WHERE phoneName = '" + phoneName + "'";
+    result = statement.executeQuery(query);
+    result.next();
+	System.out.printf("\nrquery : %s",query);
+	System.out.printf("\n\nresult : %s",result.getString(2));
+	
+	
+%>
+
   <section class="header7 cid-rrg5WhmoYo" id="header7-g">
-
-    
-
-    
-
     <div class="container">
         <div class="media-container-row">
 
             <div class="media-content align-right">
                 <h1 class="mbr-section-title mbr-white pb-3 mbr-fonts-style display-2"><strong>
-                    갤럭시 S10(128GB)</strong></h1>
+                    <%=phoneName %></strong></h1>
                 <div class="mbr-section-text mbr-white pb-3">
-                    <p class="mbr-text mbr-fonts-style display-5">메모리 : 128GB<br>운영체제 :&nbsp;</p>
+                    <p class="mbr-text mbr-fonts-style display-5">제조사 : <%=result.getString(2) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;화면사이즈 : <%=result.getString(4) %>inch</p>
+                    <p class="mbr-text mbr-fonts-style display-5">운영체제 : <%=result.getString(5) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;용량 : <%=result.getString(6) %>GB</p>
+                    <p class="mbr-text mbr-fonts-style display-5">램 : <%=result.getString(7) %>GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;전면카메라 : <%=result.getString(8) %>만 화소</p>
+                    <p class="mbr-text mbr-fonts-style display-5">후면카메라 : <%=result.getString(9) %>만 화소&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;무게 : <%=result.getString(10) %>g</p>
+                   
+                    <p class="mbr-text mbr-fonts-style display-5">크기 : <%=result.getString(11) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;배터리 용량 : <%=result.getString(12) %></p>
+                  
+                    <p class="mbr-text mbr-fonts-style display-5">속도 : <%=result.getString(13) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;해상도 : <%=result.getString(14) %></p>
+                   
+                    <p class="mbr-text mbr-fonts-style display-5">출시년도 : <%=result.getString(15) %></p>
+                   
+                    
+                    
                 </div>
-                <div class="mbr-section-btn">
-                        <a class="btn btn-md btn-primary display-4" href="https://mobirise.co">LEARN MORE</a>
-                        <a class="btn btn-md btn-white-outline display-4" href="https://mobirise.co">LIVE DEMO</a>
-                </div>
+                
             </div>
 
-            <div class="mbr-figure" style="width: 100%;"><iframe class="mbr-embedded-video" src="https://www.youtube.com/embed/Xpj9cjfLTSE?rel=0&amp;amp;showinfo=0&amp;autoplay=0&amp;loop=0" width="1280" height="720" frameborder="0" allowfullscreen></iframe></div>
-
+            <div class="mbr-figure" style="width: 135%;"><iframe class="mbr-embedded-video" src="<%=result.getString(19)%>?rel=0&amp;amp;showinfo=0&amp;autoplay=0&amp;loop=0" width="1920" height="1080" frameborder="0" allowfullscreen></iframe></div>
+ 		<%result.close(); %>
         </div>
     </div>
 </section>

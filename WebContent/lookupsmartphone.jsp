@@ -64,8 +64,8 @@
       <div class="table-wrapper">
         <div class="container">
           <div class="row search">
-            <div class="col-md-6"></div>
-            <div class="col-md-6">
+            <div class="col-md-7"></div>
+            <div class="col-md-7">
                 <div class="dataTables_filter">
                   <label class="searchInfo mbr-fonts-style display-7"><strong>검색</strong></label>
                   <input class="form-control input-sm" disabled="">
@@ -85,7 +85,8 @@
               <th class="head-item mbr-fonts-style display-7">휴대폰 이름</th><th class="head-item mbr-fonts-style display-7">
                       제조사</th><th class="head-item mbr-fonts-style display-7">
                       용량</th><th class="head-item mbr-fonts-style display-7">&nbsp;가격</th><th class="head-item mbr-fonts-style display-7">출시일</th>
-                    </tr>
+                      <th class="head-item mbr-fonts-style display-7">상세보기</th>
+                      </tr>
             </thead>
 
             <tbody>
@@ -98,27 +99,32 @@
          
          <%
              
-			ResultSet result = null;
-			String query = null;
-     		// 쿼리를 실행하기 위한 Statement 객체 생성 
-     		Connection connection = DBCon.getmyConnection();
-     		Statement statement =connection.createStatement();
-			// 쿼리문 작성 
-			query = "SELECT * from phoneInfo ";
-			// 쿼리문 실행 
-			result = statement.executeQuery(query);
-			
-			while(result.next())
-			{
-	          out.println("
-	          			+"<td class=\"body-item mbr-fonts-style display-7\">"+result.getString(2)+"</td>"
-	         			+"<td class = \"body-item mbr-fonts-style display-7\">"+Integer.parseInt(result.getString(6))+"</td>"
-	         			+"<td class = \"body-item mbr-fonts-style display-7\">"+Integer.parseInt(result.getString(3))+"</td>"
-	         			+"<td class = \"body-item mbr-fonts-style display7\">"+Integer.parseInt(result.getString(15))+"</td></tr>"); 
-			}
-			
-			result.close();
-			
+         ResultSet result = null;
+         String query = null;
+           // 쿼리를 실행하기 위한 Statement 객체 생성 
+           Connection connection = DBCon.getmyConnection();
+           Statement statement =connection.createStatement();
+         // 쿼리문 작성 
+         query = "SELECT * from phoneInfo ";
+         // 쿼리문 실행 
+         result = statement.executeQuery(query);
+         
+         while(result.next())
+         {
+             out.println("<tr><td class=\"body-item mbr-fonts-style display-7\">"+result.getString(1)+"</td>"
+                      +"<td class=\"body-item mbr-fonts-style display-7\">"+result.getString(2)+"</td>"
+                     +"<td class = \"body-item mbr-fonts-style display-7\">"+Integer.parseInt(result.getString(6))+"</td>"
+                     +"<td class = \"body-item mbr-fonts-style display-7\">"+Integer.parseInt(result.getString(3))+"</td>"
+                     +"<td class = \"body-item mbr-fonts-style display-7\">"+Integer.parseInt(result.getString(15))+"</td>"
+                     +"<td>"
+                    +"<form action = \"detailphone.jsp\" method = \"post\"><input type = \"hidden\" name = \"phoneName\""
+                    +"value = \""+result.getString(1)+"\">"
+                    +"<input type = \"submit\" value = \"상세보기\" class=\"body-item mbr-fonts-style display-7\"></form></tr>" 
+                   ); 
+         }
+         
+         result.close();
+         
          %>
          
          </tbody>
@@ -135,7 +141,7 @@
         </div>
         <div class="container table-info-container">
           <div class="row info">
-            <div class="col-md-6">
+            <div class="col-md-7">
               <div class="dataTables_info mbr-fonts-style display-7">
                 <span class="infoBefore">Showing</span>
                 <span class="inactive infoRows"></span>
@@ -145,7 +151,7 @@
                 <span class="infoFilteredAfter"> total entries)</span>
               </div>
             </div>
-            <div class="col-md-6"></div>
+            <div class="col-md-7"></div>
           </div>
         </div>
       </div>
