@@ -6,13 +6,12 @@ import java.sql.*;
 
 public class DBTest {
 
-			Connection connection = null;
 			ResultSet result = null;
 			String query = null;
-			
+			Connection connection= null;
 			public DBTest(){	
 			}
-		
+			
 			public void connectDB(){
 				try {
 					// 드라이버에 로드
@@ -314,5 +313,15 @@ public class DBTest {
 	            }
 	            System.out.println("DB 연결이 종료되었습니다.");
 			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 
 }

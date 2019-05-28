@@ -1,5 +1,13 @@
+<%@ page import ="java.util.*" %>
+<%@ page import ="java.io.*" %>
+<%@ page import ="java.sql.*" %>  
+<%@ page import="javaCode.DBTest"%>
+<%@ page import="javaCode.DBCon"%>
+
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,7 +84,8 @@
                   
               <th class="head-item mbr-fonts-style display-7">휴대폰 이름</th><th class="head-item mbr-fonts-style display-7">
                       제조사</th><th class="head-item mbr-fonts-style display-7">
-                      용량</th><th class="head-item mbr-fonts-style display-7">&nbsp;가격</th><th class="head-item mbr-fonts-style display-7">출시일</th></tr>
+                      용량</th><th class="head-item mbr-fonts-style display-7">&nbsp;가격</th><th class="head-item mbr-fonts-style display-7">출시일</th>
+                      </tr>
             </thead>
 
             <tbody>
@@ -84,249 +93,44 @@
            
               
               
-            <tr> 
+           
               
-              <td class="body-item mbr-fonts-style display-7">Caren Rials</td><td class="body-item mbr-fonts-style display-7">35</td><td class="body-item mbr-fonts-style display-7">2013-04-12</td><td class="body-item mbr-fonts-style display-7">$445.500</td><td class="body-item mbr-fonts-style display-7">$445.500</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Leon Rogol</td><td class="body-item mbr-fonts-style display-7">66</td><td class="body-item mbr-fonts-style display-7">2016-05-22</td><td class="body-item mbr-fonts-style display-7">$152.558</td><td class="body-item mbr-fonts-style display-7">$152.558</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr></tbody>
+         
+         <%
+             
+			ResultSet result = null;
+			String query = null;
+     		// 쿼리를 실행하기 위한 Statement 객체 생성 
+     		Connection connection = DBCon.getmyConnection();
+     		Statement statement =connection.createStatement();
+			// 쿼리문 작성 
+			query = "SELECT * from phoneInfo ";
+			// 쿼리문 실행 
+			result = statement.executeQuery(query);
+			
+			while(result.next())
+			{
+	          out.println("<tr><td class=\"body-item mbr-fonts-style display-7\">"+result.getString(1)+"</td>"
+	          			+"<td class=\"body-item mbr-fonts-style display-7\">"+result.getString(2)+"</td>"
+	         			+"<td class = \"body-item mbr-fonts-style display-7\">"+Integer.parseInt(result.getString(6))+"</td>"
+	         			+"<td class = \"body-item mbr-fonts-style display-7\">"+Integer.parseInt(result.getString(3))+"</td>"
+	         			+"<td class = \"body-item mbr-fonts-style display7\">"+Integer.parseInt(result.getString(15))+"</td></tr>"); 
+			}
+			
+			result.close();
+			
+         %>
+         
+         </tbody>
+         
+         
+         
+         
+         
+         
+         
+         
+         
           </table>
         </div>
         <div class="container table-info-container">
