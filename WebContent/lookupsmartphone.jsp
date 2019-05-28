@@ -85,7 +85,7 @@
               <th class="head-item mbr-fonts-style display-7">휴대폰 이름</th><th class="head-item mbr-fonts-style display-7">
                       제조사</th><th class="head-item mbr-fonts-style display-7">
                       용량</th><th class="head-item mbr-fonts-style display-7">&nbsp;가격</th><th class="head-item mbr-fonts-style display-7">출시일</th>
-                      </tr>
+                    </tr>
             </thead>
 
             <tbody>
@@ -110,7 +110,7 @@
 			
 			while(result.next())
 			{
-	          out.println("<tr><td class=\"body-item mbr-fonts-style display-7\">"+result.getString(1)+"</td>"
+	          out.println("
 	          			+"<td class=\"body-item mbr-fonts-style display-7\">"+result.getString(2)+"</td>"
 	         			+"<td class = \"body-item mbr-fonts-style display-7\">"+Integer.parseInt(result.getString(6))+"</td>"
 	         			+"<td class = \"body-item mbr-fonts-style display-7\">"+Integer.parseInt(result.getString(3))+"</td>"
