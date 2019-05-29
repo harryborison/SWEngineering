@@ -99,28 +99,32 @@
          
          <%
              
-			ResultSet result = null;
-			String query = null;
-     		// 쿼리를 실행하기 위한 Statement 객체 생성 
-     		Connection connection = DBCon.getmyConnection();
-     		Statement statement =connection.createStatement();
-			// 쿼리문 작성 
-			query = "SELECT * from phoneInfo ";
-			// 쿼리문 실행 
-			result = statement.executeQuery(query);
-			
-			while(result.next())
-			{
-	          out.println("<tr><td class=\"body-item mbr-fonts-style display-7\">"+result.getString(1)+"</td>"
-	          			+"<td class=\"body-item mbr-fonts-style display-7\">"+result.getString(2)+"</td>"
-	         			+"<td class = \"body-item mbr-fonts-style display-7\">"+Integer.parseInt(result.getString(6))+"</td>"
-	         			+"<td class = \"body-item mbr-fonts-style display-7\">"+Integer.parseInt(result.getString(3))+"</td>"
-	         			+"<td class = \"body-item mbr-fonts-style display-7\">"+Integer.parseInt(result.getString(15))+"</td>"
-	         			+"<td class = \"body-item mbr-fonts-style display7\">"+"상세보기"+"</td></tr>"); 
-			}
-			
-			result.close();
-			
+         ResultSet result = null;
+         String query = null;
+           // 쿼리를 실행하기 위한 Statement 객체 생성 
+           Connection connection = DBCon.getmyConnection();
+           Statement statement =connection.createStatement();
+         // 쿼리문 작성 
+         query = "SELECT * from phoneInfo ";
+         // 쿼리문 실행 
+         result = statement.executeQuery(query);
+         
+         while(result.next())
+         {
+             out.println("<tr><td class=\"body-item mbr-fonts-style display-7\">"+result.getString(1)+"</td>"
+                      +"<td class=\"body-item mbr-fonts-style display-7\">"+result.getString(2)+"</td>"
+                     +"<td class = \"body-item mbr-fonts-style display-7\">"+Integer.parseInt(result.getString(6))+"</td>"
+                     +"<td class = \"body-item mbr-fonts-style display-7\">"+Integer.parseInt(result.getString(3))+"</td>"
+                     +"<td class = \"body-item mbr-fonts-style display-7\">"+Integer.parseInt(result.getString(15))+"</td>"
+                     +"<td>"
+                    +"<form action = \"detailphone.jsp\" method = \"post\"><input type = \"hidden\" name = \"phoneName\""
+                    +"value = \""+result.getString(1)+"\">"
+                    +"<input type = \"submit\" value = \"상세보기\" class=\"body-item mbr-fonts-style display-7\"></form></tr>" 
+                   ); 
+         }
+         
+         result.close();
+         
          %>
          
          </tbody>
