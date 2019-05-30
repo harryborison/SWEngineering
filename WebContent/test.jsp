@@ -56,48 +56,10 @@
 
 <body class="bg-dark">
 
-  <div class="container">
-    <div class="card card-register mx-auto mt-5">
-      <div class="card-header">원하는 항목을 체크해주세요.</div>
-      <div class="card-body">
-        
-        <form>
-          <div class="timeline-heading"><h4>Company</h4></div>
-          <input type="checkbox" name = "company" value = "Samsung">삼성&nbsp; 
-          <input type="checkbox" name = "company" value = "LG">엘지&nbsp;  
-          <input type="checkbox" name = "company" value = "Apple">애플<br><br>
-          
-          <div class="timeline-heading"><h4>Price</h4></div>
-          <span class="fa-stack fa-2x">
-          <input class="form-control" type="text" name="minprice" placeholder="" required />
-          </span><label for="username">만원  &nbsp;&nbsp; ~&nbsp; &nbsp;</label>
-          <span class="fa-stack fa-2x">
-          <input class="form-control" type="text" name="maxprice" placeholder="" required />
-           </span><label for="username">만원</label>
-          
-          <br><br><div class="timeline-heading"><h4>Purpose</h4></div>
-          <input type="checkbox" name = "purpose" value = "homebutton">홈버튼&nbsp; 
-          <input type="checkbox" name = "purpose" value = "game">고사양게임&nbsp;  
-          <input type="checkbox" name = "purpose" value = "battery">대용량 배터리&nbsp;
-          <input type="checkbox" name = "purpose" value = "camera">고성능 카메라&nbsp;<br>
-          <input type="checkbox" name = "purpose" value = "screen">큰 화면&nbsp;
-          <input type="checkbox" name = "purpose" value = "memory">대용량 메모리&nbsp;
-          <input type="checkbox" name = "purpose" value = "video">고화질 동영상&nbsp;<br><br>
-          
-          
-          <a class="btn btn-primary btn-block">추천 해주세요!</a>
-        </form>
-        
-      </div>
-    </div>
-  </div>
-
-  <!-- Bootstrap core JavaScript-->
-  <script src="template1/vendor/jquery/jquery.min.js"></script>
-  <script src="template1/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Core plugin JavaScript-->
-  <script src="template1/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <form action = "detailphone.jsp" method = "post">
+  <input type = "hidden" name = "phoneName" value = "iphone12">
+  <input type = "submit" value = "submit">
+  </form>
 
 </body>
 
