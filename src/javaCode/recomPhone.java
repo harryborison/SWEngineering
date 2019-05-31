@@ -13,12 +13,12 @@ public class recomPhone {
 		db.connectDB();
 		phonelist=db.getPhoneDB();
 	}
-	public String[] recom(String companyname[], int lowprice, int highprice, String purpose[] )
+	public Model[] recom(String companyname[], int lowprice, int highprice, String purpose[] )
 	{
 		int Length = phonelist.size();
 		int[] count = new int[Length];
 		int[] Rank = new int[3];
-		String[] resultPhone = new String[3];
+		Model[] resultPhone = new Model[3];
 		for(int i=0; i< Length;i++)
 		{
 			count[i] = count[i] + matchcompany(phonelist.get(i).company,companyname);
@@ -39,7 +39,7 @@ public class recomPhone {
 					maxindex = i;
 				}
 			}
-			resultPhone[t] = phonelist.get(maxindex).phoneName;
+			resultPhone[t] = phonelist.get(maxindex);
 			count[maxindex] = -1;
 
 		}

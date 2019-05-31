@@ -1,12 +1,15 @@
 package javaCode;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import java.sql.Connection;
+import java.util.*;
 /**
  * Servlet implementation class Recomsmartphone
  */
@@ -35,13 +38,40 @@ public class Recomsmartphone extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.setCharacterEncoding("EUC-KR");
+		//request.setCharacterEncoding("EUC-KR");
+		request.setCharacterEncoding("utf-8");
+
+		
 		String[] company = request.getParameterValues("company");
 		String minPrice = request.getParameter("minPrice");
 		String maxPrice = request.getParameter("maxPrice");
 		String[] purpose = request.getParameterValues("purpose");
+		Model[] result = new Model[3];
 		
-		doGet(request, response);
+		int minP = Integer.parseInt(minPrice) * 10000;
+		int maxP = Integer.parseInt(maxPrice) * 10000;
+		DBTest db = new DBTest();
+		db.connectDB();
+		recomPhone rep = new recomPhone();
+		rep.makemodel_list();
+		result = rep.recom(company, minP, maxP, purpose);
+		
+		System.out.println(result[0].phoneName);
+		System.out.println(result[1].phoneName);
+		System.out.println(result[2].phoneName);
+		
+		request.setAttribute("phone1", result[0]); //객체를 request객체에 담음 (data가 문자열이 아니어도 가능)
+		request.setAttribute("phone2", result[1]);
+		request.setAttribute("phone3", result[2]);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("recommendedphone.jsp");
+		
+		dispatcher.forward(request, response);
+		
+
+		
+		System.out.println("BBBBBBBBBBBBBBb");
+		
+		
 	}
 
 }

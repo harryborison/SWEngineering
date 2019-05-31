@@ -1,5 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page import="javaCode.Model"%>
+<%@ page import ="java.util.*" %>
+<%@ page import ="java.io.*" %>
+<%@ page import ="java.sql.*" %>  
+<%@ page import="javaCode.DBTest"%>
+<%@ page import="javaCode.DBCon"%>
+
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="UTF-8"%>
+
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +32,74 @@
   
 </head>
 <body>
+
+<%!
+
+
+%>
+
+<%
+	request.setCharacterEncoding("EUC-KR");
+
+	System.out.println("AAAAAAAA");
+	
+	Model firstPhone = new Model();
+	Model secondPhone = new Model();
+	Model thirdPhone = new Model();
+	//String a=request.getParameter("data");
+	//out.println(a);
+	//a="abC";
+	//String abc = "AA";
+	firstPhone = (Model)request.getAttribute("phone1");
+	//out.println(firstPhone.phoneName);
+	secondPhone = (Model)request.getAttribute("phone2");
+	thirdPhone = (Model)request.getAttribute("phone3");
+	
+	String s1 = String.valueOf(firstPhone.capacity);
+	String s2 = String.valueOf(secondPhone.capacity);
+	String s3 = String.valueOf(thirdPhone.capacity);
+	
+	String p1 = new String();
+	String p2 = new String();
+	String p3 = new String();
+	
+	double temp = Double.valueOf(firstPhone.phonePrice).doubleValue();
+	if(temp >= 1000000.0) // 1280000
+	{
+		temp = temp / 10000;
+		p1 = String.format("%.1f", temp);	
+	}
+	else
+	{
+		temp = temp / 10000;
+		p1 = String.format("%.1f", temp);
+	}
+	
+	temp = Double.valueOf(secondPhone.phonePrice).doubleValue();
+	if(temp >= 1000000.0) // 1280000
+	{
+		temp = temp / 10000;
+		p2 = String.format("%.1f", temp);	
+	}
+	else
+	{
+		temp = temp / 10000;
+		p2 = String.format("%.1f", temp);
+	}
+	
+	temp = Double.valueOf(thirdPhone.phonePrice).doubleValue();
+	if(temp >= 1000000.0) // 1280000
+	{
+		temp = temp / 10000;
+		p3 = String.format("%.1f", temp);	
+	}
+	else
+	{
+		temp = temp / 10000;
+		p3 = String.format("%.1f", temp);
+	}
+%>
+
   <section class="pricing-table3 cid-rruoh41Ypk" id="pricing-tables3-6" data-bg-video="https://www.youtube.com/watch?v=neqXWmV9J7k">
 
     
@@ -36,18 +113,19 @@
                     <div class="plan-header">
                         <div class="plan-price">
                             <span class="price-value mbr-fonts-style display-5">
-                                $
+                                
                             </span>
-                            <span class="price-figure mbr-fonts-style display-2">∞∂∑∞Ω√10</span>
+                            <span class="price-figure mbr-fonts-style display-2"><%=firstPhone.phoneName %></span>
                             <h3 class="plan-title mbr-fonts-style display-5">
-                                Standard
+                                
                             </h3>
                             <hr>
                         </div>
                     </div>
                     <div class="plan-body">
-                        <p class="mbr-text mbr-fonts-style display-7">∏ﬁ∏∏Æ : ~<br>øÎ∑Æ : ~</p>
-                        <div class="mbr-section-btn pt-4 text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">ªÛºº¡§∫∏ ∫∏±‚</a></div>
+                        <p class="mbr-text mbr-fonts-style display-7">ÌöåÏÇ¨ : <%=firstPhone.company %><br>Í∞ÄÍ≤© : <%=p1 %>ÎßåÏõê<br>Ïö©Îüâ : <%=firstPhone.capacity%>GB<br></p>
+                        <form action = "detailphone.jsp" method = "post"><input type = "hidden" name = "phoneName" value = "<%= firstPhone.phoneName%>"><div class="mbr-section-btn pt-4 text-center"><input type = "submit" value = "ÏÉÅÏÑ∏Ï†ïÎ≥¥ Î≥¥Í∏∞" class="btn btn-primary display-4"></div>
+                    	</form>
                     </div>
                 </div>
             </div>
@@ -57,20 +135,21 @@
                     <div class="plan-header">
                         <div class="plan-price">
                             <span class="price-value mbr-fonts-style display-5">
-                                $
+                                
                             </span>
-                            <span class="price-figure mbr-fonts-style display-2">æ∆¿Ã∆˘XR</span>
+                            <span class="price-figure mbr-fonts-style display-2"><%=secondPhone.phoneName %></span>
                             <h3 class="plan-title mbr-fonts-style display-5">
-                                Business
+                                
                             </h3>
                             <hr>
                         </div>
                     </div>
                     <div class="plan-body">
                         <p class="mbr-text mbr-fonts-style display-7">
-                            Mobirise is perfect for non-techies who are not familiar with web development.
+                            ÌöåÏÇ¨ : <%=secondPhone.company %><br>Í∞ÄÍ≤© : <%=p2 %>ÎßåÏõê<br>Ïö©Îüâ : <%=secondPhone.capacity%>GB
                         </p>
-                        <div class="mbr-section-btn pt-4 text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">ªÛºº¡§∫∏ ∫∏±‚</a></div>
+                        <form action = "detailphone.jsp" method = "post"><input type = "hidden" name = "phoneName" value = "<%= secondPhone.phoneName%>"><div class="mbr-section-btn pt-4 text-center"><input type = "submit" value = "ÏÉÅÏÑ∏Ï†ïÎ≥¥ Î≥¥Í∏∞" class="btn btn-primary display-4"></div>
+                    	</form>
                     </div>
                 </div>
             </div>
@@ -80,20 +159,21 @@
                     <div class="plan-header">
                         <div class="plan-price">
                             <span class="price-value mbr-fonts-style display-5">
-                                $
+                                
                             </span>
-                            <span class="price-figure mbr-fonts-style display-2">LG G9</span>
+                            <span class="price-figure mbr-fonts-style display-2"><%=thirdPhone.phoneName %></span>
                             <h3 class="plan-title mbr-fonts-style display-5">
-                                Premium
+                                
                             </h3>
                             <hr>
                         </div>
                     </div>
                     <div class="plan-body ">
                         <p class="mbr-text mbr-fonts-style display-7">
-                            Mobirise is perfect for non-techies who are not familiar with web development.
+                          	  ÌöåÏÇ¨ : <%=thirdPhone.company %><br>Í∞ÄÍ≤© : <%=p3 %>ÎßåÏõê<br>Ïö©Îüâ : <%=thirdPhone.capacity%>GB
                         </p>
-                        <div class="mbr-section-btn pt-4 text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">ªÛºº¡§∫∏ ∫∏±‚</a></div>
+                        <form action = "detailphone.jsp" method = "post"><input type = "hidden" name = "phoneName" value = "<%= thirdPhone.phoneName%>"><div class="mbr-section-btn pt-4 text-center"><input type = "submit" value = "ÏÉÅÏÑ∏Ï†ïÎ≥¥ Î≥¥Í∏∞" class="btn btn-primary display-4"></div>
+                    	</form>
                     </div>
                 </div>
             </div>

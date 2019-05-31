@@ -20,8 +20,8 @@ public class Test {
 			pur[0]="new";
 			pur[1]="storage";
 			pur[2]="screen";
-			result = rep.recom(com, 500000, 800000, pur);
-			System.out.printf("1: %s\n2: %s\n3: %s\n", result[0],result[1],result[2]);
+			//result = rep.recom(com, 500000, 800000, pur);
+			//System.out.printf("1: %s\n2: %s\n3: %s\n", result[0],result[1],result[2]);
 		}
 	
 	

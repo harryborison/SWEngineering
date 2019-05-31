@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- Site made with Mobirise Website Builder v4.10.0, https://mobirise.com -->
-  <meta charset="UTF-8">
+  <meta charset="EUC-KR">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v4.10.0, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
@@ -35,10 +35,10 @@
 %>
 
 <%
-	request.setCharacterEncoding("EUC-KR");
+	request.setCharacterEncoding("UTF-8");
 
 	phoneName = request.getParameter("phoneName");
- 	
+ 	System.out.println(phoneName);
 	ResultSet result = null;
 	String query = null;
 	  // 쿼리를 실행하기 위한 Statement 객체 생성 

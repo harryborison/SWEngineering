@@ -175,6 +175,7 @@ public class DBTest {
 						model.color = result.getString(16);
 						model.link = result.getString(17);
 						model.recCount = Integer.parseInt(result.getString(18));
+						model.videolink = result.getString(19);
 						modellist.add(i,model);
 					
 						i++;
