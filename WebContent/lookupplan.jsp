@@ -1,3 +1,9 @@
+<%@ page import ="java.util.*" %>
+<%@ page import ="java.io.*" %>
+<%@ page import ="java.sql.*" %>  
+<%@ page import="javaCode.DBTest"%>
+<%@ page import="javaCode.DBCon"%>
+
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -56,8 +62,8 @@
       <div class="table-wrapper">
         <div class="container">
           <div class="row search">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
+            <div class="col-md-5"></div>
+            <div class="col-md-5">
                 <div class="dataTables_filter">
                   <label class="searchInfo mbr-fonts-style display-7"><strong>검색</strong></label>
                   <input class="form-control input-sm" disabled="">
@@ -73,20 +79,45 @@
                   
                   
                   
-                  
+                   <th class="head-item mbr-fonts-style display-7">통신사</th>
               <th class="head-item mbr-fonts-style display-7">요금제 이름</th><th class="head-item mbr-fonts-style display-7">
                       가격 (월)</th><th class="head-item mbr-fonts-style display-7">
-                      데이터</th></tr>
+                      데이터</th><th class="head-item mbr-fonts-style display-7">
+                      상세보기</th></tr>
             </thead>
 
             <tbody>
+           	
+           <%
+             
+         ResultSet result = null;
+         String query = null;
+           // 쿼리를 실행하기 위한 Statement 객체 생성 
+           Connection connection = DBCon.getmyConnection();
+           Statement statement =connection.createStatement();
+         // 쿼리문 작성 
+         query = "SELECT * from planInfo ";
+         // 쿼리문 실행 
+         result = statement.executeQuery(query);
+         
+         while(result.next())
+         {
+             out.println("<tr><td class=\"body-item mbr-fonts-style display-7\">"+result.getString(1)+"</td>"
+            		 +"<td class=\"body-item mbr-fonts-style display-7\">"+result.getString(2)+"</td>" 
+            		 +"<td class=\"body-item mbr-fonts-style display-7\">"+result.getString(4)+"</td>"
+                     +"<td class = \"body-item mbr-fonts-style display-7\">"+result.getString(5)+"</td>"
+                     +"<td>"
+                    +"<form action = \"detailplan.jsp\" method = \"post\"><input type = \"hidden\" name = \"planName\""
+                    +"value = \""+result.getString(2)+"\">"
+                    +"<input type = \"submit\" value = \"상세보기\" class=\"body-item mbr-fonts-style display-7\"></form></tr>" 
+                   ); 
+         }
+         
+         result.close();
+         
+         %>
               
-           
-              
-              
-            <tr> 
-                
-          
+            </tbody>
                 
                 
                 
@@ -95,7 +126,7 @@
         </div>
         <div class="container table-info-container">
           <div class="row info">
-            <div class="col-md-4">
+            <div class="col-md-5">
               <div class="dataTables_info mbr-fonts-style display-7">
                 <span class="infoBefore">Showing</span>
                 <span class="inactive infoRows"></span>
@@ -105,7 +136,7 @@
                 <span class="infoFilteredAfter"> total entries)</span>
               </div>
             </div>
-            <div class="col-md-4"></div>
+            <div class="col-md-5"></div>
           </div>
         </div>
       </div>

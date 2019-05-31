@@ -20,9 +20,9 @@ public class DBTest {
 					System.out.println("after forName");
 					
 					// 연결 
-					String url = "jdbc:mysql://localhost:3306/testdb";
-	
-					connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb", "root", "1234");
+					String url = "jdbc:mysql://localhost:3306/recDB?serverTimezone=Asia/Seoul";
+					
+					connection = DriverManager.getConnection(url, "root", "1234");
 	
 					System.out.println("DB 서버에 연결되었습니다.");
 				
