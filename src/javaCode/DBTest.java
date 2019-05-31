@@ -68,8 +68,13 @@ public class DBTest {
 					Statement statement = connection.createStatement();
 					
 		            int count = 0;
-		            
-						
+		           
+		            query = "DELETE TABLE testdb.phoneInfo ";
+					count = statement.executeUpdate(query);
+					if(count ==0)
+					{
+						System.out.println("del 실패");
+					}
 					// phoneInfo 테이블 생성
 					query = "CREATE TABLE IF NOT EXISTS testdb.phoneInfo(phoneName varchar(45) NOT NULL,company varchar(45) NOT NULL,phonePrice int(11) NOT NULL,screenSize decimal(5,3) NOT NULL,os varchar(45) NOT NULL,capacity int(11) NOT NULL,RAM int(11) NOT NULL,frontCamera int(11) NOT NULL,rearCamera int(11) NOT NULL,weight int(11) NOT NULL,phoneSize varchar(45) NOT NULL,betteryCapacity int(11) NOT NULL,speed float NOT NULL,resolution varchar(45) NOT NULL,releaseYear int(11) NOT NULL,color varchar(70) NOT NULL,link varchar(150) NOT NULL,recCount int(11) NOT NULL DEFAULT 0,link2 varchar(150) NOT NULL,PRIMARY KEY(phoneName))";
 							 
@@ -133,38 +138,47 @@ public class DBTest {
 		            System.out.println("error: " + e);
 		        }
 			}
-				
+	
 
 			// 휴대폰 정보 받아오기  
-			public void getPhoneDB(String info) {
+			public  ArrayList<Model> getPhoneDB() {
+				 ArrayList<Model> modellist = new ArrayList<Model>();
+				 modellist.clear();
+				 
 				try{
 					// 쿼리를 실행하기 위한 Statement 객체 생성 
 					Statement statement = connection.createStatement();
 					// 쿼리문 작성 
-					query = "SELECT * from phoneInfo WHERE phoneName = '" + info + "'";
+					query = "SELECT * from phoneInfo ";
 					// 쿼리문 실행 
 					result = statement.executeQuery(query);
-					// 검색 결과 출력 
+			        int i=0;
 					while(result.next()) {
-						String phoneName = result.getString(1);
-						String company = result.getString(2);
-						int phonePrice = Integer.parseInt(result.getString(3));
-						double screenSize = Double.parseDouble(result.getString(4));
-						String os = result.getString(5);
-						int capacity = Integer.parseInt(result.getString(6));
-						int RAM = Integer.parseInt(result.getString(7));
-						int frontCamera = Integer.parseInt(result.getString(8));
-						int rearCamera = Integer.parseInt(result.getString(9));
-						int weight = Integer.parseInt(result.getString(10));
-						String phoneSize = result.getString(11);
-						int betteryCapacity = Integer.parseInt(result.getString(12));
-						double speed = Double.parseDouble(result.getString(13));
-						String resolution = result.getString(14);
-						int releaseYear = Integer.parseInt(result.getString(15));
-						String color = result.getString(16);
-						String link = result.getString(17);
-						int recCount = Integer.parseInt(result.getString(18));
-						
+						Model model = new Model();
+
+						model.phoneName = result.getString(1);
+
+						model.company = result.getString(2);
+						model.phonePrice = Integer.parseInt(result.getString(3));
+						model.screenSize = Double.parseDouble(result.getString(4));
+						model.os = result.getString(5);
+						model.capacity = Integer.parseInt(result.getString(6));
+						model.RAM = Integer.parseInt(result.getString(7));
+						model.frontCamera = Integer.parseInt(result.getString(8));
+						model.rearCamera = Integer.parseInt(result.getString(9));
+						model.weight = Integer.parseInt(result.getString(10));
+						model.phoneSize = result.getString(11);
+						model.betteryCapacity = Integer.parseInt(result.getString(12));
+						model.speed = Double.parseDouble(result.getString(13));
+						model.resolution = result.getString(14);
+						model.releaseYear = Integer.parseInt(result.getString(15));
+						model.color = result.getString(16);
+						model.link = result.getString(17);
+						model.recCount = Integer.parseInt(result.getString(18));
+						modellist.add(i,model);
+					
+						i++;
+						/*
 						System.out.println("모델명: " + phoneName 
 								+ "\n제조사: " + company 
 								+ "\n가격: " + phonePrice + "원"
@@ -182,11 +196,14 @@ public class DBTest {
 								+ "\n출시년도: " + releaseYear + "년" 
 								+ "\n색상: " + color 
 								+ "\n링크: " + link 
-								+ "\n추천수: " + recCount + "회\n\n");
+								+ "\n추천수: " + recCount + "회\n\n");*/
 					}
 				} catch(SQLException e){
 		            System.out.println("error: " + e);
 		        }
+
+				
+				return modellist;
 			
 			} 	
 			
