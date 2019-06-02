@@ -10,18 +10,25 @@ public class Test {
 			String[] result = new String[3];
 			//db.connectDB();
 			//db.loadData();
-			db.getPlanDB("KT");
+			//db.getPhoneDB("iPhone X(256GB)");
 			//db.getPlanDB("KT");
 			//db.closeDB();
-			recomPhone rep = new recomPhone();
-			rep.makemodel_list();
-			com[0]="LG";
-			com[1]="Samsung";
-			pur[0]="new";
-			pur[1]="storage";
-			pur[2]="screen";
-			//result = rep.recom(com, 500000, 800000, pur);
-			//System.out.printf("1: %s\n2: %s\n3: %s\n", result[0],result[1],result[2]);
+			Plan[] p = new Plan[3];
+			recomPlan rep = new recomPlan();
+			rep.makepaln_list();
+			String[] tel = new String[2];
+			tel[0]="SKT";
+			tel[1]="KT";
+			String[] ty = new String[1];
+			ty[0]="5G";
+			int lowprice = 50000;
+			int highprice = 70000;
+			int data = 5000;
+			String[] option = new String[2];
+			option[0]="시각장애인";
+			option[1]="군인";
+			p=rep.recPlan(tel,ty,lowprice,highprice,data,option);
+			System.out.printf("%s\n%s\n%s\n", p[0].planName,p[1].planName,p[2].planName);
 		}
 	
 	
