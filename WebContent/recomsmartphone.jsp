@@ -112,7 +112,7 @@ function checkCompany(myform)
 
   <div class="container">
     <div class="card card-register mx-auto mt-5">
-      <div class="card-header">원하는 항목을 체크해주세요.</div>
+      <div class="card-header">스마트폰 추천 - 원하는 항목을 체크해주세요.</div>
       <div class="card-body">
         
         <form name = "myform" action = "Recomsmartphone" method = "post" onSubmit="return checkCompany(this)">

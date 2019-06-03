@@ -15,7 +15,7 @@ public class Test {
 			//db.closeDB();
 			Plan[] p = new Plan[3];
 			recomPlan rep = new recomPlan();
-			rep.makepaln_list();
+			rep.makeplan_list();
 			String[] tel = new String[2];
 			tel[0]="SKT";
 			tel[1]="KT";

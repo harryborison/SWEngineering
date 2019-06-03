@@ -17,7 +17,7 @@
   <link rel="shortcut icon" href="assets3/images/logo4.png" type="image/x-icon">
   <meta name="description" content="">
   
-  <title>상세보기</title>
+  <title>요금제 상세보기</title>
   <link rel="stylesheet" href="assets3/tether/tether.min.css">
   <link rel="stylesheet" href="assets3/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets3/bootstrap/css/bootstrap-grid.min.css">

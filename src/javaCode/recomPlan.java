@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class recomPlan {
 	Connection conn= DBCon.getmyConnection();
     ArrayList<Plan> planlist = new ArrayList<Plan>();
-	public void makepaln_list()
+	public void makeplan_list()
 	{
 
 		DBTest db = new DBTest();

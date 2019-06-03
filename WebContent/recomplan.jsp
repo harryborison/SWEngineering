@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +11,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>����� ��õ�ޱ�</title>
+  <title>요금제 추천받기</title>
 
   <!-- Custom fonts for this template-->
   <link href="template1/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -52,40 +52,155 @@
 
   <!-- Custom styles for this template -->
   <link href="signup/css/agency.min.css" rel="stylesheet">
+  
+  
+<script type="text/javascript">
+
+
+function Data_OnOff(id)
+{
+   if(id == "inf")
+   {
+      document.all["da"].style.display = 'none';
+      document.all["gb"].style.display = 'none';
+      document.all["da"].value = "0";
+   }
+   else
+   {      
+      document.all["da"].style.display = '';
+      document.all["gb"].style.display = '';
+   }
+}
+
+
+</script>
+
+
+<script LANGUAGE = "javascript">
+function checkForm(myform2)
+{
+	//alert("AAAAAAAAAAAAAAAAAAAAAa");
+	var chk1 = document.myform2.c1.checked;
+	var chk2 = document.myform2.c2.checked;
+	var chk3 = document.myform2.c3.checked;
+	var chk4 = document.myform2.c4.checked;
+	   
+    if(chk1 == "" && chk2 == "" && chk3 == "" && chk4 == "")
+	{
+		alert("Company를 한개 이상 선택해주세요.");
+		return false;
+	}
+    
+    var tq1 = document.myform2.t1.checked;
+    var tq2 = document.myform2.t2.checked;
+    
+    if(tq1 == "" && tq2 == "")
+	{
+		alert("Type을 한개 이상 선택해주세요.");
+		return false;
+	}
+    
+    var minP = document.myform2.minPr.value;
+    var maxP= document.myform2.maxPr.value;
+    
+    if(isNaN(minP) == true || isNaN(maxP) == true)
+    {
+ 	   alert("price입력이 잘못되었습니다.");
+ 	   return false;
+    }
+    
+    var minIntPrice = parseInt(minP);
+    var maxIntPrice = parseInt(maxP);
+    
+    if(minIntPrice > maxIntPrice)
+    {
+ 	   alert("Price입력이 잘못되었습니다.");
+ 	   return false;
+    }
+    
+    var temp = document.all("data");
+    if(temp[0].checked == false && temp[1].checked == false)
+    {
+    	alert("Data를 선택해주세요.");
+    	return false;
+    }
+    
+    var amount = document.myform2.da.value;
+    
+    if(temp[1].checked == true && isNaN(amount) == true)
+    {
+    	alert("Data양 입력이 잘못되었습니다.");
+    	return false;
+    }
+    
+    var oq1 = document.myform2.o1.checked;
+    var oq2 = document.myform2.o2.checked;
+    var oq3 = document.myform2.o3.checked;
+    var oq4 = document.myform2.o4.checked;
+    var oq5 = document.myform2.o5.checked;
+    var oq6 = document.myform2.o6.checked;
+    var oq7 = document.myform2.o7.checked;
+    var oq8 = document.myform2.o8.checked;
+    var oq9 = document.myform2.o9.checked;
+    
+    if(oq1 == "" && oq2 == "" && oq3 == "" && oq4 == "" && oq5 == "" &&
+    		oq6 == "" && oq7 == "" && oq8 == "" && oq9 == "")
+    {
+    	alert("Option을 한개 이상 선택해주세요.");
+		return false;
+    }
+}
+
+</script>
+
+  
 </head>
 
 <body class="bg-dark">
 
   <div class="container">
     <div class="card card-register mx-auto mt-5">
-      <div class="card-header">���ϴ� �׸��� üũ���ּ���.</div>
+      <div class="card-header">요금제 추천 - 원하는 항목을 체크해주세요.</div>
       <div class="card-body">
         
-        <form>
-          <div class="timeline-heading"><h4>Company</h4></div>
-          <input type="checkbox" name = "company" value = "Samsung">�Ｚ&nbsp; 
-          <input type="checkbox" name = "company" value = "LG">����&nbsp;  
-          <input type="checkbox" name = "company" value = "Apple">����<br><br>
+        <form name = "myform2" action = "RecomPlanServlet" method = "post" onSubmit="return checkForm(this)">
+          <div class="timeline-heading"><h4>Company(1개 이상 선택)</h4></div>
+          <input type="checkbox" id = "c1" name = "company" value = "KT">KT&nbsp; 
+          <input type="checkbox" id = "c2" name = "company" value = "LG U+">LG U+&nbsp;  
+          <input type="checkbox" id = "c3" name = "company" value = "SKT">SKT&nbsp;<br><br>
           
-          <div class="timeline-heading"><h4>Price</h4></div>
+          <div class="timeline-heading"><h4>Type(1개 이상 선택)</h4></div>
+          <input type="checkbox" id = "t1" name = "type" value = "LTE">LTE&nbsp; 
+		  <input type="checkbox" id = "t2" name = "type" value = "5G">5G&nbsp;<br><br>
+          
+          <div class="timeline-heading"><h4>Price(자연수 입력)</h4></div>
           <span class="fa-stack fa-2x">
-          <input class="form-control" type="text" name="minprice" placeholder="" required />
-          </span><label for="username">����  &nbsp;&nbsp; ~&nbsp; &nbsp;</label>
+          <input class="form-control" type="text" id = "minPr" name="minprice" placeholder="" required />
+          </span><label for="username">원  &nbsp;&nbsp; ~&nbsp; &nbsp;</label>
           <span class="fa-stack fa-2x">
-          <input class="form-control" type="text" name="maxprice" placeholder="" required />
-           </span><label for="username">����</label>
+          <input class="form-control" type="text" id = "maxPr" name="maxprice" placeholder="" required />
+           </span><label for="username">원</label>
           
-          <br><br><div class="timeline-heading"><h4>Purpose</h4></div>
-          <input type="checkbox" name = "purpose" value = "homebutton">Ȩ��ư&nbsp; 
-          <input type="checkbox" name = "purpose" value = "game">��������&nbsp;  
-          <input type="checkbox" name = "purpose" value = "battery">��뷮 ���͸�&nbsp;
-          <input type="checkbox" name = "purpose" value = "camera">������ ī�޶�&nbsp;<br>
-          <input type="checkbox" name = "purpose" value = "screen">ū ȭ��&nbsp;
-          <input type="checkbox" name = "purpose" value = "memory">��뷮 �޸�&nbsp;
-          <input type="checkbox" name = "purpose" value = "video">��ȭ�� ������&nbsp;<br><br>
+          <div class="timeline-heading"><h4>Data</h4></div>
+          <input type="radio" id = "d1" name = "data" value = "inf" onClick = "Data_OnOff('inf');">무제한&nbsp; 
+		  <input type="radio" id = "d2" name = "data" value = "self" onClick = "Data_OnOff('self');">직접입력&nbsp;
+		  <span class="fa-stack fa-2x"><input  style="display:none;" class="form-control" type="text" id = "da" name="dataAmount" value ="" required /></span>
+          <label id = "gb" style="display:none;" for="username">GB(소수점 입력 가능)</label><br><br>
           
           
-          <a class="btn btn-primary btn-block">��õ ���ּ���!</a>
+          <div class="timeline-heading"><h4>Option(1개 이상 선택)</h4></div>
+          <input type="checkbox" id = "o1" name = "option" value = "soldier">군인&nbsp; 
+          <input type="checkbox" id = "o2" name = "option" value = "mextmonth">이월요금제&nbsp;  
+          <input type="checkbox" id = "o3" name = "option" value = "vip">vip 멤버쉽&nbsp;
+          <input type="checkbox" id = "o4" name = "option" value = "feature">피쳐폰 전용&nbsp;
+          <input type="checkbox" id = "o5" name = "option" value = "notsee">시각장애인 전용&nbsp;<br>
+          <input type="checkbox" id = "o6" name = "option" value = "notlisten">청각장애인 전용&nbsp;
+          <input type="checkbox" id = "o7" name = "option" value = "disabled">장애인 혜택 요금제&nbsp;
+          <input type="checkbox" id = "o8" name = "option" value = "old">65세 이상&nbsp;
+          <input type="checkbox" id = "o9" name = "option" value = "young">청소년 요금제&nbsp;<br><br>
+          
+          
+          <input type = "submit" value = "추천 해주세요!"  onClick = "return checkForm(this);"class="btn btn-primary btn-block"></input>
         </form>
         
       </div>

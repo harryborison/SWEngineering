@@ -20,7 +20,7 @@
   <link rel="shortcut icon" href="assets5/images/logo4.png" type="image/x-icon">
   <meta name="description" content="">
   
-  <title>Home</title>
+  <title>스마트폰 추천</title>
   <link rel="stylesheet" href="assets5/tether/tether.min.css">
   <link rel="stylesheet" href="assets5/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets5/bootstrap/css/bootstrap-grid.min.css">
@@ -39,7 +39,7 @@
 %>
 
 <%
-	request.setCharacterEncoding("EUC-KR");
+	request.setCharacterEncoding("UTF-8");
 
 	System.out.println("AAAAAAAA");
 	

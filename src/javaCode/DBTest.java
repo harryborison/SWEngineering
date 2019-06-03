@@ -209,41 +209,42 @@ public class DBTest {
 			} 	
 			
 			// 요금제 정보 받아오기 
-			public void getPlanDB(String info) {
-				try{
-					// 쿼리를 실행하기 위한 Statement 객체 생성 
-					Statement statement = connection.createStatement();
-					// 쿼리문 작성 
-					query = "SELECT * from planInfo WHERE operator = '" + info + "'";
-					// 쿼리문 실행 
-					result = statement.executeQuery(query);
-					// 검색 결과 출력 
-					while(result.next()) {
-						String operator = result.getString(1);
-						String planName = result.getString(2);
-						String mobile = result.getString(3);
-						int planPrice = Integer.parseInt(result.getString(4));
-						String amtOfData = result.getString(4);
-						String videoCall = result.getString(5);
-						String call = result.getString(6);
-						String message = result.getString(7);
-						String option = result.getString(8);
-						
-						System.out.println("요금제 이름: " + planName 
-								+ "\n통신사: " + operator 
-								+ "\n기기: " + mobile
-								+ "\n가격(원): " + planPrice + "원" 
-								+ "\n데이터: " + amtOfData 
-								+ "\n영상통화: " + videoCall
-								+ "\n전화: " + call
-								+ "\n메세지: " + message 
-								+ "\n특이사항: " + option + "\n\n");
-					}
-				} catch(SQLException e){
-		            System.out.println("error: " + e);
-		        }
-			
-			}
+			public ArrayList<Plan> getPlanDB() {
+	            
+	             ArrayList<Plan> planlist = new ArrayList<Plan>();
+
+	            try{
+	               // 쿼리를 실행하기 위한 Statement 객체 생성 
+	               Statement statement = connection.createStatement();
+	               // 쿼리문 작성 
+	               query = "SELECT * from planInfo ";
+	               // 쿼리문 실행 
+	               result = statement.executeQuery(query);
+	               // 검색 결과 출력 
+	               
+	               
+	               while(result.next()) {
+	                  Plan plan = new Plan();
+	                  plan.operator = result.getString(1);
+	                  plan.planName = result.getString(2);
+	                  plan.mobile = result.getString(3);
+	                  plan.planPrice = Integer.parseInt(result.getString(4));
+	                  plan.amtOfData = result.getString(5);
+	                  plan.videoCall = result.getString(6);
+	                  plan.call= result.getString(7);
+	                  plan.message = result.getString(8);
+	                  plan.option = result.getString(9);
+	                  plan.data2 = Integer.parseInt(result.getString(10));
+	                  planlist.add(plan);      
+	                  
+	               }
+	               
+	            } catch(SQLException e){
+	                  System.out.println("error: " + e);
+	              }
+	            return planlist;
+	         
+	         }
 			
 			// 휴대폰 정보 입력하기 
 			public void setPhoneDB(String[] input) {

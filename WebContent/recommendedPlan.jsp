@@ -1,3 +1,10 @@
+<%@ page import="javaCode.Plan"%>
+<%@ page import ="java.util.*" %>
+<%@ page import ="java.io.*" %>
+<%@ page import ="java.sql.*" %>  
+<%@ page import="javaCode.DBTest"%>
+<%@ page import="javaCode.DBCon"%>
+
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -11,7 +18,7 @@
   <link rel="shortcut icon" href="assets4/images/logo4.png" type="image/x-icon">
   <meta name="description" content="">
   
-  <title>Home</title>
+  <title>요금제 추천</title>
   <link rel="stylesheet" href="assets4/tether/tether.min.css">
   <link rel="stylesheet" href="assets4/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets4/bootstrap/css/bootstrap-grid.min.css">
@@ -23,6 +30,36 @@
   
 </head>
 <body>
+<%
+	request.setCharacterEncoding("UTF-8");
+
+	Plan firstPlan = new Plan();
+	Plan secondPlan = new Plan();
+	Plan thirdPlan = new Plan();
+	
+	firstPlan = (Plan)request.getAttribute("plan1");
+	secondPlan = (Plan)request.getAttribute("plan2");
+	thirdPlan = (Plan)request.getAttribute("plan3");
+	
+	String p1 = new String();
+	String p2 = new String();
+	String p3 = new String();
+	
+	double temp = Double.valueOf(firstPlan.planPrice).doubleValue();
+	temp /= 10000; 
+	p1 = String.format("%.1f", temp);
+	
+	temp = Double.valueOf(secondPlan.planPrice).doubleValue();
+	temp /= 10000; 
+	p2 = String.format("%.1f", temp);
+	
+	temp = Double.valueOf(thirdPlan.planPrice).doubleValue();
+	temp /= 10000; 
+	p3 = String.format("%.1f", temp);
+%>
+
+
+
   <section class="pricing-table3 cid-rruaJ6FYPe" id="pricing-tables3-1" data-bg-video="https://www.youtube.com/watch?v=dlk9xmhntrI">
 
     
@@ -38,15 +75,15 @@
                             <span class="price-value mbr-fonts-style display-5">
                                 $
                             </span>
-                            <span class="price-figure mbr-fonts-style display-1">3.5</span>
-                            <h3 class="plan-title mbr-fonts-style display-5">아이사랑 요금제</h3>
+                            <span class="price-figure mbr-fonts-style display-1"><%=p1 %></span>
+                            <h3 class="plan-title mbr-fonts-style display-5"><%=firstPlan.planName %></h3>
                             <hr>
                         </div>
                     </div>
                     <div class="plan-body">
                         <p class="mbr-text mbr-fonts-style display-7">
-                            월 데이터 1GB<br>월 전화 10분<br>월 문자 50개<br><br></p>
-                        <div class="mbr-section-btn pt-4 text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">상세정보 보기</a></div>
+                            <%=firstPlan.operator %>&nbsp;&nbsp;&nbsp;&nbsp;<%=firstPlan.mobile %> 요금제<br><br>월 데이터 : <%=firstPlan.amtOfData %><br>월 전화 : <%=firstPlan.call %><br>월 문자 : <%=firstPlan.message %><br><br></p>
+                        <form action = "detailplan.jsp" method = "post"><input type = "hidden" name = "planName" value = "<%= firstPlan.planName%>"><div class="mbr-section-btn pt-4 text-center"><input type = "submit" value = "상세정보 보기" class="btn btn-primary display-4"></div>
                     </div>
                 </div>
             </div>
@@ -59,16 +96,16 @@
                                 $
                             </span>
                             <span class="price-figure mbr-fonts-style display-1">
-                                6.5
+                                <%=p2 %>
                             </span>
-                            <h3 class="plan-title mbr-fonts-style display-5">최고의 커플 요금제</h3>
+                            <h3 class="plan-title mbr-fonts-style display-5"><%=secondPlan.planName %></h3>
                             <hr>
                         </div>
                     </div>
                     <div class="plan-body">
                         <p class="mbr-text mbr-fonts-style display-7">
-                            월 데이터 5GB<br>월 전화 100분<br>월 문자 30개<br><br></p>
-                        <div class="mbr-section-btn pt-4 text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">상세정보 보기</a></div>
+                           <%=secondPlan.operator %>&nbsp;&nbsp;&nbsp;&nbsp;<%=secondPlan.mobile %> 요금제<br><br>월 데이터 : <%=secondPlan.amtOfData %><br>월 전화 : <%=secondPlan.call %><br>월 문자 : <%=secondPlan.message %><br><br></p>
+                        <form action = "detailplan.jsp" method = "post"><input type = "hidden" name = "planName" value = "<%= secondPlan.planName%>"><div class="mbr-section-btn pt-4 text-center"><input type = "submit" value = "상세정보 보기" class="btn btn-primary display-4"></div>
                     </div>
                 </div>
             </div>
@@ -81,17 +118,17 @@
                                 $
                             </span>
                             <span class="price-figure mbr-fonts-style display-1">
-                                9.0
+                                <%=p3 %>
                             </span>
                             <h3 class="plan-title mbr-fonts-style display-5">
-                                실버타운 요금제</h3>
+                                <%=thirdPlan.planName %></h3>
                             <hr>
                         </div>
                     </div>
                     <div class="plan-body ">
                         <p class="mbr-text mbr-fonts-style display-7">
-                            월 데이터 500MB<br>월 전화 100분<br>월 문자 30개<br><br></p>
-                        <div class="mbr-section-btn pt-4 text-center"><a href="https://mobirise.co" class="btn btn-primary display-4">상세정보 보기</a></div>
+                             <%=thirdPlan.operator %>&nbsp;&nbsp;&nbsp;&nbsp;<%=thirdPlan.mobile %> 요금제<br><br>월 데이터  : <%=thirdPlan.amtOfData %><br>월 전화 : <%=thirdPlan.call %><br>월 문자 : <%=thirdPlan.message %><br><br></p>
+                        <form action = "detailplan.jsp" method = "post"><input type = "hidden" name = "planName" value = "<%= thirdPlan.planName%>"><div class="mbr-section-btn pt-4 text-center"><input type = "submit" value = "상세정보 보기" class="btn btn-primary display-4"></div>
                     </div>
                 </div>
             </div>

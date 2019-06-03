@@ -2,16 +2,16 @@ package javaCode;
 
 public class Plan {
 	
-		String operator ;
-		String planName ;
-		String mobile ;
-		int planPrice ;
-		String amtOfData ;
-		String videoCall ;
-		String call ;
-		String message ;
-		String option ;
-		int data2;
+		public String operator ;
+		public String planName ;
+		public String mobile ;
+		public int planPrice ;
+		public String amtOfData ;
+		public String videoCall ;
+		public String call ;
+		public String message ;
+		public String option ;
+		public int data2;
 		
 		public Plan()
 		{
