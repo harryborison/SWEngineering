@@ -54,7 +54,11 @@
   <link href="signup/css/agency.min.css" rel="stylesheet">
   
   
-<script type="text/javascript">
+
+
+
+
+<script language="javascript">
 
 
 function Data_OnOff(id)
@@ -73,19 +77,14 @@ function Data_OnOff(id)
 }
 
 
-</script>
-
-
-<script LANGUAGE = "javascript">
 function checkForm(myform2)
 {
-	//alert("AAAAAAAAAAAAAAAAAAAAAa");
 	var chk1 = document.myform2.c1.checked;
 	var chk2 = document.myform2.c2.checked;
 	var chk3 = document.myform2.c3.checked;
-	var chk4 = document.myform2.c4.checked;
+	
 	   
-    if(chk1 == "" && chk2 == "" && chk3 == "" && chk4 == "")
+    if(chk1 == "" && chk2 == "" && chk3 == "")
 	{
 		alert("Company를 한개 이상 선택해주세요.");
 		return false;
@@ -101,7 +100,7 @@ function checkForm(myform2)
 	}
     
     var minP = document.myform2.minPr.value;
-    var maxP= document.myform2.maxPr.value;
+    var maxP = document.myform2.maxPr.value;
     
     if(isNaN(minP) == true || isNaN(maxP) == true)
     {
@@ -152,9 +151,10 @@ function checkForm(myform2)
 }
 
 </script>
-
   
 </head>
+
+
 
 <body class="bg-dark">
 
@@ -163,7 +163,7 @@ function checkForm(myform2)
       <div class="card-header">요금제 추천 - 원하는 항목을 체크해주세요.</div>
       <div class="card-body">
         
-        <form name = "myform2" action = "RecomPlanServlet" method = "post" onSubmit="return checkForm(this)">
+        <form name = "myform2" id = "form2" action = "RecomPlanServlet" method = "post"  onSubmit="return checkForm(this)">
           <div class="timeline-heading"><h4>Company(1개 이상 선택)</h4></div>
           <input type="checkbox" id = "c1" name = "company" value = "KT">KT&nbsp; 
           <input type="checkbox" id = "c2" name = "company" value = "LG U+">LG U+&nbsp;  
@@ -184,13 +184,13 @@ function checkForm(myform2)
           <div class="timeline-heading"><h4>Data</h4></div>
           <input type="radio" id = "d1" name = "data" value = "inf" onClick = "Data_OnOff('inf');">무제한&nbsp; 
 		  <input type="radio" id = "d2" name = "data" value = "self" onClick = "Data_OnOff('self');">직접입력&nbsp;
-		  <span class="fa-stack fa-2x"><input  style="display:none;" class="form-control" type="text" id = "da" name="dataAmount" value ="" required /></span>
+		  <span class="fa-stack fa-2x"><input  style="display:none;" class="form-control" type="text" id = "da" name="dataAmount" value ="0" required /></span>
           <label id = "gb" style="display:none;" for="username">GB(소수점 입력 가능)</label><br><br>
           
           
           <div class="timeline-heading"><h4>Option(1개 이상 선택)</h4></div>
           <input type="checkbox" id = "o1" name = "option" value = "soldier">군인&nbsp; 
-          <input type="checkbox" id = "o2" name = "option" value = "mextmonth">이월요금제&nbsp;  
+          <input type="checkbox" id = "o2" name = "option" value = "nextmonth">이월요금제&nbsp;  
           <input type="checkbox" id = "o3" name = "option" value = "vip">vip 멤버쉽&nbsp;
           <input type="checkbox" id = "o4" name = "option" value = "feature">피쳐폰 전용&nbsp;
           <input type="checkbox" id = "o5" name = "option" value = "notsee">시각장애인 전용&nbsp;<br>
@@ -200,7 +200,7 @@ function checkForm(myform2)
           <input type="checkbox" id = "o9" name = "option" value = "young">청소년 요금제&nbsp;<br><br>
           
           
-          <input type = "submit" value = "추천 해주세요!"  onClick = "return checkForm(this);"class="btn btn-primary btn-block"></input>
+          <input type = "submit" value = "추천 해주세요!"  class="btn btn-primary btn-block"></input>
         </form>
         
       </div>
