@@ -77,7 +77,7 @@ query = "SELECT * from planInfo WHERE planName = '" + planName + "'";
                 
             </div>
 
-            <div class="mbr-figure" style="width: 135%;"><iframe class="mbr-embedded-video" src="?rel=0&amp;amp;showinfo=0&amp;autoplay=0&amp;loop=0" width="1920" height="1080" frameborder="0" allowfullscreen></iframe></div>
+            <div class="mbr-figure" style="width: 135%;"><iframe class="mbr-embedded-video" src="https://namu.wiki/w/iPhone%20X?rel=0&amp;amp;showinfo=0&amp;autoplay=0&amp;loop=0" width="1920" height="1080" frameborder="0" allowfullscreen></iframe></div>
  		<%result.close(); %>
         </div>
     </div>
