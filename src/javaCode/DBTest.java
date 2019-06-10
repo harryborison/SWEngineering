@@ -13,6 +13,9 @@ public class DBTest {
 			}
 			
 			public void connectDB(){
+				String name = getName();
+				String pw = getPwd();
+				
 				try {
 					// 드라이버에 로드
 					Class.forName("com.mysql.jdbc.Driver"); 
@@ -22,7 +25,7 @@ public class DBTest {
 					// 연결 
 					String url = "jdbc:mysql://localhost:3306/recDB?serverTimezone=Asia/Seoul";
 					
-					connection = DriverManager.getConnection(url, "root", "1234");
+					connection = DriverManager.getConnection(url, name, pw);
 	
 					System.out.println("DB 서버에 연결되었습니다.");
 				
@@ -334,7 +337,15 @@ public class DBTest {
 			}
 			
 			
-			
+
+			 public static String getName()
+			 {
+				 return "root";
+			 }
+			 public static String getPwd()
+			 {
+				 return "1234";
+			 }
 			
 			
 			

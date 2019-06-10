@@ -14,11 +14,12 @@ public class DBCon {
 			Class.forName("com.mysql.jdbc.Driver"); 
 
 			System.out.println("after forName");
-			
+			String name = getName();
+			String pw = getPwd();
 			// 연결 
 			String url = "jdbc:mysql://localhost:3306/recDB?serverTimezone=Asia/Seoul";
 			
-			conn = DriverManager.getConnection(url, "root", "1234");
+			conn = DriverManager.getConnection(url,name, pw);
 
 			System.out.println("DB 서버에 연결되었습니다.");
 		
@@ -32,5 +33,13 @@ public class DBCon {
         }
 		 return conn;
 
+	 }
+	 public static String getName()
+	 {
+		 return "root";
+	 }
+	 public static String getPwd()
+	 {
+		 return "1234";
 	 }
 }
