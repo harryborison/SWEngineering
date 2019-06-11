@@ -7,25 +7,7 @@ import org.junit.Test;
 public class recomPhoneTest {
 
 
-	@Test
-	public void testMatchcompany() {
-		
-		recomPhone rec = new recomPhone();
-		String[] company = new String[3];
-		String[] company2 = new String[1];
-		company[0] = "SAMSUNG";
-		company[1] = "LG";
-		company[2] = "»þ¿À¹Ì";
-		company2[0] = "LG";
-        assertEquals(3,  rec.matchcompany("SAMSUNG",company));
-        assertEquals(3,  rec.matchcompany("LG",company));
-        assertEquals(3,  rec.matchcompany("»þ¿À¹Ì",company));
-        assertEquals(0,  rec.matchcompany("NULL",company));
-        assertEquals(0,  rec.matchcompany("samsung",company));
-        assertEquals(0,  rec.matchcompany("lg",company));
-        assertEquals(3,  rec.matchcompany("LG",company2));
-        assertEquals(0,  rec.matchcompany("NULL",company2));
-	}
+	
 
 	@Test
 	public void testMatchprice() {
@@ -47,17 +29,6 @@ public class recomPhoneTest {
 		
 	}
 
-	@Test
-	public void testMatchpurpose() {
-
-	
-	
-	
-	
-	
-	
-	
-	}
 
 	@Test
 	public void testCalcGame() {
