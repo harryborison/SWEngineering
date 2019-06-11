@@ -6,39 +6,6 @@ import org.junit.Test;
 
 public class recomPhoneTest {
 
-	@Test
-	public void testMakemodel_list() {
-		
-		recomPhone rec = new recomPhone();
-		rec.makemodel_list();
-		int len;
-		int result;
-		len=rec.phonelist.size();
-		if(len>0)
-		{
-			result = 1;
-		}
-		else
-		{
-			result = 0;
-		}
-		assertEquals(result,1);
-		for(int i=0; i< len ; i++)
-		{
-			assertNotNull(rec.phonelist.get(i));
-		}
-	
-	
-	}
-
-	@Test
-	public void testRecom() {
-	
-		
-		
-		
-		
-	}
 
 	@Test
 	public void testMatchcompany() {
