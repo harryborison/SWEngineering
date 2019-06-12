@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class recomPlan {
 	Connection conn= DBCon.getmyConnection();
     ArrayList<Plan> planlist = new ArrayList<Plan>();
-	public void makeplan_list()
+	public void makepaln_list()
 	{
 
 		DBTest db = new DBTest();
@@ -21,10 +21,10 @@ public class recomPlan {
 		Plan[] resultPlan = new Plan[3];
 		for(int i=0; i<Length ; i++)
 		{
-			count[i] = count[i] + matchtelecom(planlist.get(i).operator,telecom);
-			count[i] = count[i] + matchtype(planlist.get(i).mobile,type);
-			count[i] = count[i] + matchprice(planlist.get(i).planPrice,lowprice,highprice);
-			count[i] = count[i] + matchdata(planlist.get(i).data2,data);
+			count[i] = count[i] + matchtelecom(planlist.get(i).getOperator(),telecom);
+			count[i] = count[i] + matchtype(planlist.get(i).getMobile(),type);
+			count[i] = count[i] + matchprice(planlist.get(i).getPlanPrice(),lowprice,highprice);
+			count[i] = count[i] + matchdata(planlist.get(i).getData2(),data);
 			count[i] = count[i] + matchoption(option,planlist.get(i));
 		}
 
@@ -171,7 +171,7 @@ public class recomPlan {
 			
 			if(option[i].equals("soldier"))
 			{
-				if(plan.option.matches(".*군인.*"))
+				if(plan.getOption().matches(".*군인.*"))
 				{
 					sum = sum + 3;
 				}
@@ -179,7 +179,7 @@ public class recomPlan {
 			}
 			if(option[i].equals("nextmonth"))
 			{
-				if(plan.option.matches(".*이월.*"))
+				if(plan.getOption().matches(".*이월.*"))
 				{
 					sum =sum + 3;
 				}
@@ -187,35 +187,35 @@ public class recomPlan {
 			}
 			if(option[i].equals("vip"))
 			{
-				if(plan.option.matches("(?!).*vip.*"))
+				if(plan.getOption().matches("(?!).*vip.*"))
 				{
 					sum = sum + 3;
 				}
 			}
 			if(option[i].equals("feature"))
 			{
-				if(plan.option.matches(".*피쳐.*"))
+				if(plan.getOption().matches(".*피쳐.*"))
 				{
 					sum = sum + 3;
 				}
 			}
 			if(option[i].equals("notsee"))
 			{
-				if(plan.option.matches(".*시각.*"))
+				if(plan.getOption().matches(".*시각.*"))
 				{
 					sum = sum + 3;
 				}
 			}
 			if(option[i].equals("notlisten"))
 			{
-				if(plan.option.matches(".*청각.*"))
+				if(plan.getOption().matches(".*청각.*"))
 				{
 					sum = sum + 3;
 				}
 			}
 			if(option[i].equals("diabled"))
 			{
-				if(plan.option.matches(".*장애.*"))
+				if(plan.getOption().matches(".*장애.*"))
 				{
 					sum = sum + 3;
 				}
@@ -223,14 +223,14 @@ public class recomPlan {
 			
 			if(option[i].equals("old"))
 			{
-				if(plan.option.matches(".*65세.*"))
+				if(plan.getOption().matches(".*65세.*"))
 				{
 					sum = sum + 3;
 				}
 			}
 			if(option[i].equals("young"))
 			{
-				if(plan.option.matches(".*18세.*") || plan.option.matches(".*청소년.*"))
+				if(plan.getOption().matches(".*18세.*") || plan.getOption().matches(".*청소년.*"))
 				{
 					sum = sum + 6;
 				}

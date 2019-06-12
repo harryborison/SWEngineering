@@ -15,7 +15,7 @@ public class Test {
 			//db.closeDB();
 			Plan[] p = new Plan[3];
 			recomPlan rep = new recomPlan();
-			rep.makeplan_list();
+			rep.makepaln_list();
 			String[] tel = new String[2];
 			tel[0]="SKT";
 			tel[1]="KT";
@@ -28,7 +28,7 @@ public class Test {
 			option[0]="시각장애인";
 			option[1]="군인";
 			p=rep.recPlan(tel,ty,lowprice,highprice,data,option);
-			System.out.printf("%s\n%s\n%s\n", p[0].planName,p[1].planName,p[2].planName);
+			System.out.printf("%s\n%s\n%s\n", p[0].getPlanName(),p[1].getPlanName(),p[2].getPlanName());
 		}
 	
 	

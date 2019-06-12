@@ -13,9 +13,6 @@ public class DBTest {
 			}
 			
 			public void connectDB(){
-				String name = getName();
-				String pw = getPwd();
-				
 				try {
 					// 드라이버에 로드
 					Class.forName("com.mysql.jdbc.Driver"); 
@@ -23,9 +20,9 @@ public class DBTest {
 					System.out.println("after forName");
 					
 					// 연결 
-					String url = "jdbc:mysql://localhost:3306/recDB?serverTimezone=Asia/Seoul";
-					
-					connection = DriverManager.getConnection(url, name, pw);
+					String url = "jdbc:mysql://localhost:3306/testdb";
+	
+					connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb", "root", "tls1697926");
 	
 					System.out.println("DB 서버에 연결되었습니다.");
 				
@@ -159,26 +156,25 @@ public class DBTest {
 					while(result.next()) {
 						Model model = new Model();
 
-						model.phoneName = result.getString(1);
-
-						model.company = result.getString(2);
-						model.phonePrice = Integer.parseInt(result.getString(3));
-						model.screenSize = Double.parseDouble(result.getString(4));
-						model.os = result.getString(5);
-						model.capacity = Integer.parseInt(result.getString(6));
-						model.RAM = Integer.parseInt(result.getString(7));
-						model.frontCamera = Integer.parseInt(result.getString(8));
-						model.rearCamera = Integer.parseInt(result.getString(9));
-						model.weight = Integer.parseInt(result.getString(10));
-						model.phoneSize = result.getString(11);
-						model.betteryCapacity = Integer.parseInt(result.getString(12));
-						model.speed = Double.parseDouble(result.getString(13));
-						model.resolution = result.getString(14);
-						model.releaseYear = Integer.parseInt(result.getString(15));
-						model.color = result.getString(16);
-						model.link = result.getString(17);
-						model.recCount = Integer.parseInt(result.getString(18));
-						model.videolink = result.getString(19);
+						model.setPhoneName(result.getString(1));
+						model.setCompany(result.getString(2));
+						model.setPhonePrice(Integer.parseInt(result.getString(3)));
+						model.setScreenSize(Double.parseDouble(result.getString(4)));
+						model.setOs(result.getString(5));
+						model.setCapacity(Integer.parseInt(result.getString(6)));
+						model.setRAM(Integer.parseInt(result.getString(7)));
+						model.setFrontCamera(Integer.parseInt(result.getString(8)));
+						model.setRearCamera(Integer.parseInt(result.getString(9)));
+						model.setWeight(Integer.parseInt(result.getString(10)));
+						model.setPhoneSize(result.getString(11));
+						model.setBetteryCapacity(Integer.parseInt(result.getString(12)));
+						model.setSpeed(Double.parseDouble(result.getString(13)));
+						model.setResolution(result.getString(14));
+						model.setReleaseYear(Integer.parseInt(result.getString(15)));
+						model.setColor(result.getString(16));
+						model.setLink(result.getString(17));
+						model.setRecCount(Integer.parseInt(result.getString(18)));
+						model.setVideolink(result.getString(19));
 						modellist.add(i,model);
 					
 						i++;
@@ -213,41 +209,41 @@ public class DBTest {
 			
 			// 요금제 정보 받아오기 
 			public ArrayList<Plan> getPlanDB() {
-	            
-	             ArrayList<Plan> planlist = new ArrayList<Plan>();
+				
+				 ArrayList<Plan> planlist = new ArrayList<Plan>();
 
-	            try{
-	               // 쿼리를 실행하기 위한 Statement 객체 생성 
-	               Statement statement = connection.createStatement();
-	               // 쿼리문 작성 
-	               query = "SELECT * from planInfo ";
-	               // 쿼리문 실행 
-	               result = statement.executeQuery(query);
-	               // 검색 결과 출력 
-	               
-	               
-	               while(result.next()) {
-	                  Plan plan = new Plan();
-	                  plan.operator = result.getString(1);
-	                  plan.planName = result.getString(2);
-	                  plan.mobile = result.getString(3);
-	                  plan.planPrice = Integer.parseInt(result.getString(4));
-	                  plan.amtOfData = result.getString(5);
-	                  plan.videoCall = result.getString(6);
-	                  plan.call= result.getString(7);
-	                  plan.message = result.getString(8);
-	                  plan.option = result.getString(9);
-	                  plan.data2 = Integer.parseInt(result.getString(10));
-	                  planlist.add(plan);      
-	                  
-	               }
-	               
-	            } catch(SQLException e){
-	                  System.out.println("error: " + e);
-	              }
-	            return planlist;
-	         
-	         }
+				try{
+					// 쿼리를 실행하기 위한 Statement 객체 생성 
+					Statement statement = connection.createStatement();
+					// 쿼리문 작성 
+					query = "SELECT * from planInfo ";
+					// 쿼리문 실행 
+					result = statement.executeQuery(query);
+					// 검색 결과 출력 
+					
+					
+					while(result.next()) {
+						Plan plan = new Plan();
+						plan.setOperator((result.getString(1)));
+						plan.setPlanName(result.getString(2));
+						plan.setMobile(result.getString(3)); 
+						plan.setPlanPrice(Integer.parseInt(result.getString(4)));
+						plan.setAmtOfData(result.getString(5));
+						plan.setVideoCall(result.getString(6));
+						plan.setCall(result.getString(7));
+						plan.setMessage(result.getString(8));
+						plan.setOption(result.getString(9));
+						plan.setData2(Integer.parseInt(result.getString(10)));
+						planlist.add(plan);		
+						
+					}
+					
+				} catch(SQLException e){
+		            System.out.println("error: " + e);
+		        }
+				return planlist;
+			
+			}
 			
 			// 휴대폰 정보 입력하기 
 			public void setPhoneDB(String[] input) {
@@ -337,15 +333,7 @@ public class DBTest {
 			}
 			
 			
-
-			 public static String getName()
-			 {
-				 return "root";
-			 }
-			 public static String getPwd()
-			 {
-				 return "1234";
-			 }
+			
 			
 			
 			
