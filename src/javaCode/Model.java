@@ -135,10 +135,6 @@ public class Model {
 	private String link ;
 	private int recCount ;
 	private String videolink;
-		public Model()
-		{
-			
-		}
 		
 		
 		

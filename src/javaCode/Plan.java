@@ -94,8 +94,5 @@ public class Plan {
 
 		private int data2;
 		
-		public Plan()
-		{
-			
-		}
+		
 }
