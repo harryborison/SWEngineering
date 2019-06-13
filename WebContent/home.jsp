@@ -148,9 +148,11 @@
 			</div>
 			<div class="row text-center">
 				<div class="col-md-3">
-					<span class="fa-stack fa-4x"> <i
-						class="fas fa-circle fa-stack-2x text-primary"></i> <i
-						class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+					<span class="fa-stack fa-4x"> 
+					<div class="timeline-image">
+								<img class="rounded-circle img-fluid" src="img/about/1.jpg"
+									alt="" style = "width:130px;height:130px;">
+							</div>
 					</span>
 					<h4 class="service-heading">
 						<a href="lookupsmartphone.jsp">스마트폰 조회</a>
@@ -160,9 +162,11 @@
 
 				<%if(id == null){%>
 				<div class="col-md-3">
-					<span class="fa-stack fa-4x"> <i
-						class="fas fa-circle fa-stack-2x text-primary"></i> <i
-						class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+					<span class="fa-stack fa-4x"> 
+					<div class="timeline-image">
+								<img class="rounded-circle img-fluid" src="img/about/2.jpg"
+									alt="" style = "width:130px;height:130px;">
+							</div>
 					</span>
 					<h4 class="service-heading">
 						<a href="login.jsp">스마트폰 추천</a>
@@ -172,9 +176,11 @@
 
 				<%}else{ %>
 				<div class="col-md-3">
-					<span class="fa-stack fa-4x"> <i
-						class="fas fa-circle fa-stack-2x text-primary"></i> <i
-						class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+					<span class="fa-stack fa-4x"> 
+					<div class="timeline-image">
+								<img class="rounded-circle img-fluid" src="img/about/2.jpg"
+									alt="" style = "width:130px;height:130px;">
+							</div>
 					</span>
 					<h4 class="service-heading">
 						<a href="recomsmartphone.jsp">스마트폰 추천</a>
@@ -189,9 +195,11 @@
 
 
 				<div class="col-md-3">
-					<span class="fa-stack fa-4x"> <i
-						class="fas fa-circle fa-stack-2x text-primary"></i> <i
-						class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+					<span class="fa-stack fa-4x"> 
+					<div class="timeline-image">
+								<img class="rounded-circle img-fluid" src="img/about/3.jpg"
+									alt="" style = "width:130px;height:130px;">
+							</div>
 					</span>
 					<h4 class="service-heading">
 						<a href="lookupplan.jsp">요금제 조회</a>
@@ -201,9 +209,11 @@
 				
 				<%if(id == null){%>
 					<div class="col-md-3">
-					<span class="fa-stack fa-4x"> <i
-						class="fas fa-circle fa-stack-2x text-primary"></i> <i
-						class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+					<span class="fa-stack fa-4x"> 
+					<div class="timeline-image">
+								<img class="rounded-circle img-fluid" src="img/about/4.jpg"
+									alt="" style = "width:130px;height:130px;">
+							</div>
 					</span>
 					<h4 class="service-heading">
 						<a href="login.jsp">요금제 추천</a>
@@ -213,9 +223,11 @@
 					
 					<%}else{ %>
 					<div class="col-md-3">
-					<span class="fa-stack fa-4x"> <i
-						class="fas fa-circle fa-stack-2x text-primary"></i> <i
-						class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+					<span class="fa-stack fa-4x"> 
+					<div class="timeline-image">
+								<img class="rounded-circle img-fluid" src="img/about/4.jpg"
+									alt="" style = "width:130px;height:130px;">
+							</div>
 					</span>
 					<h4 class="service-heading">
 						<a href="recomplan.jsp">요금제 추천</a>
@@ -229,9 +241,11 @@
 				
 				
 				<div class="col-md-3">
-					<span class="fa-stack fa-4x"> <i
-						class="fas fa-circle fa-stack-2x text-primary"></i> <i
-						class="fas fa-lock fa-stack-1x fa-inverse"></i>
+					<span class="fa-stack fa-4x"> 
+					<div class="timeline-image">
+								<img class="rounded-circle img-fluid" src="img/about/5.jpg"
+									alt="" style = "width:130px;height:130px;">
+							</div>
 					</span>
 					<h4 class="service-heading">
 						<a href="ranking.jsp">랭킹 조회</a>
@@ -361,15 +375,7 @@
 						<h4>신승민</h4>
 						<p class="text-muted">Project Manager</p>
 						<ul class="list-inline social-buttons">
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
+							
 						</ul>
 					</div>
 				</div>
@@ -379,15 +385,7 @@
 						<h4>황석영</h4>
 						<p class="text-muted">Web Developer</p>
 						<ul class="list-inline social-buttons">
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
+							
 						</ul>
 					</div>
 				</div>
@@ -397,15 +395,7 @@
 						<h4>박성곤</h4>
 						<p class="text-muted">Data Manager</p>
 						<ul class="list-inline social-buttons">
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
+							
 						</ul>
 					</div>
 				</div>
@@ -415,15 +405,7 @@
 						<h4>박윤화</h4>
 						<p class="text-muted">DB Developer</p>
 						<ul class="list-inline social-buttons">
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
+							
 						</ul>
 					</div>
 				</div>
