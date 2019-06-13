@@ -72,7 +72,7 @@ public class RecomPlanServlet extends HttpServlet {
 		db.connectDB();
 		
 		recomPlan rep = new recomPlan();
-		rep.makeplan_list();
+		rep.makepaln_list();
 		result = rep.recPlan(company, type, Integer.parseInt(minPrice), Integer.parseInt(maxPrice), dataA, option);
 		
 		request.setAttribute("plan1", result[0]); 

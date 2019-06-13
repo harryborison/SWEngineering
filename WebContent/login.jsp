@@ -44,6 +44,37 @@
 
   <!-- Custom styles for this template -->
   <link href="css/agency.min.css" rel="stylesheet">
+  
+<script type="text/javascript">
+function checkForm()
+{
+	if(document.myform.id.value == "")
+	{
+		alert("ID를 입력해주세요.");
+		return false;
+	}
+	if(document.myform.password.value == "")
+	{
+		alert("password를 입력해주세요.");
+		return false;
+	}
+	
+	if (document.myform.id.value.length < 4 || document.myform.id.value.length > 12) 
+	{
+        alert("아이디는 4~12자로 입력해주세요.");
+        document.myform.id.value = "";
+        return false;
+    }
+	
+	if (document.myform.password.value.length < 4 || document.myform.password.value.length > 8) 
+	{
+        alert("비밀번호는 4~8자로 입력해주세요.");
+        document.myform.password.value = "";
+        return false;
+    }
+}
+</script>
+
 
 </head>
 <body>
@@ -54,24 +85,22 @@
 				
 				
 				
-				<form action = "Login" method = "post" class="login100-form validate-form">
+				<form name = "myform" action = "Login" method = "post" class="login100-form validate-form" onSubmit="return checkForm()">
 					<span class="login100-form-title p-b-34">
 						Account Login
 					</span>
 					
 					<div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type user name">
-						<input id="first-name" class="input100" type="text" name="username" placeholder="ID">
+						<input id="first-name" class="input100" id = "id" type="text" name="id" placeholder="ID">
 						<span class="focus-input100"></span>
 					</div>
 					<div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20" data-validate="Type password">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+						<input class="input100" type="password" id = "password" name="password" placeholder="Password">
 						<span class="focus-input100"></span>
 					</div>
 					
 					<div  class="container-login100-form-btn">
-						<button type = "submit" class="login100-form-btn">
-							Login in
-						</button>
+						<input type = "submit" class="login100-form-btn" value = "LOGIN">
 					</div>
 
 					<div class="w-full text-center p-t-27 p-b-230">

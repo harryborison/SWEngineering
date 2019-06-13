@@ -21,8 +21,8 @@ public class recomPhone {
 		Model[] resultPhone = new Model[3];
 		for(int i=0; i< Length;i++)
 		{
-			count[i] = count[i] + matchcompany(phonelist.get(i).company,companyname);
-			count[i] = count[i] + matchprice(phonelist.get(i).phonePrice,lowprice , highprice);
+			count[i] = count[i] + matchcompany(phonelist.get(i).getCompany(),companyname);
+			count[i] = count[i] + matchprice(phonelist.get(i).getPhonePrice(),lowprice , highprice);
 			count[i] = count[i] + matchpurpose(purpose, phonelist.get(i));
 			
 		}
@@ -62,7 +62,7 @@ public class recomPhone {
 		}
 		return 0;
 	}
-	
+
 	public int matchprice(int price,int low, int high) // 가격에따라 가중치를 return
 	{
 		
@@ -91,31 +91,31 @@ public class recomPhone {
 		{
 			if(purpose[i].equals("game"))
 			{
-				sum = sum + calcGame(model.RAM,model.speed);
+				sum = sum + calcGame(model.getRAM(),model.getSpeed());
 			}
 			if(purpose[i].equals("battery"))
 			{
-				sum = sum + calcbattery(model.betteryCapacity);
+				sum = sum + calcbattery(model.getBetteryCapacity());
 			}
 			if(purpose[i].equals("camera"))
 			{
-				sum = sum + calccamera(model.frontCamera,model.rearCamera);
+				sum = sum + calccamera(model.getFrontCamera(),model.getRearCamera());
 			}
 			if(purpose[i].equals("screen"))
 			{
-				sum = sum + calcscreen(model.screenSize);
+				sum = sum + calcscreen(model.getScreenSize());
 			}
 			if(purpose[i].equals("storage"))
 			{
-				sum = sum + calcstorage(model.capacity);
+				sum = sum + calcstorage(model.getCapacity());
 			}
 			if(purpose[i].equals("new"))
 			{
-				sum = sum + calcNew(model.releaseYear);
+				sum = sum + calcNew(model.getReleaseYear());
 			}
 			if(purpose[i].equals("light"))
 			{
-				sum = sum + calclight(model.weight);
+				sum = sum + calclight(model.getWeight());
 			}
 		}
 		return sum;
@@ -278,25 +278,25 @@ public class recomPhone {
 		}
 		
 	}
-	
-	public int calclight(int weight)
-	{
-		if(weight <=175 )
+		
+		public int calclight(int weight)
 		{
-			return 3;
-		}
-		else if(weight >175 && weight <=185)
-		{
-			return 2;
-		}
-		else if(weight > 185 && weight < 200)
-		{
+			if(weight <=175 )
+			{
+				return 3;
+			}
+			else if(weight >175 && weight <=185)
+			{
+				return 2;
+			}
+			else if(weight > 185 && weight < 200)
+			{
 			return 1;
-		}
-		else
-		{
+			}
+			else
+			{
 			return 0;
-		}
+			}
 	}
 	
 

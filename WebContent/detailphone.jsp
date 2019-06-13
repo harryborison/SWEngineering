@@ -6,7 +6,7 @@
 
 
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <!-- Site made with Mobirise Website Builder v4.10.0, https://mobirise.com -->
@@ -17,7 +17,7 @@
   <link rel="shortcut icon" href="assets3/images/logo4.png" type="image/x-icon">
   <meta name="description" content="">
   
-  <title>½º¸¶Æ®Æù »ó¼¼º¸±â</title>
+  <title>ìŠ¤ë§ˆíŠ¸í° ìƒì„¸ë³´ê¸°</title>
   <link rel="stylesheet" href="assets3/tether/tether.min.css">
   <link rel="stylesheet" href="assets3/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets3/bootstrap/css/bootstrap-grid.min.css">
@@ -41,10 +41,10 @@
  	System.out.println(phoneName);
 	ResultSet result = null;
 	String query = null;
-	  // Äõ¸®¸¦ ½ÇÇàÇÏ±â À§ÇÑ Statement °´Ã¼ »ı¼º 
+	  // ì¿¼ë¦¬ë¥¼ ì‹¤í–‰í•˜ê¸° ìœ„í•œ Statement ê°ì²´ ìƒì„± 
 	  Connection connection = DBCon.getmyConnection();
 	  Statement statement =connection.createStatement();
-	// Äõ¸®¹® ÀÛ¼º 
+	// ì¿¼ë¦¬ë¬¸ ì‘ì„± 
 query = "SELECT * from phoneInfo WHERE phoneName = '" + phoneName + "'";
     result = statement.executeQuery(query);
     result.next();
@@ -62,16 +62,16 @@ query = "SELECT * from phoneInfo WHERE phoneName = '" + phoneName + "'";
                 <h1 class="mbr-section-title mbr-white pb-3 mbr-fonts-style display-2"><strong>
                     <%=phoneName %></strong></h1>
                 <div class="mbr-section-text mbr-white pb-3">
-                    <p class="mbr-text mbr-fonts-style display-5">Á¦Á¶»ç : <%=result.getString(2) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;È­¸é»çÀÌÁî : <%=result.getString(4) %>inch</p>
-                    <p class="mbr-text mbr-fonts-style display-5">¿î¿µÃ¼Á¦ : <%=result.getString(5) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¿ë·® : <%=result.getString(6) %>GB</p>
-                    <p class="mbr-text mbr-fonts-style display-5">·¥ : <%=result.getString(7) %>GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Àü¸éÄ«¸Ş¶ó : <%=result.getString(8) %>¸¸ È­¼Ò</p>
-                    <p class="mbr-text mbr-fonts-style display-5">ÈÄ¸éÄ«¸Ş¶ó : <%=result.getString(9) %>¸¸ È­¼Ò&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¹«°Ô : <%=result.getString(10) %>g</p>
+                    <p class="mbr-text mbr-fonts-style display-5">ì œì¡°ì‚¬ : <%=result.getString(2) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;í™”ë©´ì‚¬ì´ì¦ˆ : <%=result.getString(4) %>inch</p>
+                    <p class="mbr-text mbr-fonts-style display-5">ìš´ì˜ì²´ì œ : <%=result.getString(5) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ìš©ëŸ‰ : <%=result.getString(6) %>GB</p>
+                    <p class="mbr-text mbr-fonts-style display-5">ë¨ : <%=result.getString(7) %>GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ì „ë©´ì¹´ë©”ë¼ : <%=result.getString(8) %>ë§Œ í™”ì†Œ</p>
+                    <p class="mbr-text mbr-fonts-style display-5">í›„ë©´ì¹´ë©”ë¼ : <%=result.getString(9) %>ë§Œ í™”ì†Œ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ë¬´ê²Œ : <%=result.getString(10) %>g</p>
                    
-                    <p class="mbr-text mbr-fonts-style display-5">Å©±â : <%=result.getString(11) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¹èÅÍ¸® ¿ë·® : <%=result.getString(12) %></p>
+                    <p class="mbr-text mbr-fonts-style display-5">í¬ê¸° : <%=result.getString(11) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ë°°í„°ë¦¬ ìš©ëŸ‰ : <%=result.getString(12) %></p>
                   
-                    <p class="mbr-text mbr-fonts-style display-5">¼Óµµ : <%=result.getString(13) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ÇØ»óµµ : <%=result.getString(14) %></p>
+                    <p class="mbr-text mbr-fonts-style display-5">ì†ë„ : <%=result.getString(13) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;í•´ìƒë„ : <%=result.getString(14) %></p>
                    
-                    <p class="mbr-text mbr-fonts-style display-5">Ãâ½Ã³âµµ : <%=result.getString(15) %></p>
+                    <p class="mbr-text mbr-fonts-style display-5">ì¶œì‹œë…„ë„ : <%=result.getString(15) %></p>
                    
                     
                     

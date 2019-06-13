@@ -35,14 +35,17 @@ public class Login extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		// boolean loginSuccess = true;
 		request.setCharacterEncoding("UTF-8");
 		
-		String id = request.getParameter("username");
-		String password = request.getParameter("pass");
+		String id = request.getParameter("id");
+		String password = request.getParameter("password");
 		
 		System.out.println(id);
 		System.out.println(password);
-		doGet(request, response);
+		
+		CustomerControlDB test = new CustomerControlDB();
+		int check = test.loginCheck(id, password);
+		System.out.println(check);
 	}
-
 }

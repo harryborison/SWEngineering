@@ -4,8 +4,8 @@
 <%@ page import="javaCode.DBTest"%>
 <%@ page import="javaCode.DBCon"%>
 
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 
 
 <!DOCTYPE html>
@@ -20,7 +20,7 @@
   <meta name="description" content="">
  
   
-  <title>½º¸¶Æ®Æù Á¶È¸</title>
+  <title>ìŠ¤ë§ˆíŠ¸í° ì¡°íšŒ</title>
   <link rel="stylesheet" href="assets/tether/tether.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
@@ -58,16 +58,16 @@
   <section class="section-table cid-rq6r9igM31" id="table1-3">
   <div class="container container-table">
       <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-2"><strong>
-          ÈÞ´ëÆù ÀüÃ¼ º¸±â</strong></h2>
+          íœ´ëŒ€í° ì „ì²´ ë³´ê¸°</strong></h2>
       <h3 class="mbr-section-subtitle mbr-fonts-style align-center pb-5 mbr-light display-5"><strong>
-            ÈÞ´ëÆù ÀüÃ¼º¸±â ±â´ÉÀÔ´Ï´Ù °Ë»ö±â´É°ú À§¾Æ·¡ ¹öÆ°À» ÅëÇØ¼­ Á¤·Ä±â´ÉÀ» »ç¿ë ÇÒ ¼ö ÀÖ½À´Ï´Ù.</strong></h3>
+            íœ´ëŒ€í° ì „ì²´ë³´ê¸° ê¸°ëŠ¥ìž…ë‹ˆë‹¤ ê²€ìƒ‰ê¸°ëŠ¥ê³¼ ìœ„ì•„ëž˜ ë²„íŠ¼ì„ í†µí•´ì„œ ì •ë ¬ê¸°ëŠ¥ì„ ì‚¬ìš© í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.</strong></h3>
       <div class="table-wrapper">
         <div class="container">
           <div class="row search">
             <div class="col-md-7"></div>
             <div class="col-md-7">
                 <div class="dataTables_filter">
-                  <label class="searchInfo mbr-fonts-style display-7"><strong>°Ë»ö</strong></label>
+                  <label class="searchInfo mbr-fonts-style display-7"><strong>ê²€ìƒ‰</strong></label>
                   <input class="form-control input-sm" disabled="">
                 </div>
             </div>
@@ -82,10 +82,10 @@
                   
                   
                   
-              <th class="head-item mbr-fonts-style display-7">ÈÞ´ëÆù ÀÌ¸§</th><th class="head-item mbr-fonts-style display-7">
-                      Á¦Á¶»ç</th><th class="head-item mbr-fonts-style display-7">
-                      ¿ë·®</th><th class="head-item mbr-fonts-style display-7">&nbsp;°¡°Ý</th><th class="head-item mbr-fonts-style display-7">Ãâ½ÃÀÏ</th>
-                      <th class="head-item mbr-fonts-style display-7">»ó¼¼º¸±â</th>
+              <th class="head-item mbr-fonts-style display-7">íœ´ëŒ€í° ì´ë¦„</th><th class="head-item mbr-fonts-style display-7">
+                      ì œì¡°ì‚¬</th><th class="head-item mbr-fonts-style display-7">
+                      ìš©ëŸ‰</th><th class="head-item mbr-fonts-style display-7">&nbsp;ê°€ê²©</th><th class="head-item mbr-fonts-style display-7">ì¶œì‹œì¼</th>
+                      <th class="head-item mbr-fonts-style display-7">ìƒì„¸ë³´ê¸°</th>
                       </tr>
             </thead>
 
@@ -101,12 +101,12 @@
              
          ResultSet result = null;
          String query = null;
-           // Äõ¸®¸¦ ½ÇÇàÇÏ±â À§ÇÑ Statement °´Ã¼ »ý¼º 
+           // ì¿¼ë¦¬ë¥¼ ì‹¤í–‰í•˜ê¸° ìœ„í•œ Statement ê°ì²´ ìƒì„± 
            Connection connection = DBCon.getmyConnection();
            Statement statement =connection.createStatement();
-         // Äõ¸®¹® ÀÛ¼º 
+         // ì¿¼ë¦¬ë¬¸ ìž‘ì„± 
          query = "SELECT * from phoneInfo ";
-         // Äõ¸®¹® ½ÇÇà 
+         // ì¿¼ë¦¬ë¬¸ ì‹¤í–‰ 
          result = statement.executeQuery(query);
          
          while(result.next())
@@ -119,7 +119,7 @@
                      +"<td>"
                     +"<form action = \"detailphone.jsp\" method = \"post\"><input type = \"hidden\" name = \"phoneName\""
                     +"value = \""+result.getString(1)+"\">"
-                    +"<input type = \"submit\" value = \"»ó¼¼º¸±â\" class=\"body-item mbr-fonts-style display-7\"></form></tr>" 
+                    +"<input type = \"submit\" value = \"ìƒì„¸ë³´ê¸°\" class=\"body-item mbr-fonts-style display-7\"></form></tr>" 
                    ); 
          }
          
