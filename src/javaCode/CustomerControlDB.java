@@ -51,5 +51,54 @@ public class CustomerControlDB {
       return 0;
    }
    
+   public int signinCheck(String name)
+   {
+         connection = con.getmyConnection();
+         String hashname = sec.encryptSHA256(name);
+         String tmp;
+         query = "SELECT * from testdb.customerInfo where ID = '"+ hashname +"' ";
+         result = null;
+         try {
+            Statement statement = connection.createStatement();
+            result = statement.executeQuery(query);
+            while(result.next()) // 데이터존재
+               {
+                 return 1;
+             
+               }
+            
+         } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+         }
+         
+     
+         
+         return 0;
+   }
    
+   public String getNameFromID(String id)
+   {
+      
+       connection = con.getmyConnection();
+         String hashname = sec.encryptSHA256(id);
+         String tmp;
+         String resultname = null;
+         query = "SELECT * from testdb.customerInfo where ID = '"+ hashname +"' ";
+         result = null;
+         try {
+            Statement statement = connection.createStatement();
+            result = statement.executeQuery(query);
+            while(result.next()) // 데이터존재
+               {
+               resultname = result.getString(3);
+               }
+            
+         } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+         }
+         return resultname;
+      
+   }
 }

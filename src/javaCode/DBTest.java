@@ -350,7 +350,7 @@ public class DBTest {
 			// 쿼리를 실행하기 위한 Statement 객체 생성 
 			Statement statement = connection.createStatement();
 			// 쿼리문 작성
-			query = "INSERT INTO customerInfo(ID, password, name, age, phone_number, email_address, sex)VALUES"
+			query = "INSERT INTO testdb.customerInfo(ID, password, name, age, phone_number, email_address, sex)VALUES"
 					+ "('"+id+"','"+pwd+"','"+Cusinfo[2]+"','"+Cusinfo[3]+"','"+Cusinfo[4]+"','"+Cusinfo[5]+"','"+Cusinfo[6]+"')";
 			// 쿼리문 실행 
 			int cnt = statement.executeUpdate(query);   

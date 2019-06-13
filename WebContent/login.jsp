@@ -85,7 +85,7 @@ function checkForm()
 				
 				
 				
-				<form name = "myform" action = "Login" method = "post" class="login100-form validate-form" onSubmit="return checkForm()">
+				<form name = "myform" action = "loginCheck.jsp" method = "post" class="login100-form validate-form" onSubmit="return checkForm()">
 					<span class="login100-form-title p-b-34">
 						Account Login
 					</span>

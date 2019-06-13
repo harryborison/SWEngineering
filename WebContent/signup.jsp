@@ -1,3 +1,11 @@
+<%@ page import ="java.util.*" %>
+<%@ page import ="java.io.*" %>
+<%@ page import ="java.sql.*" %>  
+<%@ page import="javaCode.DBTest"%>
+<%@ page import="javaCode.DBCon"%>
+<%@ page import="javaCode.CustomerControlDB" %>
+
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
@@ -89,7 +97,7 @@ function checkForm()
 	
 	if (document.myform.ID.value.length < 4 || document.myform.ID.value.length > 12) 
 	{
-        alert("아이디는 4~12자까지 입력 가능합니다.");
+        alert("아이디는 4~12 자까지 입력 가능합니다.");
         document.myform.ID.value = "";
         return false;
     }
@@ -236,13 +244,14 @@ function checkForm()
 
 
 
-			<form name="myform" action="Signup" method="post"
+			<form name="myform" action="signupCheck.jsp" method="post"
 				onSubmit="return checkForm()">
 				<div class="form-group">
 					<label for="username">ID(영문 대소문자 or 숫자)</label> <input
 						class="form-control" type="text" name="ID" id="ID"
 						placeholder="4 ~ 12 자리" required />
 				</div>
+				
 				<div class="form-group">
 					<label for="password">PASSWORD(영문 대소문자 or 숫자)</label> <input
 						class="form-control" type="password" name="password" id="password"
