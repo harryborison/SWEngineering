@@ -117,13 +117,14 @@
 		<div class="container">
 			<div class="intro-text">
 				<div class="intro-lead-in"></div>
-				<div class="intro-heading text-uppercase">스마트폰 & 요금제 추천</div>
-				
-				
 				<%if(id != null){%>
 					<h2 class="section-heading text-uppercase"><%=name %> 님 안녕하세요!</h2><br>
 					
 					<%}%>
+				<div class="intro-heading text-uppercase">스마트폰 & 요금제 추천</div>
+				
+				
+				
 					
 				
 				
