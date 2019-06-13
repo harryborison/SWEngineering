@@ -95,6 +95,7 @@ public class DBTest {
 			count = statement.executeUpdate(query);
 			if( count == 0 ){
 				System.out.println("planInfo 테이블 생성 실패");
+
 			}
 			else{
 				System.out.println("planInfo 테이블 생성 성공");
@@ -396,7 +397,6 @@ public class DBTest {
 
 
 	}
-
 
 
 }
