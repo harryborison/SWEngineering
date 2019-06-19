@@ -1,4 +1,4 @@
-package javaCode;
+package javacode;
 
 import static org.junit.Assert.*;
 

@@ -1,4 +1,4 @@
-package javaCode;
+package javacode;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
@@ -38,12 +38,13 @@ public class RecomPlanServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		try {
-			request.setCharacterEncoding("utf-8");
-		}catch(IOException e)
-		{
-			e.printStackTrace();
-		}
+		
+			try {
+				request.setCharacterEncoding("utf-8");
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		
 		
 		String[] company = request.getParameterValues("company");
@@ -58,7 +59,12 @@ public class RecomPlanServlet extends HttpServlet {
 		{
 			dataAmount = request.getParameter("dataAmount");
 	
-				dataB = Double.parseDouble(dataAmount);
+				try {
+					dataB = Double.parseDouble(dataAmount);
+				} catch (NumberFormatException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			
 			dataB = dataB * 1000;
 			dataA = (int)dataB;
@@ -66,7 +72,12 @@ public class RecomPlanServlet extends HttpServlet {
 		else // ¹«Á¦ÇÑ
 		{
 			dataAmount = "500000";
-			dataA = Integer.parseInt(dataAmount);
+			try {
+				dataA = Integer.parseInt(dataAmount);
+			} catch (NumberFormatException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		String[] option = request.getParameterValues("option");
 		
@@ -82,7 +93,13 @@ public class RecomPlanServlet extends HttpServlet {
 		
 		recomPlan rep = new recomPlan();
 		rep.makepaln_list();
-		result = rep.recPlan(company, type, Integer.parseInt(minPrice), Integer.parseInt(maxPrice), dataA, option);
+		
+		try {
+			result = rep.recPlan(company, type, Integer.parseInt(minPrice), Integer.parseInt(maxPrice), dataA, option);
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		request.setAttribute("plan1", result[0]); 
 		request.setAttribute("plan2", result[1]);
@@ -90,7 +107,12 @@ public class RecomPlanServlet extends HttpServlet {
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("recommendedPlan.jsp");
 		
-		dispatcher.forward(request, response);
+		try {
+			dispatcher.forward(request, response);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

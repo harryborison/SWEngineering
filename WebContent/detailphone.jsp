@@ -1,8 +1,8 @@
 <%@ page import ="java.util.*" %>
 <%@ page import ="java.io.*" %>
 <%@ page import ="java.sql.*" %>  
-<%@ page import="javaCode.DBTest"%>
-<%@ page import="javaCode.DBCon"%>
+<%@ page import="javacode.DBTest"%>
+<%@ page import="javacode.DBCon"%>
 
 
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
@@ -41,8 +41,9 @@
  	System.out.println(phoneName);
 	ResultSet result = null;
 	String query = null;
-	  // 쿼리를 실행하기 위한 Statement 객체 생성 
-	  Connection connection = DBCon.getmyConnection();
+	  // 쿼리를 실행하기 위한 Statement 객체 생성
+	  DBCon dbc = new DBCon();
+	  Connection connection = dbc.getmyConnection();
 	  Statement statement =connection.createStatement();
 	// 쿼리문 작성 
 query = "SELECT * from phoneInfo WHERE phoneName = '" + phoneName + "'";

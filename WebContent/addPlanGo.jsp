@@ -1,10 +1,10 @@
 <%@ page import ="java.util.*" %>
 <%@ page import ="java.io.*" %>
 <%@ page import ="java.sql.*" %>  
-<%@ page import="javaCode.DBTest"%>
-<%@ page import="javaCode.DBCon"%>
-<%@ page import="javaCode.Plan"%>
-<%@ page import="javaCode.PlanControlDB"%>
+<%@ page import="javacode.DBTest"%>
+<%@ page import="javacode.DBCon"%>
+<%@ page import="javacode.Plan"%>
+<%@ page import="javacode.PlanControlDB"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html>

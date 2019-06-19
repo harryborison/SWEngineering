@@ -1,4 +1,4 @@
-package javaCode;
+package javacode;
 
 import java.io.IOException;
 
@@ -30,7 +30,6 @@ public class Recomsmartphone extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -39,7 +38,12 @@ public class Recomsmartphone extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//request.setCharacterEncoding("EUC-KR");
-		request.setCharacterEncoding("utf-8");
+		try {
+			request.setCharacterEncoding("utf-8");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		ModelControlDB mdb = new ModelControlDB();
 		
@@ -51,8 +55,22 @@ public class Recomsmartphone extends HttpServlet {
 		String[] str = new String[3];
 		
 		
-		int minP = Integer.parseInt(minPrice) * 10000;
-		int maxP = Integer.parseInt(maxPrice) * 10000;
+		int minP=0;
+		try {
+			minP = Integer.parseInt(minPrice) * 10000;
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		int maxP=0;
+		try {
+			maxP = Integer.parseInt(maxPrice) * 10000;
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 		DBTest db = new DBTest();
 		db.connectDB();
 		recomPhone rep = new recomPhone();
@@ -74,6 +92,11 @@ public class Recomsmartphone extends HttpServlet {
 		request.setAttribute("phone3", result[2]);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("recommendedphone.jsp");
 
-		dispatcher.forward(request, response);
+		try {
+			dispatcher.forward(request, response);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

@@ -1,4 +1,4 @@
-package javaCode;
+package javacode;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

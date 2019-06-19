@@ -1,12 +1,12 @@
-package javaCode;
+package javacode;
 
-public class Test {
+public class MainFunc {
 
 		public static void main(String args[])
 		{
 			DBTest db = new DBTest();
 			db.connectDB();
-			db.loadData();
+			//db.loadData();
 		}
 	
 	

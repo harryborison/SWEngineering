@@ -1,4 +1,4 @@
-package javaCode;
+package javacode;
 
 import java.util.*;
 import java.io.*;
@@ -6,7 +6,7 @@ import java.sql.*;
 
 
 public class DBCon {
-	public static Connection getmyConnection()
+	public Connection getmyConnection()
 	{
 		Connection conn= null;
 		try {

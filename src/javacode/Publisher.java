@@ -1,4 +1,4 @@
-package javaCode;
+package javacode;
 
 public interface Publisher {
 	public void add(Observer observer); 

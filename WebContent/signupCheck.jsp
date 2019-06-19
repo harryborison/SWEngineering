@@ -1,9 +1,9 @@
 <%@ page import ="java.util.*" %>
 <%@ page import ="java.io.*" %>
 <%@ page import ="java.sql.*" %>  
-<%@ page import="javaCode.DBTest"%>
-<%@ page import="javaCode.DBCon"%>
-<%@ page import="javaCode.CustomerControlDB" %>
+<%@ page import="javacode.DBTest"%>
+<%@ page import="javacode.DBCon"%>
+<%@ page import="javacode.CustomerControlDB" %>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>

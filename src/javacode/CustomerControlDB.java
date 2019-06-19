@@ -1,16 +1,22 @@
-package javaCode;
+package javacode;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Logger;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
+
+
 
 
 
 public class CustomerControlDB {
 
-
+	
    ResultSet result = null;
    String query = null;
    Connection connection= null;
