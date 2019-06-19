@@ -3,7 +3,7 @@ package javacode;
 
 import java.util.ArrayList;
 
-public class recomPlan {
+public class RecomPlan {
     ArrayList<Plan> planlist = new ArrayList<Plan>();
 	public void makepaln_list()
 	{

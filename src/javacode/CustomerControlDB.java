@@ -27,6 +27,9 @@ public class CustomerControlDB {
    
    public int loginCheck(String name , String pwd)
    {
+Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
+	   
+       logger.log(Level.INFO, "Start Logging");
 	  
 	   DBCon con = new DBCon();
       connection = con.getmyConnection();
@@ -51,14 +54,14 @@ public class CustomerControlDB {
          
       } catch (SQLException e) {
          // TODO Auto-generated catch block
-    	  e.printStackTrace();
+    	  logger.log(Level.SEVERE, "error, {0}", e.toString());
       }
       finally{
     	  try {
 			result.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.log(Level.SEVERE, "error, {0}", e.toString());
 		}
       }
   
@@ -68,6 +71,11 @@ public class CustomerControlDB {
    
    public int signinCheck(String name)
    {
+	   Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
+	   
+       logger.log(Level.INFO, "Start Logging");
+
+
 	   DBCon con = new DBCon();
          connection = con.getmyConnection();
          String hashname = sec.encryptSHA256(name);
@@ -85,14 +93,14 @@ public class CustomerControlDB {
             
          } catch (SQLException e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+        	 logger.log(Level.SEVERE, "error, {0}", e.toString());
          }
          finally {
         	 try {
 				result.close();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				logger.log(Level.SEVERE, "error, {0}", e.toString());
 			}
          }
          
@@ -103,6 +111,9 @@ public class CustomerControlDB {
    
    public String getNameFromID(String id)
    {
+	   Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
+	   
+       logger.log(Level.INFO, "Start Logging");
       DBCon con = new DBCon();
        connection = con.getmyConnection();
          String hashname = sec.encryptSHA256(id);
@@ -120,14 +131,14 @@ public class CustomerControlDB {
             
          } catch (SQLException e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+        	 logger.log(Level.SEVERE, "error, {0}", e.toString());
          }
          finally {
         	 try {
 				result.close();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				logger.log(Level.SEVERE, "error, {0}", e.toString());
 			}
          }
          return resultname;

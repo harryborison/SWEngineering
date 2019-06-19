@@ -1,7 +1,7 @@
 package javacode;
 
 import java.util.*;
-public class recomPhone {
+public class RecomPhone {
 	
     ArrayList<Model> phonelist = new ArrayList<Model>();
 	public void makemodel_list()

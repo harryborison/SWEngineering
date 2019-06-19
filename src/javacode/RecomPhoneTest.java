@@ -4,14 +4,14 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class recomPhoneTest {
+public class RecomPhoneTest {
 
 
 	
 
 	@Test
 	public void testMatchprice() {
-		recomPhone rec = new recomPhone();
+		RecomPhone rec = new RecomPhone();
 		assertEquals(10 ,rec.matchprice(100000,10000,200000));
 		assertEquals(10 ,rec.matchprice(200000,10000,200000));
 		assertEquals(8 ,rec.matchprice(100000,150000,200000));
@@ -33,7 +33,7 @@ public class recomPhoneTest {
 	@Test
 	public void testCalcGame() {
 	
-		recomPhone rec = new recomPhone();
+		RecomPhone rec = new RecomPhone();
 		assertEquals(8 ,rec.calcGame(11,7));
 		assertEquals(8 ,rec.calcGame(10,6));
 		assertEquals(6 ,rec.calcGame(8,6));
@@ -55,7 +55,7 @@ public class recomPhoneTest {
 
 	@Test
 	public void testCalcstorage() {
-		recomPhone rec = new recomPhone();
+		RecomPhone rec = new RecomPhone();
 		assertEquals(4 ,rec.calcstorage(500));
 		assertEquals(4 ,rec.calcstorage(10000));
 		assertEquals(2 ,rec.calcstorage(499));
@@ -72,7 +72,7 @@ public class recomPhoneTest {
 
 	@Test
 	public void testCalcbattery() {
-		recomPhone rec = new recomPhone();
+		RecomPhone rec = new RecomPhone();
 		assertEquals(3 ,rec.calcbattery(4000));
 		assertEquals(3 ,rec.calcbattery(5000));
 		assertEquals(2 ,rec.calcbattery(3500));
@@ -89,7 +89,7 @@ public class recomPhoneTest {
 
 	@Test
 	public void testCalcNew() {
-		recomPhone rec = new recomPhone();
+		RecomPhone rec = new RecomPhone();
 		assertEquals(3 ,rec.calcNew(2019));
 		assertEquals(1 ,rec.calcNew(2018));
 		assertEquals(0 ,rec.calcNew(2017));
@@ -100,7 +100,7 @@ public class recomPhoneTest {
 	@Test
 	public void testCalccamera() {
 		
-		recomPhone rec = new recomPhone();
+		RecomPhone rec = new RecomPhone();
 		assertEquals(7,rec.calccamera(2000,4000));
 		assertEquals(6,rec.calccamera(1000,4000));
 		assertEquals(5,rec.calccamera(700,4000));
@@ -122,7 +122,7 @@ public class recomPhoneTest {
 
 	@Test
 	public void testCalcscreen() {
-		recomPhone rec = new recomPhone();
+		RecomPhone rec = new RecomPhone();
 		
 		assertEquals(3 ,rec.calcscreen(6));
 		assertEquals(3 ,rec.calcscreen(6.5));
@@ -145,7 +145,7 @@ public class recomPhoneTest {
 
 	@Test
 	public void testCalclight() {
-		recomPhone rec = new recomPhone();
+		RecomPhone rec = new RecomPhone();
 		
 		assertEquals(3 ,rec.calclight(150));	
 		assertEquals(3 ,rec.calclight(175));
@@ -164,7 +164,7 @@ public class recomPhoneTest {
 	@Test
 	public void testCalcdiff() {
 	
-		recomPhone rec = new recomPhone();
+		RecomPhone rec = new RecomPhone();
 		assertEquals(8 ,rec.calcdiff(100000));	
 		assertEquals(8 ,rec.calcdiff(0));
 		assertEquals(8 ,rec.calcdiff(1000));

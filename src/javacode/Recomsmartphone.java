@@ -8,7 +8,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.Connection;
 import java.util.*;
 /**
  * Servlet implementation class Recomsmartphone
@@ -28,6 +27,7 @@ public class Recomsmartphone extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	}
@@ -35,9 +35,9 @@ public class Recomsmartphone extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//request.setCharacterEncoding("EUC-KR");
 		try {
 			request.setCharacterEncoding("utf-8");
 		} catch (Exception e) {
@@ -73,7 +73,7 @@ public class Recomsmartphone extends HttpServlet {
 		
 		DBTest db = new DBTest();
 		db.connectDB();
-		recomPhone rep = new recomPhone();
+		RecomPhone rep = new RecomPhone();
 		rep.makemodel_list();
 		result = rep.recom(company, minP, maxP, purpose);
 		
@@ -83,9 +83,7 @@ public class Recomsmartphone extends HttpServlet {
 		
 		mdb.countPlus(str);
 		
-		System.out.println(result[0].getPhoneName());
-		System.out.println(result[1].getPhoneName());
-		System.out.println(result[2].getPhoneName());
+		
 
 		request.setAttribute("phone1", result[0]); //객체를 request객체에 담음 (data가 문자열이 아니어도 가능)
 		request.setAttribute("phone2", result[1]);

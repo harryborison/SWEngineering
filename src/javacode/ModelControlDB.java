@@ -79,7 +79,7 @@ public class ModelControlDB {
       connection  = con.getmyConnection();
       for(int i=0; i<3 ;i++)
       {
-         String str =  "SELECT phoneName from testdb.phoneInfo order by recCount limit 3";
+         String str =  "SELECT phoneName from testdb.phoneInfo order by recCount desc limit 3";
          try {
             Statement statement = connection.createStatement();
             result = statement.executeQuery(str);
@@ -120,7 +120,7 @@ public class ModelControlDB {
       connection  = con.getmyConnection();
       for(int i=0; i<3 ;i++)
       {
-         String str =  "SELECT recCount from testdb.phoneInfo order by recCount limit 3";
+         String str =  "SELECT recCount from testdb.phoneInfo order by recCount desc limit 3";
          try {
             Statement statement = connection.createStatement();
             result = statement.executeQuery(str);

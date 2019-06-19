@@ -43,7 +43,10 @@
 	int[] count = new int[3];
 	name = db.seeRank();
 	count = db.seeRankcnt();
-
+	
+	System.out.println(name[0]);
+	System.out.println(name[1]);
+	System.out.println(name[2]);
 
 
 %>
@@ -247,12 +250,12 @@
         var myLineChart = new Chart(ctx, {
           type: 'bar',
           data: {
-            labels: [<%=name[0]%>, <%=name[1]%>, <%=name[2]%>],
+            labels: ['<%=name[0]%>', '<%=name[1]%>', '<%=name[2]%>'],
             datasets: [{
               label: "Revenue",
               backgroundColor: "rgba(2,117,216,1)",
               borderColor: "rgba(2,117,216,1)",
-              data: [<%=count[0]%>, <%=count[1]%>,<%=count[2]%>],
+              data: [<%=count[0]%>,<%=count[1]%>, <%=count[2]%>],
             }],
           },
           options: {
@@ -271,7 +274,7 @@
               yAxes: [{
                 ticks: {
                   min: 0,
-                  max: 15000,
+                  max: <%=count[0]%>,
                   maxTicksLimit: 5
                 },
                 gridLines: {
@@ -292,9 +295,9 @@
         var myPieChart = new Chart(ctx, {
           type: 'pie',
           data: {
-            labels: ["갤럭시", "아이폰", "샤오미"],
+            labels: ['<%=name[0]%>', '<%=name[1]%>', '<%=name[2]%>'],
             datasets: [{
-              data: [100, 50, 200],
+              data: [<%=count[0]%>,<%=count[1]%>, <%=count[2]%>],
               backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
             }],
           },

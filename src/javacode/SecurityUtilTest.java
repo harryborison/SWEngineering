@@ -27,10 +27,6 @@ public class SecurityUtilTest {
 			fail("why is this same ?? not null!");
 		}
 		
-		
-		
-		
-		
 	}
 
 }

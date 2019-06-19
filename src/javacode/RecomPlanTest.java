@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class recomPlanTest {
+public class RecomPlanTest {
 
 	@Test
 	public void testMakepaln_list() {
@@ -18,7 +18,7 @@ public class recomPlanTest {
 
 	@Test
 	public void testMatchtelecom() {
-		recomPlan p = new recomPlan();
+		RecomPlan p = new RecomPlan();
 		String[] wanttel = new String[3];
 		String[] wanttel2 = new String[1];
 		wanttel[0]= "NULL";
@@ -40,7 +40,7 @@ public class recomPlanTest {
 
 	@Test
 	public void testMatchtype() {
-		recomPlan p = new recomPlan();
+		RecomPlan p = new RecomPlan();
 		String[] wanttype = new String[2];
 		wanttype[0] = "5G";
 		wanttype[1] = "LTE";

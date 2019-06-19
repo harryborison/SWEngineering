@@ -28,6 +28,7 @@ public class RecomPlanServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+    @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
@@ -36,6 +37,7 @@ public class RecomPlanServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+    @Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
@@ -52,10 +54,10 @@ public class RecomPlanServlet extends HttpServlet {
 		String minPrice = request.getParameter("minprice");
 		String maxPrice = request.getParameter("maxprice");
 		String data = request.getParameter("data");
-		String dataAmount = new String();
+		String dataAmount;
 		int dataA=0;
 		double dataB=0;
-		if(data.contentEquals("self")) // 직접입력
+		if(data.equals("self")) // 직접입력
 		{
 			dataAmount = request.getParameter("dataAmount");
 	
@@ -81,17 +83,12 @@ public class RecomPlanServlet extends HttpServlet {
 		}
 		String[] option = request.getParameterValues("option");
 		
-		System.out.println("company : " + company[0]);
-		System.out.println("type : " + type[0]);
-		System.out.println("data : " + data);
-		System.out.println("data양 : " + dataAmount);
-		System.out.println("option : " + option[0]);
 		
-		Plan[] result = new Plan[3];
+		Plan result[] = {};
 		DBTest db = new DBTest();
 		db.connectDB();
 		
-		recomPlan rep = new recomPlan();
+		RecomPlan rep = new RecomPlan();
 		rep.makepaln_list();
 		
 		try {
