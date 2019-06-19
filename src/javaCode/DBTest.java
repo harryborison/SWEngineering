@@ -42,42 +42,11 @@ public class DBTest {
 	// 데이터베이스, 테이블 없으면 생성 후 데이터 로드 
 	public void loadData(){
 		try{
-			//					// 쿼리를 실행하기 위한 Statement 객체 생성 
-			//					Statement statement = connection.createStatement();
-			//				
-			//					// testdb 데이터베이스 생성
-			//					query = "CREATE DATABASE IF NOT EXISTS testdb";
-			//					
-			//					int count = statement.executeUpdate(query);
-			//		            if( count == 0 ){
-			//		                System.out.println("testdb 데이터베이스 생성 실패");
-			//		            }
-			//		            else{
-			//		                System.out.println("testdb 데이터베이스 생성 성공");
-			//		            }
-			//		            // testdb 데이터베이스 선택
-			//		            query = "use testdb";
-			//					
-			//					count = statement.executeUpdate(query);
-			//		            if( count == 0 ){
-			//		                System.out.println("testdb 데이터베이스 선택 실패");
-			//		            }
-			//		            else{
-			//		                System.out.println("testdb 데이터베이스 선택 성공");
-			//		            }
-			//		            count = 0;
-
-			// 쿼리를 실행하기 위한 Statement 객체 생성 
+			
 			Statement statement = connection.createStatement();
 
 			int count = 0;
 
-			query = "DELETE TABLE testdb.phoneInfo ";
-			count = statement.executeUpdate(query);
-			if(count ==0)
-			{
-				System.out.println("del 실패");
-			}
 			// phoneInfo 테이블 생성
 			query = "CREATE TABLE IF NOT EXISTS testdb.phoneInfo(phoneName varchar(45) NOT NULL,company varchar(45) NOT NULL,phonePrice int(11) NOT NULL,screenSize decimal(5,3) NOT NULL,os varchar(45) NOT NULL,capacity int(11) NOT NULL,RAM int(11) NOT NULL,frontCamera int(11) NOT NULL,rearCamera int(11) NOT NULL,weight int(11) NOT NULL,phoneSize varchar(45) NOT NULL,betteryCapacity int(11) NOT NULL,speed float NOT NULL,resolution varchar(45) NOT NULL,releaseYear int(11) NOT NULL,color varchar(70) NOT NULL,link varchar(150) NOT NULL,recCount int(11) NOT NULL DEFAULT 0,link2 varchar(150) NOT NULL,PRIMARY KEY(phoneName))";
 
@@ -91,7 +60,7 @@ public class DBTest {
 			count = 0;
 
 			// planInfo 테이블 생성
-			query = "CREATE TABLE IF NOT EXISTS testdb.planInfo ( operator varchar(20) NOT NULL,planName varchar(45) NOT NULL,mobile varchar(10) NOT NULL,planPrice int(11) NOT NULL,data varchar(50) NOT NULL,videoCall varchar(45) NOT NULL,phoneCall varchar(45) NOT NULL,message varchar(45) NOT NULL,phoneOption varchar(70) NOT NULL, data2 int(11) NOT NULL, PRIMARY KEY(planName))";
+			query = "CREATE TABLE IF NOT EXISTS testdb.planInfo ( operator varchar(20) NOT NULL,planName varchar(45) NOT NULL,mobile varchar(10) NOT NULL,planPrice int(11) NOT NULL,data varchar(50) NOT NULL,videoCall varchar(45) NOT NULL,phoneCall varchar(45) NOT NULL,message varchar(45) NOT NULL,phoneOption varchar(70) NOT NULL, data2 int(11) NOT NULL, link varchar(150) NOT NULL, PRIMARY KEY(planName))";
 			count = statement.executeUpdate(query);
 			if( count == 0 ){
 				System.out.println("planInfo 테이블 생성 실패");
@@ -102,18 +71,18 @@ public class DBTest {
 			}		
 
 
-
+/*
 			// 데이터 로드
-			// query = "LOAD DATA INFILE 'C:\\\\ProgramData\\\\MySQL\\\\MySQL Server 8.0\\\\Uploads\\\\planInfo.csv' INTO TABLE planInfo FIELDS TERMINATED BY ',' IGNORE 2 LINES";
-			//  count = statement.executeUpdate(query);
-			//  if( count == 0 ){
-			//      System.out.println("planInfo.csv 데이터 로드 실패");
-			//  }
-			//   else{
-			//        System.out.println("planInfo.csv 데이터 로드 성공");
-			//   } 
-
-			query = "LOAD DATA INFILE 'C:\\\\ProgramData\\\\MySQL\\\\MySQL Server 8.0\\\\Uploads\\\\phoneInfo.csv' INTO TABLE phoneInfo FIELDS TERMINATED BY ',' IGNORE 2 LINES";
+			 query = "LOAD DATA INFILE 'C:\\\\ProgramData\\\\MySQL\\\\MySQL Server 8.0\\\\Uploads\\\\planInfo.csv' INTO TABLE testdb.planInfo FIELDS TERMINATED BY ',' IGNORE 2 LINES";
+			  count = statement.executeUpdate(query);
+			  if( count == 0 ){
+			      System.out.println("planInfo.csv 데이터 로드 실패");
+			  }
+			   else{
+			        System.out.println("planInfo.csv 데이터 로드 성공");
+			   } 
+*/
+			query = "LOAD DATA INFILE 'C:\\\\ProgramData\\\\MySQL\\\\MySQL Server 8.0\\\\Uploads\\\\phoneInfo.csv' INTO TABLE testdb.phoneInfo FIELDS TERMINATED BY ',' IGNORE 2 LINES";
 			count = statement.executeUpdate(query);
 			if( count == 0 ){
 				System.out.println("phoneInfo.csv 데이터 로드 실패");
@@ -137,7 +106,7 @@ public class DBTest {
           // 쿼리를 실행하기 위한 Statement 객체 생성 
           Statement statement = connection.createStatement();
           // 쿼리문 작성 
-          query = "SELECT * from phoneInfo ";
+          query = "SELECT * from testdb.phoneInfo ";
           // 쿼리문 실행 
           result = statement.executeQuery(query);
             int i=0;
@@ -186,7 +155,7 @@ public class DBTest {
           // 쿼리를 실행하기 위한 Statement 객체 생성 
           Statement statement = connection.createStatement();
           // 쿼리문 작성 
-          query = "SELECT * from planInfo ";
+          query = "SELECT * from testdb.planInfo ";
           // 쿼리문 실행 
           result = statement.executeQuery(query);
           // 검색 결과 출력 
@@ -204,6 +173,7 @@ public class DBTest {
              plan.setMessage(result.getString(8));
              plan.setOption(result.getString(9));
              plan.setData2(Integer.parseInt(result.getString(10)));
+             plan.setLink(result.getString(11));
              planlist.add(plan);      
              
           }

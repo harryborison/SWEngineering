@@ -45,7 +45,7 @@
 	  Connection connection = DBCon.getmyConnection();
 	  Statement statement =connection.createStatement();
 	// Äõ¸®¹® ÀÛ¼º 
-query = "SELECT * from planInfo WHERE planName = '" + planName + "'";
+query = "SELECT * from testdb.planInfo WHERE planName = '" + planName + "'";
     result = statement.executeQuery(query);
     result.next();
 	System.out.printf("\nrquery : %s",query);
@@ -77,7 +77,7 @@ query = "SELECT * from planInfo WHERE planName = '" + planName + "'";
                 
             </div>
 
-            <div class="mbr-figure" style="width: 135%;"><iframe class="mbr-embedded-video" src="https://namu.wiki/w/iPhone%20X?rel=0&amp;amp;showinfo=0&amp;autoplay=0&amp;loop=0" width="1920" height="1080" frameborder="0" allowfullscreen></iframe></div>
+            <div class="mbr-figure" style="width: 135%;"><iframe class="mbr-embedded-video" src="<%=result.getString(11) %>?rel=0&amp;amp;showinfo=0&amp;autoplay=0&amp;loop=0" width="1920" height="1080" frameborder="0" allowfullscreen></iframe></div>
  		<%result.close(); %>
         </div>
     </div>

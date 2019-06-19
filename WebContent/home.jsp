@@ -44,12 +44,11 @@
 </head>
 
 <body id="page-top">
-
 	<%
 	String name = "";
 	String id = new String();
 	id = null;
-		//session.removeAttribute("id");
+	//session.removeAttribute("id");
 	id = (String)session.getAttribute("id");
 	if(id != null)
 	{
@@ -57,7 +56,6 @@
 		name = test.getNameFromID(id);
 	}
 	%>
-
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
 		<div class="container">
@@ -363,7 +361,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2 class="section-heading text-uppercase">Seven Valley Team</h2>
+					<h2 class="section-heading text-uppercase">Team Seven Valley</h2>
 					<h3 class="section-subheading text-muted">Software Engineering
 						Team 9</h3>
 				</div>
@@ -412,9 +410,7 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-8 mx-auto text-center">
-					<p class="large text-muted">Lorem ipsum dolor sit amet,
-						consectetur adipisicing elit. Aut eaque, laboriosam veritatis,
-						quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+					<p class="large text-muted"></p>
 				</div>
 			</div>
 		</div>
@@ -426,58 +422,26 @@
 			<div class="row">
 				<div class="col-md-3 col-sm-6">
 					<a href="#"> <img class="img-fluid d-block mx-auto"
-						src="img/logos/envato.jpg" alt="">
+						 alt="">
 					</a>
 				</div>
 				<div class="col-md-3 col-sm-6">
-					<a href="#"> <img class="img-fluid d-block mx-auto"
-						src="img/logos/designmodo.jpg" alt="">
+					<a href="http://sselab.dothome.co.kr/"> <img class="img-fluid d-block mx-auto"
+						src="img/logos/logo1.jpg" alt="">
 					</a>
 				</div>
 				<div class="col-md-3 col-sm-6">
-					<a href="#"> <img class="img-fluid d-block mx-auto"
-						src="img/logos/themeforest.jpg" alt="">
+					<a href="http://knu.ac.kr"> <img class="img-fluid d-block mx-auto"
+						src="img/logos/logo2.jpg" alt="">
 					</a>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<a href="#"> <img class="img-fluid d-block mx-auto"
-						src="img/logos/creative-market.jpg" alt="">
-					</a>
-				</div>
+				
 			</div>
 		</div>
 	</section>
 
 
 	<!-- Footer -->
-	<footer class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<span class="copyright">Copyright &copy; Your Website 2019</span>
-				</div>
-				<div class="col-md-4">
-					<ul class="list-inline social-buttons">
-						<li class="list-inline-item"><a href="#"> <i
-								class="fab fa-twitter"></i>
-						</a></li>
-						<li class="list-inline-item"><a href="#"> <i
-								class="fab fa-facebook-f"></i>
-						</a></li>
-						<li class="list-inline-item"><a href="#"> <i
-								class="fab fa-linkedin-in"></i>
-						</a></li>
-					</ul>
-				</div>
-				<div class="col-md-4">
-					<ul class="list-inline quicklinks">
-						<li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-						<li class="list-inline-item"><a href="#">Terms of Use</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</footer>
+	
 
 	<!-- Portfolio Modals -->
 

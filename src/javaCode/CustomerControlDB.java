@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Logger;
+
+
 
 public class CustomerControlDB {
 
@@ -11,18 +14,15 @@ public class CustomerControlDB {
    ResultSet result = null;
    String query = null;
    Connection connection= null;
-   DBCon con = new DBCon();
+   
    SecurityUtil sec = new SecurityUtil();
    
-   public int checkId(String name)
-   {
-      
-      
-      return 1;
-   }
+   
    
    public int loginCheck(String name , String pwd)
    {
+	  
+	   DBCon con = new DBCon();
       connection = con.getmyConnection();
       String hashname = sec.encryptSHA256(name);
       String hashpwd  = sec.encryptSHA256(pwd);
@@ -31,7 +31,9 @@ public class CustomerControlDB {
       System.out.println(query);
       
       try {
+    	  
          Statement statement = connection.createStatement();
+         
          result = statement.executeQuery(query);
          while(result.next())
         	 {
@@ -43,9 +45,16 @@ public class CustomerControlDB {
          
       } catch (SQLException e) {
          // TODO Auto-generated catch block
-         e.printStackTrace();
+    	  e.printStackTrace();
       }
-      
+      finally{
+    	  try {
+			result.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+      }
   
       
       return 0;
@@ -53,6 +62,7 @@ public class CustomerControlDB {
    
    public int signinCheck(String name)
    {
+	   DBCon con = new DBCon();
          connection = con.getmyConnection();
          String hashname = sec.encryptSHA256(name);
          String tmp;
@@ -71,6 +81,14 @@ public class CustomerControlDB {
             // TODO Auto-generated catch block
             e.printStackTrace();
          }
+         finally {
+        	 try {
+				result.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+         }
          
      
          
@@ -79,7 +97,7 @@ public class CustomerControlDB {
    
    public String getNameFromID(String id)
    {
-      
+      DBCon con = new DBCon();
        connection = con.getmyConnection();
          String hashname = sec.encryptSHA256(id);
          String tmp;
@@ -97,6 +115,14 @@ public class CustomerControlDB {
          } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+         }
+         finally {
+        	 try {
+				result.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
          }
          return resultname;
       

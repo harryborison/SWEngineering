@@ -91,12 +91,12 @@ function checkCompany(myform)
    var p3 = document.myform.p3.checked;
    var p4 = document.myform.p4.checked;
    var p5 = document.myform.p5.checked;
-   var p6 = document.myform.p6.checked;
+  
    var p7 = document.myform.p7.checked;
    var p8 = document.myform.p8.checked;
    
    if(p1 == "" && p2 == "" && p3 == "" && p4 == "" &&
-		   p5 == "" && p6 == "" && p7 == "" && p8 == "")
+		   p5 == ""  && p7 == "" && p8 == "")
    {
 	   alert("purpose를 한개 이상 선택해주세요.");
 	   return false;
@@ -136,7 +136,6 @@ function checkCompany(myform)
           <input type="checkbox" id = "p3" name = "purpose" value = "camera">고성능 카메라&nbsp;
           <input type="checkbox" id = "p4" name = "purpose" value = "screen">큰 화면&nbsp;<br>
           <input type="checkbox" id = "p5" name = "purpose" value = "storage">대용량 스토리지&nbsp;
-          <input type="checkbox" id = "p6" name = "purpose" value = "video">고화질 동영상&nbsp;
           <input type="checkbox" id = "p7" name = "purpose" value = "new">최신 휴대폰&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="checkbox" id = "p8" name = "purpose" value = "light">가벼운 무게&nbsp;<br><br>
           

@@ -41,13 +41,16 @@ public class Recomsmartphone extends HttpServlet {
 		//request.setCharacterEncoding("EUC-KR");
 		request.setCharacterEncoding("utf-8");
 
-
+		ModelControlDB mdb = new ModelControlDB();
+		
 		String[] company = request.getParameterValues("company");
 		String minPrice = request.getParameter("minPrice");
 		String maxPrice = request.getParameter("maxPrice");
 		String[] purpose = request.getParameterValues("purpose");
 		Model[] result = new Model[3];
-
+		String[] str = new String[3];
+		
+		
 		int minP = Integer.parseInt(minPrice) * 10000;
 		int maxP = Integer.parseInt(maxPrice) * 10000;
 		DBTest db = new DBTest();
@@ -55,7 +58,13 @@ public class Recomsmartphone extends HttpServlet {
 		recomPhone rep = new recomPhone();
 		rep.makemodel_list();
 		result = rep.recom(company, minP, maxP, purpose);
-
+		
+		str[0] = result[0].getPhoneName();
+		str[1] = result[1].getPhoneName();
+		str[2] = result[2].getPhoneName();
+		
+		mdb.countPlus(str);
+		
 		System.out.println(result[0].getPhoneName());
 		System.out.println(result[1].getPhoneName());
 		System.out.println(result[2].getPhoneName());

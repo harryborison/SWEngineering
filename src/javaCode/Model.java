@@ -7,6 +7,21 @@ public class Model {
 	private int phonePrice ;
 	private double screenSize ;
 	private String os ;
+	private int capacity ;
+	private int RAM ;
+	private int frontCamera;
+	private int rearCamera;
+	private int weight;
+	private String phoneSize;
+	private int betteryCapacity ;
+	private double speed ;
+	private String resolution;
+	private int releaseYear ;
+	private String color ;
+	private String link ;
+	private int recCount ;
+	private String videolink;
+	
 	public String getPhoneName() {
 		return phoneName;
 	}
@@ -121,20 +136,7 @@ public class Model {
 	public void setVideolink(String videolink) {
 		this.videolink = videolink;
 	}
-	private int capacity ;
-	private int RAM ;
-	private int frontCamera;
-	private int rearCamera;
-	private int weight;
-	private String phoneSize;
-	private int betteryCapacity ;
-	private double speed ;
-	private String resolution;
-	private int releaseYear ;
-	private String color ;
-	private String link ;
-	private int recCount ;
-	private String videolink;
+	
 		
 		
 		

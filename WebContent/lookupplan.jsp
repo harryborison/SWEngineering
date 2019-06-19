@@ -96,7 +96,7 @@
            Connection connection = DBCon.getmyConnection();
            Statement statement =connection.createStatement();
          // 孽府巩 累己 
-         query = "SELECT * from planInfo ";
+         query = "SELECT * from testdb.planInfo ";
          // 孽府巩 角青 
          result = statement.executeQuery(query);
          

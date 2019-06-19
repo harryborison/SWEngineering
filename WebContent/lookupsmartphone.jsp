@@ -105,7 +105,7 @@
            Connection connection = DBCon.getmyConnection();
            Statement statement =connection.createStatement();
          // 쿼리문 작성 
-         query = "SELECT * from phoneInfo ";
+         query = "SELECT * from testdb.phoneInfo ";
          // 쿼리문 실행 
          result = statement.executeQuery(query);
          

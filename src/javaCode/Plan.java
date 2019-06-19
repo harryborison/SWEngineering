@@ -11,7 +11,17 @@ public class Plan {
 		private String call ;
 		private String message ;
 		private String option ;
+		private String link;
+		private int data2;
 		
+		public String getLink() {
+			return link;
+		}
+
+		public void setLink(String link) {
+			this.link = link;
+		}
+
 		public String getOperator() {
 			return operator;
 		}
@@ -92,7 +102,7 @@ public class Plan {
 			this.data2 = data2;
 		}
 
-		private int data2;
+		
 		
 		
 }

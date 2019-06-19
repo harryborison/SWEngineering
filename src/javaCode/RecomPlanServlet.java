@@ -1,6 +1,7 @@
 package javaCode;
 
 import java.io.IOException;
+import java.net.UnknownHostException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -29,7 +30,7 @@ public class RecomPlanServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 	}
 
 	/**
@@ -37,7 +38,13 @@ public class RecomPlanServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.setCharacterEncoding("utf-8");
+		try {
+			request.setCharacterEncoding("utf-8");
+		}catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+		
 		
 		String[] company = request.getParameterValues("company");
 		String[] type = request.getParameterValues("type");
@@ -50,7 +57,9 @@ public class RecomPlanServlet extends HttpServlet {
 		if(data.contentEquals("self")) // 직접입력
 		{
 			dataAmount = request.getParameter("dataAmount");
-			dataB = Double.parseDouble(dataAmount);
+	
+				dataB = Double.parseDouble(dataAmount);
+			
 			dataB = dataB * 1000;
 			dataA = (int)dataB;
 		}

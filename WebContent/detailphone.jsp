@@ -62,16 +62,17 @@ query = "SELECT * from phoneInfo WHERE phoneName = '" + phoneName + "'";
                 <h1 class="mbr-section-title mbr-white pb-3 mbr-fonts-style display-2"><strong>
                     <%=phoneName %></strong></h1>
                 <div class="mbr-section-text mbr-white pb-3">
-                    <p class="mbr-text mbr-fonts-style display-5">제조사 : <%=result.getString(2) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;화면사이즈 : <%=result.getString(4) %>inch</p>
-                    <p class="mbr-text mbr-fonts-style display-5">운영체제 : <%=result.getString(5) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;용량 : <%=result.getString(6) %>GB</p>
+                    <p class="mbr-text mbr-fonts-style display-5">제조사 : <%=result.getString(2) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;가격 : <%=result.getString(3) %>원</p>
+                    <p class="mbr-text mbr-fonts-style display-5">화면사이즈 : <%=result.getString(4) %>inch</p>
+                    <p class="mbr-text mbr-fonts-style display-5">운영체제 : <%=result.getString(5) %></p>
+                    <p class="mbr-text mbr-fonts-style display-5">용량 : <%=result.getString(6) %>GB</p>
                     <p class="mbr-text mbr-fonts-style display-5">램 : <%=result.getString(7) %>GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;전면카메라 : <%=result.getString(8) %>만 화소</p>
                     <p class="mbr-text mbr-fonts-style display-5">후면카메라 : <%=result.getString(9) %>만 화소&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;무게 : <%=result.getString(10) %>g</p>
                    
-                    <p class="mbr-text mbr-fonts-style display-5">크기 : <%=result.getString(11) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;배터리 용량 : <%=result.getString(12) %></p>
-                  
-                    <p class="mbr-text mbr-fonts-style display-5">속도 : <%=result.getString(13) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;해상도 : <%=result.getString(14) %></p>
+                    <p class="mbr-text mbr-fonts-style display-5">크기 : <%=result.getString(11) %>(mm)&nbsp;&nbsp;&nbsp;&nbsp;속도 : <%=result.getString(13) %>Ghz</p>
+                  	<p class="mbr-text mbr-fonts-style display-5">배터리 용량 : <%=result.getString(12) %>mAh</p>
+                    <p class="mbr-text mbr-fonts-style display-5">해상도 : <%=result.getString(14) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;출시년도 : <%=result.getString(15) %></p>
                    
-                    <p class="mbr-text mbr-fonts-style display-5">출시년도 : <%=result.getString(15) %></p>
                    
                     
                     
