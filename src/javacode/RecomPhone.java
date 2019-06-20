@@ -78,7 +78,6 @@ public class RecomPhone {
 			int diff = price - high;
 			return calcdiff(diff);
 		}
-		return 0;
 	}
 	
 	public int matchpurpose(String[] purpose, Model model)
