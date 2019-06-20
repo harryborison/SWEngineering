@@ -82,7 +82,7 @@ public class Recomsmartphone extends HttpServlet {
 		DBTest db = new DBTest();
 		db.connectDB();
 		RecomPhone rep = new RecomPhone();
-		rep.makemodel_list();
+		rep.makemodellist();
 		result = rep.recom(company, minP, maxP, purpose);
 		
 		str[0] = result[0].getPhoneName();

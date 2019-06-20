@@ -3,15 +3,15 @@ package javacode;
 import java.util.*;
 public class RecomPhone {
 	
-    ArrayList<Model> phonelist = new ArrayList<Model>();
-	public void makemodel_list()
+    ArrayList<Model> phonelist = new ArrayList<>();
+	public void makemodellist()
 	{
 
 		DBTest db = new DBTest();
 		db.connectDB();
 		phonelist=db.getPhoneDB();
 	}
-	public Model[] recom(String companyname[], int lowprice, int highprice, String purpose[] )
+	public Model[] recom(String[] companyname, int lowprice, int highprice, String[]  purpose )
 	{
 		int Length = phonelist.size();
 		int[] count = new int[Length];
@@ -48,7 +48,7 @@ public class RecomPhone {
 	}	
 	
 	
-	public int matchcompany(String phonecompany,String company[])
+	public int matchcompany(String phonecompany,String[] company)
 	{
 		for(int i=0;i<(company).length;i++)
 		{
@@ -73,7 +73,7 @@ public class RecomPhone {
 			return calcdiff(diff);
 			
 		}
-		else if(price > high)
+		else 
 		{
 			int diff = price - high;
 			return calcdiff(diff);
@@ -81,7 +81,7 @@ public class RecomPhone {
 		return 0;
 	}
 	
-	public int matchpurpose(String purpose[], Model model)
+	public int matchpurpose(String[] purpose, Model model)
 	{
 		int sum= 0;
 		for(int i=0; i<purpose.length;i++)
@@ -118,35 +118,35 @@ public class RecomPhone {
 		return sum;
 	}
 	
-	public int calcGame(int Phoneram, double Phonespeed )
+	public int calcGame(int phoneram, double phonespeed )
 	{
 		int sum = 0;
-		if(Phoneram>=10)
+		if(phoneram>=10)
 		{
 			sum = sum + 5;
 		}
-		else if(Phoneram < 10 && Phoneram> 7)
+		else if(phoneram < 10 && phoneram> 7)
 		{
 			sum = sum + 3;
 		}
-		else if(Phoneram <= 7 && Phoneram > 5)
+		else if(phoneram <= 7 && phoneram > 5)
 		{
 			sum = sum + 2;
 		}
-		else if(Phoneram <=5 && Phoneram>=4)
+		else if(phoneram <=5 && phoneram>=4)
 		{
 			sum = sum +1;
 		}
 		
-		if(Phonespeed>=6.0)
+		if(phonespeed>=6.0)
 		{
 			sum = sum + 3;
 		}
-		else if(Phonespeed < 6.0 && Phonespeed >=4.0)
+		else if(phonespeed < 6.0 && phonespeed >=4.0)
 		{
 			sum = sum + 2;
 		}
-		else if(Phonespeed < 4.0 && Phonespeed >=2.0)
+		else if(phonespeed < 4.0 && phonespeed >=2.0)
 		{
 			sum = sum +1;
 		}
