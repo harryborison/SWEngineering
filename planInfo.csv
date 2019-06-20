@@ -1,0 +1,176 @@
+﻿char,char,char,int,char,char,char,char,char,int,char
+통신사,요금제 이름,기기,가격(원),데이터,영상통화,전화,메시지,특이사항,데이터2,링크
+KT,KT 5G 슈퍼플랜 베이직,5G,130000,무제한(최대 3Mbps 속도),300분,무제한,무제한,WIP 멤버십  기기요금 1회선 무료,500000,https://www.youtube.com/embed/vqT6hUZcXKw
+KT,KT 5G 슈퍼플랜 스페셜,5G,100000,무제한(최대100Kbps 속도),300분,무제한,무제한,WIP 멤버십  기기요금 1회선 무료,500000,https://www.youtube.com/embed/vqT6hUZcXKw
+KT,KT 5G 슈퍼플랜 프리미엄,5G,80000,무제한(최대100Kbps 속도),300분,무제한,무제한,VIP 멤버십,500000,https://www.youtube.com/embed/vqT6hUZcXKw
+KT,5G 슬림,5G,55000,8GB+무제한(최대 1Mbps 속도),300분,무제한,무제한,-,500000,https://www.youtube.com/embed/vqT6hUZcXKw
+KT,데이터ON 프리미엄,LTE,89000,무제한,300분,무제한,무제한,VIP 멤버십  기기요금 1회선 무료,500000,https://www.youtube.com/embed/0cUdwzpzlQw
+KT,데이터ON 비디오,LTE,69000,100GB+무제한(최대 5Mbps 속도),300분,무제한,무제한,VIP 멤버십,500000,https://www.youtube.com/embed/0cUdwzpzlQw
+KT,데이터ON 톡,LTE,49000,3GB+무제한(최대 1Mbps 속도),300분,무제한,무제한,-,500000,https://www.youtube.com/embed/0cUdwzpzlQw
+KT,YS24 ON 프리미엄,LTE,89000,무제한,300분,무제한,무제한,VIP 멤버십  기기요금 1회선 무료  프라임무비팩 50%할인,500000,https://www.youtube.com/embed/SFvZ-Tfkqws
+KT,YS24 ON 비디오,LTE,69000,100GB+무제한(최대 5Mbps 속도),300분,무제한,무제한,VIP 멤버십  프라임무비팩 50%할인,500000,https://www.youtube.com/embed/SFvZ-Tfkqws
+KT,YS24 ON 톡,LTE,49000,6GB+무제한(최대 1Mbps 속도),300분,무제한,무제한,프라임무비팩 50%할인,500000,https://www.youtube.com/embed/SFvZ-Tfkqws
+KT,Y틴ON,LTE,33000,2GB+무제한(400kbps 속도),50분,무제한,무제한,만 18세 이하,500000,https://www.youtube.com/embed/SFvZ-Tfkqws
+KT,Y 군인,LTE,33000,일2GB(최대 3Mbps),300분,무제한,무제한,프라임무비팩 50%할인,500000,https://www.youtube.com/embed/SFvZ-Tfkqws
+KT,Y 베이직,LTE,33000,2GB+밀당,50분,무제한,무제한,전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,2000,https://www.youtube.com/embed/SFvZ-Tfkqws
+KT,LTE 베이직,LTE,33000,1GB+밀당,50분,무제한,무제한,전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,1000,https://www.youtube.com/embed/SFvZ-Tfkqws
+KT,Y틴 38,LTE,38390,무제한(최대 400Kbps 속도),-,-,일200건,설정 시 데이터 2배 이용(최대 2Mbps 속도),500000,https://www.youtube.com/embed/4Jn7Wkxnjts
+KT,Y틴 32,LTE,32890,3000MB,-,-,일200건,설정 시 데이터 2배 이용(최대 2Mbps 속도),3000,https://www.youtube.com/embed/4Jn7Wkxnjts
+KT,Y틴 27,LTE,27390,2000MB,-,-,일200건,설정 시 데이터 2배 이용(최대 2Mbps 속도),2000,https://www.youtube.com/embed/4Jn7Wkxnjts
+KT,Y틴 20,LTE,20900,1400MB,-,-,일200건,설정 시 데이터 2배 이용(최대 2Mbps 속도),1400,https://www.youtube.com/embed/4Jn7Wkxnjts
+KT,Y24 65.8(전역),LTE,51500,무제한(6개월),200분,무제한,무제한,전역 후 90일 이내 가입 가능,500000,https://www.youtube.com/embed/86Ze6eu-7Hs
+KT,Y24 54.8(전역),LTE,48750,무제한(6개월),30분,무제한,무제한,전역 후 90일 이내 가입 가능,500000,https://www.youtube.com/embed/86Ze6eu-7Hs
+KT,Y24 49.3(전역),LTE,47375,무제한(6개월),30분,무제한,무제한,전역 후 90일 이내 가입 가능,500000,https://www.youtube.com/embed/86Ze6eu-7Hs
+KT,Y주니어 19.8,LTE,19800,900MB+안심데이터,-,2회선 무제한,일200건,만 12세 이하,1000,https://www.youtube.com/embed/qjZickEFU8U
+KT,Y주니어 워치,LTE,8800,200MB,-,2회선 무제한,200건,전용 기기  위치정보 서비스 제공,200,https://www.youtube.com/embed/qjZickEFU8U
+KT,LTE 데이터 선택 109,LTE,109890,무제한(30GB+일2GB+최대5Mbps),200분,무제한,무제한,VIP 멤버십,500000,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,LTE 데이터 선택 87.8,LTE,87890,무제한(20GB+일2GB+최대3Mbps),200분,무제한,무제한,VIP 멤버십,500000,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,LTE 데이터 선택 76.8,LTE,76890,무제한(15GB+일2GB+최대3Mbps),200분,무제한,무제한,VIP 멤버십,500000,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,LTE 데이터 선택 65.8,LTE,65890,무제한(10GB+일2GB+최대3Mbps),200분,무제한,무제한,-,500000,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,LTE 데이터 선택 54.8,LTE,54890,6GB+밀당,30분,무제한,무제한,전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,6000,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,LTE 데이터 선택 49.3,LTE,49390,3GB+밀당,30분,무제한,무제한,전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,3000,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,LTE 데이터 선택 43.8,LTE,43890,2GB+밀당,30분,무제한,무제한,전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,2000,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,LTE 데이터 선택 38.3,LTE,38390,1GB+밀당,30분,무제한,무제한,전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,1000,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,LTE 데이터 선택 32.8,LTE,32890,300MB+밀당,30분,무제한,무제한,전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,300,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,Y24 76.8,LTE,76890,무제한(15GB+일2GB+최대3Mbps),200분,무제한,무제한,VIP 멤버십,500000,https://www.youtube.com/embed/SFvZ-Tfkqws
+KT,Y24 65.8,LTE,65890,무제한(10GB+일2GB+최대3Mbps),200분,무제한,무제한,-,500000,https://www.youtube.com/embed/SFvZ-Tfkqws
+KT,Y24 54.8,LTE,54890,6GB+밀당,30분,무제한,무제한,전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,60000,https://www.youtube.com/embed/SFvZ-Tfkqws
+KT,Y24 49.8,LTE,49390,3GB+밀당,30분,무제한,무제한,전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,30000,https://www.youtube.com/embed/SFvZ-Tfkqws
+KT,Y24 43.8,LTE,43890,2GB+밀당,30분,무제한,무제한,전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,20000,https://www.youtube.com/embed/SFvZ-Tfkqws
+KT,Y24 38.8,LTE,38390,1GB+밀당,30분,무제한,무제한,전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,1000,https://www.youtube.com/embed/SFvZ-Tfkqws
+KT,Y24 32.8,LTE,32890,300MB+밀당,30분,무제한,무제한,전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,300,https://www.youtube.com/embed/SFvZ-Tfkqws
+KT,LTE 데이터 선택 시니어 43.8,LTE,43890,4GB+밀당,30분,무제한,무제한,만 65세 이상  전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,4000,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,LTE 데이터 선택 시니어 38.3,LTE,38390,2GB+밀당,30분,무제한,무제한,만 65세 이상  전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,2000,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,LTE 데이터 선택 시니어 32.8,LTE,32890,600MB+밀당,30분,무제한,무제한,만 65세 이상  전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,600,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,LTE 데이터 선택 시니어 19.8,LTE,19800,300MB+이월,30분,KT망 무제한 + 망외100분,무제한,만 65세 이상  이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,300,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,LTE 데이터 선택 나눔 43.8,LTE,43890,4GB+밀당,200분,무제한,무제한,장애인 혜택 요금제,4000,https://www.youtube.com/embed/F0g7QZRYUNQ
+KT,LTE 데이터 선택 나눔 38.3,LTE,38300,2GB+밀당,200분,무제한,무제한,장애인 혜택 요금제,2000,https://www.youtube.com/embed/F0g7QZRYUNQ
+KT,LTE 데이터 선택 나눔 32.8,LTE,32890,600MB+밀당,200분,무제한,무제한,장애인 혜택 요금제,600,https://www.youtube.com/embed/F0g7QZRYUNQ
+KT,LTE 음석 18.7,LTE,18700,-,-,100분,100건,피쳐폰 대상,0,https://www.youtube.com/embed/5Fyu0MuV6L0
+KT,LTE 음석 12.1,LTE,12100,-,-,-,50건,피쳐폰 대상,0,https://www.youtube.com/embed/5Fyu0MuV6L0
+KT,데이터 선택 109(무약정),LTE,109890,무제한(60GB+일2GB+최대5Mbps),200분,무제한,무제한,VIP 멤버십,500000,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,데이터 선택 87.8(무약정),LTE,87890,무제한(40GB+일2GB+최대3Mbps),200분,무제한,무제한,VIP 멤버십,500000,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,데이터 선택 76.8(무약정),LTE,76890,무제한(30GB+일2GB+최대3Mbps),200분,무제한,무제한,VIP 멤버십,500000,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,데이터 선택 65.8(무약정),LTE,65890,무제한(20GB+일2GB+최대3Mbps),200분,무제한,무제한,-,500000,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,데이터 선택 54.8(무약정),LTE,54890,12GB+밀당,30분,무제한,무제한,전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,120000,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,데이터 선택 49.3(무약정),LTE,49390,6GB+밀당,30분,무제한,무제한,전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,6000,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,데이터 선택 43.8(무약정),LTE,43890,4GB+밀당,30분,무제한,무제한,전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,4000,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,데이터 선택 38.3(무약정),LTE,38390,2.5GB+밀당,30분,무제한,무제한,전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,2500,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,데이터 선택 32.8(무약정),LTE,32890,1GB+밀당,30분,무제한,무제한,전월 및 이월 데이터 100MB/500MB/1000MB 단위로 이용 가능,1000,https://www.youtube.com/embed/yBf_stNn1wk?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,순 골든 20,LTE,22000,500MB,100분,-,-,만 65세 이상  스마트 지킴이 서비스,500,https://www.youtube.com/embed/F0g7QZRYUNQ
+KT,순 손말나눔 53,LTE,58300,5GB+이월,600분,-,무제한,장애인 혜택 요금제,5000,https://www.youtube.com/embed/F0g7QZRYUNQ
+KT,순 손말나눔 27,LTE,29700,1GB,120분,-,1000건,장애인 혜택 요금제,1000,https://www.youtube.com/embed/F0g7QZRYUNQ
+KT,순 소리나눔 27,LTE,29700,1GB,-,250분,100건,장애인 혜택 요금제,1000,https://www.youtube.com/embed/F0g7QZRYUNQ
+KT,순 완전무한 99,LTE,108900,무제한(25GB+일2GB+최대3Mbps),200분,무제한,무제한,알짜팩,500000,https://www.youtube.com/embed/Ldaiu7FIV5s
+KT,순 완전무한 77,LTE,84700,무제한(17GB+일2GB+최대3Mbps),200분,무제한,무제한,알짜팩,500000,https://www.youtube.com/embed/Ldaiu7FIV5s
+KT,순 완전무한 67,LTE,73700,무제한(12GB+일2GB+최대3Mbps),200분,무제한,무제한,알짜팩,500000,https://www.youtube.com/embed/Ldaiu7FIV5s
+KT,순 완전무한 61,LTE,67100,무제한(10GB+일2GB+최대3Mbps),200분,무제한,무제한,-,500000,https://www.youtube.com/embed/Ldaiu7FIV5s
+KT,순 완전무한 51,LTE,56100,5GB+이월,200분,무제한,무제한,-,5000,https://www.youtube.com/embed/Ldaiu7FIV5s
+KT,순 광대역 안심무한51,LTE,56100,무제한(15GB+최대3Mbps),-,100분+1회선무제한,100건,-,500000,https://www.youtube.com/embed/Ldaiu7FIV5s
+KT,순 모두다올레 41,LTE,45100,2.5GB+이월,KT망 무제한,KT망 무제한+ 망외250분,무제한,-,25000,https://www.youtube.com/embed/Ldaiu7FIV5s
+KT,순 모두다올레 34,LTE,37400,1.5GB+이월,KT망 무제한,KT망 무제한+ 망외185분,무제한,-,15000,https://www.youtube.com/embed/Ldaiu7FIV5s
+KT,순 모두다올레 28,LTE,30800,750MB+이월,KT망 무제한,KT망 무제한+ 망외130분,무제한,-,750,https://www.youtube.com/embed/Ldaiu7FIV5s
+KT,안심데이터 38.5,LTE,38500,무제한(450MB+최대400Kbps),30분,무제한,무제한,-,500000,https://www.youtube.com/embed/5Fyu0MuV6L0
+KT,키즈알 115,LTE,12650,12000알,-,-,750알,KT 스마트 지킴이  KT 자녀폰 안심,650,https://www.youtube.com/embed/QpY2RubOFek?list=PL_WCuvyChN3jvnHEmuxdisW2jznKIlFQM
+KT,청소년 지니 안심,LTE,39600,무제한(450MB+최대400Kbps),-,-,일200건,만18세 이하  지니팩  기본데이터 이월,500000,https://www.youtube.com/embed/5Fyu0MuV6L0
+KT,청소년 지니 베이직,LTE,32890,2500MB,-,-,일200건,만18세 이하  지니팩  기본데이터 이월,2500,https://www.youtube.com/embed/5Fyu0MuV6L0
+KT,순 청소년 안심데이터34,LTE,37400,무제한(2GB+최대400Kbps),-,52000알,20000알,만 18세 이하  기본 알 무제한 이월,500000,https://www.youtube.com/embed/5Fyu0MuV6L0
+KT,순 알 27,LTE,29700,750MB,-,34000알,20000알,만 18세 이하  기본 알 무제한 이월,750,https://www.youtube.com/embed/QpY2RubOFek?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,알 520,LTE,57200,2.5GB,-,62000알,무제한,만 18세 이하  기본 알 무제한 이월  2년약정 월 41800원,2500,https://www.youtube.com/embed/QpY2RubOFek?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,알 420,LTE,46200,1.5GB,-,52000알,20000알,만 18세 이하  기본 알 무제한 이월  2년약정 월 34100원,1500,https://www.youtube.com/embed/QpY2RubOFek?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,알 340,LTE,37400,750MB,-,34000알,20000알,만 18세 이하  기본 알 무제한 이월  2년약정 월 29700원,750,https://www.youtube.com/embed/QpY2RubOFek?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,알 240,LTE,26400,500MB,-,28000알,20000알,만 18세 이하  기본 알 무제한 이월  2년약정 월 25300원,500,https://www.youtube.com/embed/QpY2RubOFek?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,알 190,LTE,20900,300MB,-,20000알,20000알,만 18세 이하  기본 알 무제한 이월  2년약정 월 20900원,300,https://www.youtube.com/embed/QpY2RubOFek?list=PL_WCuvyChN3jvnHEmuxdisW1jznKIlFQM
+KT,청소년 안심데이터 45,LTE,49500,무제한(2GB+최대400Kbps),-,52000알,20000알,만 18세 이하  기본 알 무제한 이월  2년약정 월 37400원,500000,https://www.youtube.com/embed/Ldaiu7FIV5s
+KT,골든 275,LTE,30250,500MB,망 내 100분,-,-,만65세 이상  2년 약정 월 22000원,500,https://www.youtube.com/embed/F0g7QZRYUNQ
+KT,골든 150,LTE,16500,300MB,망 내 100분,-,-,만65세 이상  2년 약정 월 16500원,300,https://www.youtube.com/embed/F0g7QZRYUNQ
+KT,나라사랑(LTE)군인,LTE,16390,500MB,-,300분,300건,의무 복무 군인 대상,500,https://www.youtube.com/embed/VSY-2Jox9sM
+LG U+,속도 용량 걱정 없는 데이터 88,LTE,88000,무제한 + 나눠쓰기용 40GB,부가제공 300분,기본제공,기본제공,가족간 데이터 주고받기 무제한  태블릿/스마트기기 요금 2회선 무료,500000,https://www.youtube.com/embed/yyTcocZu-eM
+LG U+,속도 용량 걱정 없는 데이터 78,LTE,78000,무제한 + 나눠쓰기용 15GB,부가제공 300분,기본제공,기본제공,U+모바일 tv 무료 이용+ 프리미엄 콘텐츠  멤버십,500000,https://www.youtube.com/embed/yyTcocZu-eM
+LG U+,속도 용량 걱정 없는 데이터 69,LTE,69000,매일 5GB(초과시 최대 5Mbps속도),부가제공 300분,기본제공,기본제공,U+모바일 tv 무료 이용,500000,https://www.youtube.com/embed/yyTcocZu-eM
+LG U+,속도 용량 걱정 없는 데이터 59,LTE,59000,6.6GB (초과시 최대 5Mbps속도),부가제공 300분,기본제공,기본제공,U+모바일 tv 무료 이용,500000,https://www.youtube.com/embed/yyTcocZu-eM
+LG U+,속도 용량 걱정 없는 데이터 49,LTE,49000,3GB(초과시 최대 1Mbps),부가제공 300분,기본제공,기본제공,U+모바일 tv 무료 이용,500000,https://www.youtube.com/embed/yyTcocZu-eM
+LG U+,속도 용량 걱정 없는 데이터 44,LTE,44000,2.3GB(초과시 최대 400kbps),부가제공 110분,기본제공,기본제공,-,500000,https://www.youtube.com/embed/yyTcocZu-eM
+LG U+,추가 요금 걱정 없는 데이터 청소년 59,LTE,59000,9GB(초과시 최대 1Mbps),부가제공 300분,기본제공,기본제공,4~18세 전용  U+모바일 tv 무료 이용,500000,https://www.youtube.com/embed/oAw6Ehg7I8w
+LG U+,추가 요금 걱정 없는 데이터 청소년 49,LTE,49000,6GB(초과시 최대 1Mbps),부가제공 300분,기본제공,기본제공,4~18세 전용  U+모바일 tv 무료 이용,500000,https://www.youtube.com/embed/oAw6Ehg7I8w
+LG U+,추가 요금 걱정 없는 데이터 청소년 33,LTE,33000,2GB(초과시 최대 400kbps),부가제공 110분,기본제공,기본제공,4~18세 전용,500000,https://www.youtube.com/embed/oAw6Ehg7I8w
+LG U+,현역 병사 데이터 55,LTE,55000,매일 5GB(초과시 최대 5Mbps속도),부가제공 300분,기본제공,기본제공,U+모바일 tv 무료 이용  나눠쓰기용 데이터 5GB  현역 병사 대상,500000,https://www.youtube.com/embed/3s5IeQv3W_I
+LG U+,현역 병사 데이터 33,LTE,33000,매일 2GB(초과시 최대 3Mbps속도),부가제공 110분,기본제공,기본제공,현역 병사 대상,500000,https://www.youtube.com/embed/3s5IeQv3W_I
+LG U+,데이터 스폐셜 B,LTE,74800,월 16GB  매일 2GB(초과시 최대 3Mbps),부가제공 300분,기본제공,기본제공,U+모바일 tv 무료 이용 영화월정액or지니 뮤직 앱 음악 감상 택1  멤버십,500000,https://www.youtube.com/embed/_eZRtEiou8Q
+LG U+,데이터 스폐셜 A,LTE,65890,월 11GB  매일 2GB(초과시 최대 3Mbps),부가제공 300분,기본제공,기본제공,U+모바일 tv 무료 이용,500000,https://www.youtube.com/embed/_eZRtEiou8Q
+LG U+,데이터 6.6,LTE,55990,6.6GB,부가제공 300분,기본제공,기본제공,U+모바일 tv 무료 이용,6600,https://www.youtube.com/embed/_eZRtEiou8Q
+LG U+,데이터 3.6,LTE,51590,3.6GB,부가제공 50분,기본제공,기본제공,U+모바일 tv 무료 이용,3600,https://www.youtube.com/embed/_eZRtEiou8Q
+LG U+,데이터 2.3,LTE,46090,2.3GB,부가제공 50분,기본제공,기본제공,U+모바일 tv 무료 이용,2300,https://www.youtube.com/embed/_eZRtEiou8Q
+LG U+,데이터 1.3,LTE,39490,1.3GB,부가제공 50분,기본제공,기본제공,U+모바일 tv 라이트 무료 이용,1300,https://www.youtube.com/embed/_eZRtEiou8Q
+LG U+,데이터 일반,LTE,32890,300MB,부가제공 50분,기본제공,기본제공,U+모바일 tv 라이트 무료 이용,300,https://www.youtube.com/embed/_eZRtEiou8Q
+LG U+,Single LTE 망내 52,LTE,57200,2.1GB,기본제공,기본제공,기본제공,-,2100,https://www.youtube.com/embed/JXHC6b-ZV-k
+LG U+,Single LTE 망내 42,LTE,46200,1.4GB,기본제공,기본제공,기본제공,-,1400,https://www.youtube.com/embed/JXHC6b-ZV-k
+LG U+,Single LTE 망내 32,LTE,37400,750MB,기본제공,기본제공,기본제공,-,750,https://www.youtube.com/embed/JXHC6b-ZV-k
+LG U+,LTE데이터 33,LTE,33000,1.3GB,부가제공 110분,기본제공,기본제공,-,1300,https://www.youtube.com/embed/_eZRtEiou8Q
+LG U+,청소년 스페셜,LTE,32890,750MB,부가제공 50분,기본제공,기본제공,4~18세 전용,750,https://www.youtube.com/embed/oAw6Ehg7I8w
+LG U+,LTE 청소년 50,LTE,55000,2.2GB,-,60000링,기본제공,4~18세 전용,2200,https://www.youtube.com/embed/oAw6Ehg7I9w
+LG U+,LTE 청소년 42,LTE,46200,1.5GB,-,52000링,기본제공,4~18세 전용,1500,https://www.youtube.com/embed/oAw6Ehg7I10w
+LG U+,LTE 청소년 34,LTE,37400,750MB,-,34000링,기본제공,4~18세 전용,750,https://www.youtube.com/embed/oAw6Ehg7I11w
+LG U+,LTE 청소년 24,LTE,26400,500MB,-,28000링,1000건,4~18세 전용,500,https://www.youtube.com/embed/oAw6Ehg7I12w
+LG U+,LTE 청소년 19,LTE,20900,350MB,-,20000링,1000건,4~18세 전용,350,https://www.youtube.com/embed/oAw6Ehg7I13w
+LG U+,LTE 시니어 29.7,LTE,29700,1.2GB,-,150분,250건,만65세 이상,1200,https://www.youtube.com/embed/oAw6Ehg7I14w
+LG U+,LTE 시니어 16.5,LTE,16500,300MB,-,70분,100건,만65세 이상,300,https://www.youtube.com/embed/oAw6Ehg7I15w
+LG U+,LTE 복지 음성 34.6,LTE,34650,1.5GB,-,망 내 무제한 외 350분,200건,시각 장애 고객 대상,1500,https://www.youtube.com/embed/F0g7QZRYUNQ
+LG U+,LTE 복지 음성 29.7,LTE,29700,750MB,-,망 내 무제한 외 270분,100건,시각 장애 고객 대상,750,https://www.youtube.com/embed/F0g7QZRYUNQ
+LG U+,LTE 복지 영상 34.6,LTE,34650,2.2GB,200분,-,2000건,시각 장애인 및 청각 장애인 대상,2200,https://www.youtube.com/embed/F0g7QZRYUNQ
+LG U+,LTE 복지 영상 29.7,LTE,29700,1.5GB,130분,-,1000건,시각 장애인 및 청각 장애인 대상,1500,https://www.youtube.com/embed/F0g7QZRYUNQ
+LG U+,LTE 표준,LTE,11990,0.28원/KB,3.28원/초,1.98원/초,50건,-,0,https://www.youtube.com/embed/oAw6Ehg7I8w
+SKT,5GX플래티넘,5G,125000,무제한,부가제공 300분,기본제공,기본제공,FLO 앤 데이터  POOQ 콘텐츠 팩,500000,https://www.youtube.com/embed/1imUhSNVyTk
+SKT,5GX 프라임,5G,95000,무제한,부가제공 300분,기본제공,기본제공,FLO 앤 데이터  POOQ 콘텐츠 팩 택1,500000,https://www.youtube.com/embed/1imUhSNVyTk
+SKT,5GX 스탠다드,5G,75000,무제한,부가제공 300분,기본제공,기본제공,-,500000,https://www.youtube.com/embed/1imUhSNVyTk
+SKT,슬림,5G,55000,9GB(초과시 최대 1Mbps),부가제공 300분,기본제공,기본제공,-,9000,https://www.youtube.com/embed/1imUhSNVyTk
+SKT,Data인피니티,LTE,100000,무제한,부가제공 300분,기본제공,기본제공,데이터 쉐어링 40GB  VIP 멤버십,500000,https://www.youtube.com/embed/aamhzNlw_fo
+SKT,패밀리,LTE,79000,150GB(초과시 최대 5Mbps),부가제공 300분,기본제공,기본제공,데이터 쉐어링 20GB  VIP 멤버십,150000,https://www.youtube.com/embed/aamhzNlw_fo
+SKT,라지,LTE,69000,100GB(초과시 최대 5Mbps),부가제공 300분,기본제공,기본제공,oksusu 및 기본 FLO,100000,https://www.youtube.com/embed/1AuXDabIWqQ
+SKT,0플랜 라지,LTE,69000,100GB(초과시 최대 5Mbps),부가제공 300분,기본제공,기본제공,VIP멤버십  FOL 모바일 무제한,100000,https://www.youtube.com/embed/1d09FA-y6WQ
+SKT,T시그니처 Master,LTE,110000,35GB+매일2GB(이후 속도제어),-,기본제공,기본제공,-,500000,https://www.youtube.com/embed/mcZh5RcZaOI
+SKT,T시그니처 Classic,LTE,88000,20GB+매일2GB(이후 속도제어),-,기본제공,기본제공,-,500000,https://www.youtube.com/embed/mcZh5RcZaOI
+SKT,band 데이터 퍼펙트s,LTE,75900,16GB+매일2GB(초과시 최대 3Mbps),-,기본제공,기본제공,집전화 무료  VIP멤버십,500000,https://www.youtube.com/embed/eyqD7R6kcWU
+SKT,band 데이터 퍼펙트,LTE,65890,11GB+매일2GB(초과시 최대 3Mbps),-,기본제공,기본제공,집전화 무료  oksusu 무료,500000,https://www.youtube.com/embed/eyqD7R6kcWU
+SKT,band 데이터 6.5G,LTE,56100,6.5GB,-,기본제공,기본제공,집전화 무료  oksusu 무료,6500,https://www.youtube.com/embed/eyqD7R6kcWU
+SKT,0플랜 미디엄,LTE,50000,6GB(초과시 최대 1Mbps),-,기본제공,기본제공,-,6000,https://www.youtube.com/embed/1d09FA-y6WQ
+SKT,뉴 T끼리 맞춤형(200분+6GB),LTE,49775,6GB,-,200분+망내 무제한,기본제공, oksusu 무료,6000,https://www.youtube.com/embed/6WDOMcmTMrk
+SKT,뉴 T끼리 맞춤형(150분+6GB),LTE,47575,6GB,-,200분+망내 무제한,기본제공, oksusu 무료,6000,https://www.youtube.com/embed/6WDOMcmTMrk
+SKT,뉴 T끼리 맞춤형(100분+6GB),LTE,43175,6GB,-,200분+망내 무제한,기본제공,-,6000,https://www.youtube.com/embed/6WDOMcmTMrk
+SKT,주말엔 팅5.0G,LTE,47000,5GB,부가제공 50분,기본제공,기본제공,주말 추가 데이터 1GB,5000,https://www.youtube.com/embed/wBmy9nJhc5o
+SKT,손누리 4.5G,LTE,42350,4.5GB,250분,기본제공,2000건,청각 장애인 대상,4500,https://www.youtube.com/embed/F0g7QZRYUNQ
+SKT,미디엄,LTE,50000,4GB,-,기본제공,기본제공, oksusu 무료  00~07시 데이터 75%할인,4000,https://www.youtube.com/embed/1AuXDabIWqQ
+SKT,band 데이터 3.5G,LTE,51700,3.5GB,-,기본제공,기본제공, oksusu 무료,3500,https://www.youtube.com/embed/eyqD7R6kcWU
+SKT,주말엔 팅 3.0G,LTE,41000,3GB,부가제공 50분,기본제공,기본제공,주말 추가 데이터 1GB,3000,https://www.youtube.com/embed/wBmy9nJhc5o
+SKT,band 팅 3.0G,LTE,45100,3GB,-,기본제공,기본제공,00~07시 데이터 50%할인,3000,https://www.youtube.com/embed/wBmy9nJhc5o
+SKT,뉴 T끼리 맞춤형(200분+3GB),LTE,47575,3GB,-,200분+망내 무제한,기본제공,-,3000,https://www.youtube.com/embed/6WDOMcmTMrk
+SKT,뉴 T끼리 맞춤형(150분+3GB),LTE,42075,3GB,-,150분+망내 무제한,기본제공,-,3000,https://www.youtube.com/embed/6WDOMcmTMrk
+SKT,뉴 T끼리 맞춤형(100분+3GB),LTE,39930,3GB,-,100분+망내 무제한,기본제공,-,3000,https://www.youtube.com/embed/6WDOMcmTMrk
+SKT,소리누리 3.0G,LTE,42350,3GB,-,300분+망내 무제한,기본제공,시각 장애인 대상,3000,https://www.youtube.com/embed/F0g7QZRYUNQ
+SKT,손누리 3.0G,LTE,34650,3GB,180분,기본제공,1500건,청각 장애인 대상,2200,https://www.youtube.com/embed/F0g7QZRYUNQ
+SKT,band 데이터 2.2G,LTE,46200,2.2GB,-,기본제공,기본제공,집전화 무료  oksusu 무료,2200,https://www.youtube.com/embed/eyqD7R6kcWU
+SKT,band 어르신 2.2G,LTE,44000,2.2GB,-,기본제공,기본제공,만 65세 이상 대상,2000,https://www.youtube.com/embed/eyqD7R6kcWU
+SKT,레귤러,LTE,43000,2GB,-,기본제공,기본제공, 00~07시 데이터 75%할인,2000,https://www.youtube.com/embed/1AuXDabIWqQ
+SKT,0플랜 스몰,LTE,33000,2GB,-,기본제공,기본제공, 00~07시 데이터 75%할인,2000,https://www.youtube.com/embed/1d09FA-y6WQ
+SKT,band 팅 2.0G,LTE,38500,2GB,-,기본제공,기본제공,00~07시 데이터 50%할인,2000,https://www.youtube.com/embed/eyqD7R6kcWU
+SKT,소리누리 2.0G,LTE,34650,2GB,-,250분+망내 무제한,기본제공,시각 장애인 대상,2000,https://www.youtube.com/embed/F0g7QZRYUNQ
+SKT,뉴 T끼리 맞춤형(200분+1.5GB),LTE,43175,1.5GB,-,200분+망내 무제한,기본제공,-,1500,https://www.youtube.com/embed/6WDOMcmTMrk
+SKT,뉴 T끼리 맞춤형(150분+1.5GB),LTE,41030,1.5GB,-,150분+망내 무제한,기본제공,-,1500,https://www.youtube.com/embed/6WDOMcmTMrk
+SKT,뉴 T끼리 맞춤형(100분+1.5GB),LTE,34430,1.5GB,-,100분+망내 무제한,기본제공,-,1500,https://www.youtube.com/embed/6WDOMcmTMrk
+SKT,손누리 1.5G,LTE,29700,1.5GB,110분,기본제공,1000건,청각 장애인 대상,1500,https://www.youtube.com/embed/F0g7QZRYUNQ
+SKT,스몰,LTE,33000,1.2GB,-,기본제공,기본제공, 00~07시 데이터 75%할인,1200,https://www.youtube.com/embed/1AuXDabIWqQ
+SKT,band 데이터 1.2G,LTE,39600,2.2GB,-,기본제공,기본제공, oksusu 무료,2200,https://www.youtube.com/embed/eyqD7R6kcWU
+SKT,band 어르신 1.2G,LTE,37400,1.2GB,-,기본제공,기본제공,만 65세 이상 대상,1200,https://www.youtube.com/embed/eyqD7R6kcWU
+SKT,주말엔 팅 세이브,LTE,31000,800MB,부가제공 50분,기본제공,기본제공,주말 추가 데이터 1GB,800,https://www.youtube.com/embed/wBmy9nJhc5o
+SKT,band 팅 세이브,LTE,31790,750MB,-,기본제공,기본제공,00~07시 데이터 50%할인,750,https://www.youtube.com/embed/wBmy9nJhc5o
+SKT,뉴 T끼리 맞춤형(200분+700MB),LTE,42075,1.5GB,-,200분+망내 무제한,기본제공,-,1500,https://www.youtube.com/embed/6WDOMcmTMrk
+SKT,뉴 T끼리 맞춤형(150분+700MB),LTE,39380,1.5GB,-,150분+망내 무제한,기본제공,-,1500,https://www.youtube.com/embed/6WDOMcmTMrk
+SKT,뉴 T끼리 맞춤형(100분+700MB),LTE,32230,1.5GB,-,100분+망내 무제한,기본제공,-,1500,https://www.youtube.com/embed/6WDOMcmTMrk
+SKT,band 어르신 세이브,LTE,37400,500MB,-,기본제공,기본제공,만 65세 이상 대상,500,https://www.youtube.com/embed/eyqD7R6kcWU
+SKT,쿠키즈 스마트,LTE,19800,500MB,-,60분+2회선 무제한,기본제공,만 12세 이하 대상,500,https://www.youtube.com/embed/ppkT6od44q0
+SKT,band 데이터 세이브,LTE,32890,300MB,-,기본제공,기본제공,집전화 무료  oksusu 무료,300,https://www.youtube.com/embed/eyqD7R6kcWU
+SKT,T끼리 어르신,LTE,19800,300MB,-,70분+망내 무제한,기본제공,만 65세 이상 대상,300,https://www.youtube.com/embed/6WDOMcmTMrk
+SKT,쿠키즈 미니,LTE,15400,300MB,-,50분+2회선 무제한,기본제공,만 12세 이하 대상,300,https://www.youtube.com/embed/ppkT6od44q0
+SKT,뉴 T끼리 맞춤형(200분+250MB),LTE,37675,1.5GB,-,200분+망내 무제한,기본제공,-,1500,https://www.youtube.com/embed/6WDOMcmTMrk
+SKT,뉴 T끼리 맞춤형(150분+250MB),LTE,34430,1.5GB,-,150분+망내 무제한,기본제공,-,1500,https://www.youtube.com/embed/6WDOMcmTMrk
+SKT,뉴 T끼리 맞춤형(100분+250MB),LTE,27830,1.5GB,-,100분+망내 무제한,기본제공,-,1500,https://www.youtube.com/embed/6WDOMcmTMrk

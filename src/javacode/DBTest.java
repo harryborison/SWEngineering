@@ -45,51 +45,21 @@ public class DBTest {
 			
 			Statement statement = connection.createStatement();
 
-			int count = 0;
 
 			// phoneInfo 테이블 생성
 			query = "CREATE TABLE IF NOT EXISTS testdb.phoneInfo(phoneName varchar(45) NOT NULL,company varchar(45) NOT NULL,phonePrice int(11) NOT NULL,screenSize decimal(5,3) NOT NULL,os varchar(45) NOT NULL,capacity int(11) NOT NULL,RAM int(11) NOT NULL,frontCamera int(11) NOT NULL,rearCamera int(11) NOT NULL,weight int(11) NOT NULL,phoneSize varchar(45) NOT NULL,betteryCapacity int(11) NOT NULL,speed float NOT NULL,resolution varchar(45) NOT NULL,releaseYear int(11) NOT NULL,color varchar(70) NOT NULL,link varchar(150) NOT NULL,recCount int(11) NOT NULL DEFAULT 0,link2 varchar(150) NOT NULL,PRIMARY KEY(phoneName))";
-
-			count = statement.executeUpdate(query);
-			if( count == 0 ){
-				System.out.println("phoneInfo 테이블 생성 실패");
-			}
-			else{
-				System.out.println("phoneInfo 테이블 생성 성공");
-			}
-			count = 0;
-
+			 statement.executeUpdate(query);
+			
 			// planInfo 테이블 생성
 			query = "CREATE TABLE IF NOT EXISTS testdb.planInfo ( operator varchar(20) NOT NULL,planName varchar(45) NOT NULL,mobile varchar(10) NOT NULL,planPrice int(11) NOT NULL,data varchar(50) NOT NULL,videoCall varchar(45) NOT NULL,phoneCall varchar(45) NOT NULL,message varchar(45) NOT NULL,phoneOption varchar(70) NOT NULL, data2 int(11) NOT NULL, link varchar(150) NOT NULL, PRIMARY KEY(planName))";
-			count = statement.executeUpdate(query);
-			if( count == 0 ){
-				System.out.println("planInfo 테이블 생성 실패");
-
-			}
-			else{
-				System.out.println("planInfo 테이블 생성 성공");
-			}		
-
-
-/*
-			// 데이터 로드
+			statement.executeUpdate(query);
+			
+			 //데이터 로드
 			 query = "LOAD DATA INFILE 'C:\\\\ProgramData\\\\MySQL\\\\MySQL Server 8.0\\\\Uploads\\\\planInfo.csv' INTO TABLE testdb.planInfo FIELDS TERMINATED BY ',' IGNORE 2 LINES";
-			  count = statement.executeUpdate(query);
-			  if( count == 0 ){
-			      System.out.println("planInfo.csv 데이터 로드 실패");
-			  }
-			   else{
-			        System.out.println("planInfo.csv 데이터 로드 성공");
-			   } 
-*/
+			  statement.executeUpdate(query);
+
 			query = "LOAD DATA INFILE 'C:\\\\ProgramData\\\\MySQL\\\\MySQL Server 8.0\\\\Uploads\\\\phoneInfo.csv' INTO TABLE testdb.phoneInfo FIELDS TERMINATED BY ',' IGNORE 2 LINES";
-			count = statement.executeUpdate(query);
-			if( count == 0 ){
-				System.out.println("phoneInfo.csv 데이터 로드 실패");
-			}
-			else{
-				System.out.println("phoneInfo.csv 데이터 로드 성공");
-			}			
+			statement.executeUpdate(query);
 		} 
 		catch(SQLException e){
 			System.out.println("error: " + e);
@@ -216,13 +186,8 @@ public class DBTest {
 
 
 			// 쿼리문 실행 
-			int count = ppstatement.executeUpdate();		
-			if( count == 0 ){
-				System.out.println("데이터 입력 실패");
-			}
-			else{
-				System.out.println("데이터 입력 성공");
-			}
+			ppstatement.executeUpdate();		
+			
 		}
 		catch( SQLException e){
 			System.out.println("error: " + e);
@@ -292,17 +257,12 @@ public class DBTest {
 				+" sex varchar(10) NOT NULL, "
 				+" PRIMARY KEY(ID))";
 		try {
-			count = statement.executeUpdate(query);
+			statement.executeUpdate(query);
 		} catch (SQLException e) {
 			
 			e.printStackTrace();
 		}
-		if( count == -1 ){
-			System.out.println("Customer 테이블 생성 성공");
-		}
-		else{
-			System.out.println("Customer 테이블 생성 실패");
-		}
+		
 
 	}
 
@@ -323,7 +283,7 @@ public class DBTest {
 			query = "INSERT INTO testdb.customerInfo(ID, password, name, age, phone_number, email_address, sex)VALUES"
 					+ "('"+id+"','"+pwd+"','"+Cusinfo[2]+"','"+Cusinfo[3]+"','"+Cusinfo[4]+"','"+Cusinfo[5]+"','"+Cusinfo[6]+"')";
 			// 쿼리문 실행 
-			int cnt = statement.executeUpdate(query);   
+			statement.executeUpdate(query);   
 		}catch(SQLException e){
 			System.out.println("error: " + e);
 		}            
@@ -335,38 +295,27 @@ public class DBTest {
 			Statement statement = connection.createStatement();
 			// 쿼리문 작성
 			query = "SELECT * from customerInfo ";
-
 			// 쿼리문 실행 
 			result = statement.executeQuery(query);
 			while(result.next())
 				System.out.printf("%s %s %s %s",result.getString(1),result.getString(4),result.getString(3),result.getString(2));
-
-
 		}catch(SQLException e){
 			System.out.println("error: " + e);
 		}            
 	}
-
 	public void deleteCustomerDB() {
 		Statement statement = null;
 		try {
 			statement = connection.createStatement();
-		} catch (SQLException e) {
-			
+		} 
+		catch (SQLException e) {	
 			e.printStackTrace();
 		}
-		int count = 0;
 		query = "DROP TABLE testdb.customerInfo";
 		try {
-			count = statement.executeUpdate(query);
-		} catch (SQLException e) {
-			
+			statement.executeUpdate(query);
+		} catch (SQLException e) {	
 			e.printStackTrace();
 		}
-
-
-
 	}
-
-
 }
