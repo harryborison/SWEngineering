@@ -202,9 +202,9 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
       		+ "'"+model.getCompany()+"', '"+model.getPhonePrice()+"', '"+model.getScreenSize()+"', '"+model.getOs()+"',"
             + "'"+model.getCapacity()+"', '"+model.getRAM()+"', '"+model.getFrontCamera()+"', '"+model.getRearCamera()+"',"
                   + " '"+model.getWeight()+"', '"+model.getPhoneSize()+"', '"+model.getBetteryCapacity()+"'"
-                        + " '"+model.getSpeed()+"' , '"+model.getResolution()+"', '"+model.getReleaseYear()+"'"
-                              + " '"+model.getColor()+"', '"+model.getLink()+"', '"+model.getRecCount()+"','"+model.getVideolink()+"' )";
-     
+                        + ", '"+model.getSpeed()+"' , '"+model.getResolution()+"', '"+model.getReleaseYear()+"'"
+                              + " ,'"+model.getColor()+"', '"+model.getLink()+"', '"+model.getRecCount()+"','"+model.getVideolink()+"' )";
+      System.out.printf("%s",query);
       DBCon con = new DBCon();
       connection  = con.getmyConnection();
       

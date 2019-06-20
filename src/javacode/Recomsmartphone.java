@@ -57,8 +57,8 @@ public class Recomsmartphone extends HttpServlet {
 		String minPrice = request.getParameter("minPrice");
 		String maxPrice = request.getParameter("maxPrice");
 		String[] purpose = request.getParameterValues("purpose");
-		Model result[] = {};
-		String str[] = {};
+		Model[] result = new Model[3];
+		String[] str = new String[3];
 		
 		
 		int minP=0;

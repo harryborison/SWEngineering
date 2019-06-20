@@ -45,6 +45,7 @@
 	temp = Integer.parseInt(phonePrice);
 	md.setPhonePrice(temp);
 	temp2 = Double.parseDouble(screenSize);
+	md.setScreenSize(temp2);
 	md.setOs(os);
 	temp = Integer.parseInt(capacity);
 	md.setCapacity(temp);

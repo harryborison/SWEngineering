@@ -51,7 +51,7 @@ public class PlanControlDB {
 	      query = "INSERT INTO testdb.planInfo VALUES ('"+plan.getOperator()+"', '"+plan.getPlanName()+"', '"+plan.getMobile()+"', '"+plan.getPlanPrice()+"',"
 	            + "'"+plan.getAmtOfData()+"', '"+plan.getVideoCall()+"', '"+plan.getCall()+"' , '"+plan.getMessage()+"',"
 	                  + " '"+plan.getOption()+"' , '"+plan.getData2()+"', '"+plan.getLink()+"')";
-	      
+	      System.out.println(query);
 	      DBCon con = new DBCon();
 	      connection  = con.getmyConnection();
 	      
