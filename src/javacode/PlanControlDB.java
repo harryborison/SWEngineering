@@ -29,13 +29,13 @@ public class PlanControlDB {
 	            statement.executeUpdate(str);
 	            
 	         } catch (Exception e) {
-	            // TODO Auto-generated catch block
+	            
 	        	 logger.log(Level.SEVERE, "error, {0}", e);
 	         }
 	         try {
 				statement.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+				
 				logger.log(Level.SEVERE, "error, {0}", e);
 			}
 	      
@@ -61,14 +61,14 @@ public class PlanControlDB {
 	         
 	      } catch (Exception e) 
 	      {
-	         // TODO Auto-generated catch block
+	        
 	    	  logger.log(Level.SEVERE, "error, {0}", e);
 	      }   
 	      
 	      try {
 			statement.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			logger.log(Level.SEVERE, "error, {0}", e);
 		}
 	      

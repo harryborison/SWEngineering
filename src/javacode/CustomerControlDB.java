@@ -90,10 +90,7 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
 				result = statement.executeQuery(query);
 				
 			
-            if(result == null)
-            {
-            	return 0;
-            }
+            
             while(result.next()) // 데이터존재
                {
                  return 1;
@@ -107,7 +104,7 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
          
          try {
 			statement.close();
-			result.close();
+			
 		} catch (SQLException e) {
 		
 			logger.log(Level.SEVERE, "error, {4}", e);

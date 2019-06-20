@@ -277,7 +277,7 @@ public class DBTest {
 		try {
 			statement = connection.createStatement();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		System.out.printf("called");
@@ -294,7 +294,7 @@ public class DBTest {
 		try {
 			count = statement.executeUpdate(query);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		if( count == -1 ){
@@ -352,7 +352,7 @@ public class DBTest {
 		try {
 			statement = connection.createStatement();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		int count = 0;
@@ -360,7 +360,7 @@ public class DBTest {
 		try {
 			count = statement.executeUpdate(query);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 
