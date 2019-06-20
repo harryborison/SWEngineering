@@ -138,7 +138,9 @@
          ResultSet result = null;
          String query = null;
            // 쿼리를 실행하기 위한 Statement 객체 생성 
-           Connection connection = DBCon.getmyConnection();System.out.println("ASDASD");
+           DBCon dbc = new DBCon();
+           Connection connection = dbc.getmyConnection();
+           
            Statement statement =connection.createStatement();
          // 쿼리문 작성 
          query = "SELECT * from testdb.phoneInfo ";

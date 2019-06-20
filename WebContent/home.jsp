@@ -235,9 +235,6 @@
 					<%} %>
 				
 				
-				
-				
-				
 				<div class="col-md-3">
 					<span class="fa-stack fa-4x"> 
 					<div class="timeline-image">
@@ -250,6 +247,36 @@
 					</h4>
 					<p class="text-muted"></p>
 				</div>
+				
+				<%if(id != null && id.equals("admin")){%>
+				
+				
+				<div class="col-md-3">
+					<span class="fa-stack fa-4x"> 
+					<div class="timeline-image">
+								<img class="rounded-circle img-fluid" src="img/about/a1.jpg"
+									alt="" style = "width:130px;height:130px;">
+							</div>
+					</span>
+					<h4 class="service-heading">
+						<a href="managePhone.jsp">스마트폰 데이터 관리</a>
+					</h4>
+					<p class="text-muted"></p>
+				</div>
+				
+				<div class="col-md-3">
+					<span class="fa-stack fa-4x"> 
+					<div class="timeline-image">
+								<img class="rounded-circle img-fluid" src="img/about/a2.jpg"
+									alt="" style = "width:130px;height:130px;">
+							</div>
+					</span>
+					<h4 class="service-heading">
+						<a href="managePlan.jsp">요금제 데이터 관리</a>
+					</h4>
+					<p class="text-muted"></p>
+				</div>
+				<%} %>
 			</div>
 		</div>
 	</section>
@@ -288,7 +315,7 @@
 						</li>
 						<li class="timeline-inverted">
 							<div class="timeline-image">
-								<img class="rounded-circle img-fluid" src="img/about/2.jpg"
+								<img class="rounded-circle img-fluid" src="img/about/11.jpg"
 									alt="">
 							</div>
 							<div class="timeline-panel">
@@ -307,7 +334,7 @@
 						</li>
 						<li>
 							<div class="timeline-image">
-								<img class="rounded-circle img-fluid" src="img/about/3.jpg"
+								<img class="rounded-circle img-fluid" src="img/about/22.jpg"
 									alt="">
 							</div>
 							<div class="timeline-panel">
@@ -326,7 +353,7 @@
 						</li>
 						<li class="timeline-inverted">
 							<div class="timeline-image">
-								<img class="rounded-circle img-fluid" src="img/about/4.jpg"
+								<img class="rounded-circle img-fluid" src="img/about/33.jpg"
 									alt="">
 							</div>
 							<div class="timeline-panel">
