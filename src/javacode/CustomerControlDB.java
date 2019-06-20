@@ -13,7 +13,7 @@ import java.util.logging.Level;
 
 public class CustomerControlDB {
 
-	
+	Statement statement= null;
    ResultSet result = null;
    String query = null;
    Connection connection= null;
@@ -29,44 +29,46 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
        logger.log(Level.INFO, "Start Logging");
 	  
 	   DBCon con = new DBCon();
+	   
       connection = con.getmyConnection();
       String hashname = sec.encryptSHA256(name);
       String hashpwd  = sec.encryptSHA256(pwd);
-      query = "SELECT * from testdb.customerInfo where ID = '"+ hashname +"' ";
       System.out.println(query);
 	 
     
 
       try {
     	  
-         try {
-			Statement statement = connection.createStatement();
-			
+         
+			statement = connection.createStatement();
+		      query = "SELECT * from testdb.customerInfo where ID = '"+ hashname +"' ";
+
 			 result = statement.executeQuery(query);
-			 statement.close();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-         if(result == null)
-         {
-        	 return 0;
-         }
+			
+			
+		
          while(result.next())
-        	 {
+         {
         		 if(result.getString(2).equals(hashpwd))
         		 {
         			 return 1;
         		 }
-        	 }
+         }
          
       } catch (SQLException e) {
          // TODO Auto-generated catch block
-    	  logger.log(Level.SEVERE, "error, {0}", e.toString());
+    	  logger.log(Level.SEVERE, "error, {123}", e);
       }
       
-  
       
+      try {
+			statement.close();
+			result.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			logger.log(Level.SEVERE, "error, {123}", e);
+		}
+
       return 0;
    }
    
@@ -84,12 +86,12 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
          result = null;
          try {
             try {
-				Statement statement = connection.createStatement();
+				statement = connection.createStatement();
 				result = statement.executeQuery(query);
-				statement.close();
+				
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				logger.log(Level.SEVERE, "error, {123}", e);
 			}
             if(result == null)
             {
@@ -103,10 +105,16 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
             
          } catch (SQLException e) {
             // TODO Auto-generated catch block
-        	 logger.log(Level.SEVERE, "error, {0}", e.toString());
+        	 logger.log(Level.SEVERE, "error, {0}", e);
          }
          
-         
+         try {
+			statement.close();
+			result.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			logger.log(Level.SEVERE, "error, {123}", e);
+		}
      
          
          return 0;
@@ -124,14 +132,11 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
          query = "SELECT * from testdb.customerInfo where ID = '"+ hashname +"' ";
          result = null;
          try {
-            try {
-				Statement statement = connection.createStatement();
+            
+				statement = connection.createStatement();
 				result = statement.executeQuery(query);
-				statement.close();
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+				
+			
             if(result == null)
             {
             	return null;
@@ -143,9 +148,17 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
             
          } catch (SQLException e) {
             // TODO Auto-generated catch block
-        	 logger.log(Level.SEVERE, "error, {0}", e.toString());
+        	 logger.log(Level.SEVERE, "error, {0}", e);
          }
         
+         
+         try {
+			statement.close();
+			result.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			logger.log(Level.SEVERE, "error, {123}", e);
+		}
          return resultname;
       
    }

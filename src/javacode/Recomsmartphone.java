@@ -22,7 +22,7 @@ public class Recomsmartphone extends HttpServlet {
 	 */
 	public Recomsmartphone() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	/**
@@ -30,7 +30,7 @@ public class Recomsmartphone extends HttpServlet {
 	 */
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 	}
 
 	/**
@@ -38,16 +38,16 @@ public class Recomsmartphone extends HttpServlet {
 	 */
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		 Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
 		   
 	       logger.log(Level.INFO, "Start Logging");
 		try {
 			request.setCharacterEncoding("utf-8");
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 
-       	 logger.log(Level.SEVERE, "error, {0}", e.toString());
+       	 logger.log(Level.SEVERE, "error, {0}", e);
 
 		}
 
@@ -67,7 +67,7 @@ public class Recomsmartphone extends HttpServlet {
 		} catch (NumberFormatException e) {
 			// TODO Auto-generated catch block
 
-       	 logger.log(Level.SEVERE, "error, {0}", e.toString());
+       	 logger.log(Level.SEVERE, "error, {0}", e);
 		}
 		int maxP=0;
 		try {
@@ -75,7 +75,7 @@ public class Recomsmartphone extends HttpServlet {
 		} catch (NumberFormatException e) {
 			// TODO Auto-generated catch block
 
-       	 logger.log(Level.SEVERE, "error, {0}", e.toString());
+       	 logger.log(Level.SEVERE, "error, {0}", e);
 		}
 		
 		
@@ -103,7 +103,7 @@ public class Recomsmartphone extends HttpServlet {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 
-       	 logger.log(Level.SEVERE, "error, {0}", e.toString());
+       	 logger.log(Level.SEVERE, "error, {0}", e);
 		}
 	}
 }

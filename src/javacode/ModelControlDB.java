@@ -1,3 +1,4 @@
+
 package javacode;
 
 import java.sql.Connection;
@@ -5,12 +6,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import java.util.logging.Logger;
+import java.util.logging.Level;
 public class ModelControlDB {
    
 
    ResultSet result = null;
    String query = null;
    Connection connection= null;
+   Statement statement = null;
    
 
    public void makeDB()
@@ -19,60 +23,90 @@ public class ModelControlDB {
    }
    public void deleteDB()
    {   
+	   Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
+	   
+       logger.log(Level.INFO, "Start Logging"); 
       DBCon con = new DBCon();
       connection  = con.getmyConnection();
       query = "DROP TABLE testdb.modelInfo";
 
       try {
-         Statement statement = connection.createStatement();
+         statement = connection.createStatement();
          statement.executeQuery(query);
       } catch (SQLException e) 
       {
          // TODO Auto-generated catch block
-         e.printStackTrace();
+    	  logger.log(Level.SEVERE, "error, {0}", e);
       }   
+     
+      try {
+		statement.close();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		logger.log(Level.SEVERE, "error, {0}", e);
+	}
       
    }
    public void countPlus(String[] phoneName)
    {
+Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
+	   
+       logger.log(Level.INFO, "Start Logging"); 
       DBCon con = new DBCon();
       connection  = con.getmyConnection();
       for(int i=0; i<3 ;i++)
       {
          String str = "UPDATE testdb.phoneInfo set recCount = recCount +1 where phoneName = '"+phoneName[i]+"'";
          try {
-            Statement statement = connection.createStatement();
-            int res = statement.executeUpdate(str);
+            statement = connection.createStatement();
+            statement.executeUpdate(str);
          } catch (Exception e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+        	 logger.log(Level.SEVERE, "error, {0}", e);
          }
-      
+        
+	        try {
+				statement.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				logger.log(Level.SEVERE, "error, {0}", e);
+			}
       
       }
    }
    
    public void deletebyPhoneName(String name)
    {
-      
+Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
+	   
+       logger.log(Level.INFO, "Start Logging"); 
       DBCon con = new DBCon();
       connection  = con.getmyConnection();
       
       String str = "DELETE  from testdb.phoneInfo where phoneName = '"+name+"'";
       
          try {
-            Statement statement = connection.createStatement();
-            int res = statement.executeUpdate(str);
+            statement = connection.createStatement();
+           statement.executeUpdate(str);
          } catch (Exception e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+        	 logger.log(Level.SEVERE, "error, {0}", e);
          }
-
+        
+	        try {
+				statement.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				logger.log(Level.SEVERE, "error, {0}", e);
+			}
       
    }
    
    public String[] seeRank()
    {
+Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
+	   
+       logger.log(Level.INFO, "Start Logging"); 
       int j=0;
       DBCon con = new DBCon();
       String[] finaleresult = new String[3];
@@ -81,11 +115,11 @@ public class ModelControlDB {
       {
          String str =  "SELECT phoneName from testdb.phoneInfo order by recCount desc limit 3";
          try {
-            Statement statement = connection.createStatement();
+            statement = connection.createStatement();
             result = statement.executeQuery(str);
          } catch (SQLException e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+        	 logger.log(Level.SEVERE, "error, {0}", e);
          }
          try {
             while(result.next())
@@ -95,18 +129,20 @@ public class ModelControlDB {
                   break;
                }
                finaleresult[j++] = result.getString(1);
-               try {
-                  System.out.printf("%s\n",result.getString(1));
-               } catch (SQLException e) {
-                  // TODO Auto-generated catch block
-                  e.printStackTrace();
-               }
+               
+               
             }
          } catch (Exception e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+        	 logger.log(Level.SEVERE, "error, {0}", e);
          }
-      
+         try {
+			result.close();
+			    statement.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			logger.log(Level.SEVERE, "error, {0}", e);
+		}
       }
       return finaleresult;
       
@@ -114,6 +150,10 @@ public class ModelControlDB {
    
    public int[] seeRankcnt()
    {
+ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
+	   
+       logger.log(Level.INFO, "Start Logging");
+
       int j=0;
       DBCon con = new DBCon();
       int[] finaleresult = new int[3];
@@ -122,11 +162,11 @@ public class ModelControlDB {
       {
          String str =  "SELECT recCount from testdb.phoneInfo order by recCount desc limit 3";
          try {
-            Statement statement = connection.createStatement();
+            statement = connection.createStatement();
             result = statement.executeQuery(str);
          } catch (Exception e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+        	 logger.log(Level.SEVERE, "error, {0}", e);
          }
          try {
             while(result.next())
@@ -136,25 +176,31 @@ public class ModelControlDB {
                   break;
                }
                finaleresult[j++] = result.getInt(1);
-               try {
-                  System.out.printf("%s\n",result.getString(1));
-               } catch (SQLException e) {
-                  // TODO Auto-generated catch block
-                  e.printStackTrace();
-               }
+              
             }
          } catch (Exception e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+        	 logger.log(Level.SEVERE, "error, {0}", e);
          }
-      
+         
+         try {
+			result.close();
+	        statement.close();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			logger.log(Level.SEVERE, "error, {0}", e);
+		}
       }
       return finaleresult;
    }
    
    public void insertModel(Model model)
    {
-      
+ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
+	   
+       logger.log(Level.INFO, "Start Logging");
+
       query = "INSERT INTO testdb.phoneInfo VALUES ('"+model.getPhoneName()+"',"
       		+ "'"+model.getCompany()+"', '"+model.getPhonePrice()+"', '"+model.getScreenSize()+"', '"+model.getOs()+"',"
             + "'"+model.getCapacity()+"', '"+model.getRAM()+"', '"+model.getFrontCamera()+"' , '"+model.getRearCamera()+"',"
@@ -171,7 +217,7 @@ public class ModelControlDB {
       } catch (Exception e) 
       {
          // TODO Auto-generated catch block
-         e.printStackTrace();
+    	  logger.log(Level.SEVERE, "error, {0}", e);
       }   
       
       
