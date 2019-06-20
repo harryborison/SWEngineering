@@ -15,7 +15,7 @@ public class ModelTest {
 	public void testGetPhoneName() {
 		
 		model.setPhoneName("harry");
-		assertEquals(model.getPhoneName(),"harry");
+		assertEquals("harry",model.getPhoneName());
 		
 	}
 
@@ -31,7 +31,7 @@ public class ModelTest {
 	public void testGetCompany() {
 	
 		model.setCompany("mycom");
-		assertEquals(model.getCompany(),"mycom");
+		assertEquals("mycom",model.getCompany());
 
 	
 	
@@ -41,7 +41,7 @@ public class ModelTest {
 	public void testSetCompany() {
 		
 		model.setCompany("mycom");
-		assertEquals(model.getCompany(),"mycom");
+		assertEquals("mycom",model.getCompany());
 
 	
 	}
@@ -49,21 +49,21 @@ public class ModelTest {
 	@Test
 	public void testGetPhonePrice() {
 		model.setPhonePrice(1234);
-		assertEquals(model.getPhonePrice(),1234);
+		assertEquals(1234,model.getPhonePrice());
 
 	}
 
 	@Test
 	public void testSetPhonePrice() {
 		model.setPhonePrice(1234);
-		assertEquals(model.getPhonePrice(),1234);
+		assertEquals(1234,model.getPhonePrice());
 
 	}
 
 	@Test
 	public void testGetScreenSize() {
 		model.setScreenSize(1.123);
-		assertEquals(model.getScreenSize(),1.123,0);
+		assertEquals(1.123,model.getScreenSize(),0);
 
 	
 	}
@@ -71,27 +71,27 @@ public class ModelTest {
 	@Test
 	public void testSetScreenSize() {
 		model.setScreenSize(1.123);
-		assertEquals(model.getScreenSize(),1.123,0);
+		assertEquals(1.123,model.getScreenSize(),0);
 	}
 
 	@Test
 	public void testGetOs() {
 		
 		model.setOs("sss");
-		assertEquals(model.getOs(),"sss");
+		assertEquals("sss",model.getOs());
 
 	}
 
 	@Test
 	public void testSetOs() {
 		model.setOs("kt");
-		assertEquals(model.getOs(),"kt");
+		assertEquals("kt",model.getOs());
 	}
 
 	@Test
 	public void testGetCapacity() {
 		model.setCapacity(50);
-		assertEquals(model.getCapacity(),50);
+		assertEquals(50,model.getCapacity());
 
 		
 		
@@ -100,14 +100,14 @@ public class ModelTest {
 	@Test
 	public void testSetCapacity() {
 		model.setCapacity(50);
-		assertEquals(model.getCapacity(),50);
+		assertEquals(50,model.getCapacity());
 	}
 
 	@Test
 	public void testGetRAM() {
 		
 		model.setRAM(3);
-		assertEquals(model.getRAM(),3);
+		assertEquals(3,model.getRAM());
 
 		
 	}
@@ -115,7 +115,7 @@ public class ModelTest {
 	@Test
 	public void testSetRAM() {
 		model.setRAM(3);
-		assertEquals(model.getRAM(),3);
+		assertEquals(3,model.getRAM());
 
 	}
 
@@ -123,60 +123,60 @@ public class ModelTest {
 	public void testGetFrontCamera() {
 		
 		model.setFrontCamera(50);
-		assertEquals(model.getFrontCamera(),50);
+		assertEquals(50,model.getFrontCamera());
 
 	}
 
 	@Test
 	public void testSetFrontCamera() {
 		model.setFrontCamera(50);
-		assertEquals(model.getFrontCamera(),50);
+		assertEquals(50,model.getFrontCamera());
 	}
 
 	@Test
 	public void testGetRearCamera() {
 		
 		model.setFrontCamera(1100);
-		assertEquals(model.getFrontCamera(),1100);
+		assertEquals(1100,model.getFrontCamera());
 		
 	}
 
 	@Test
 	public void testSetRearCamera() {
 		model.setFrontCamera(1100);
-		assertEquals(model.getFrontCamera(),1100);
+		assertEquals(1100,model.getFrontCamera());
 	}
 
 	@Test
 	public void testGetWeight() {
 		model.setWeight(123);
-		assertEquals(model.getWeight(),123);
+		assertEquals(123,model.getWeight());
 	}
 
 	@Test
 	public void testSetWeight() {
 		model.setWeight(123);
-		assertEquals(model.getWeight(),123);
+		assertEquals(123,model.getWeight());
 	}
 
 	@Test
 	public void testGetPhoneSize() {
 		
 		model.setPhoneSize("15.3");
-		assertEquals(model.getPhoneSize(),"15.3");
+		assertEquals("15.3",model.getPhoneSize());
 	}
 
 	@Test
 	public void testSetPhoneSize() {
 		model.setPhoneSize("15.3");
-		assertEquals(model.getPhoneSize(),"15.3");
+		assertEquals("15.3",model.getPhoneSize());
 	}
 
 	@Test
 	public void testGetBetteryCapacity() {
 		
 		model.setBetteryCapacity(3500);
-		assertEquals(model.getBetteryCapacity(),3500);
+		assertEquals(3500,model.getBetteryCapacity());
 		
 		
 	}
@@ -184,41 +184,41 @@ public class ModelTest {
 	@Test
 	public void testSetBetteryCapacity() {
 		model.setBetteryCapacity(3500);
-		assertEquals(model.getBetteryCapacity(),3500);
+		assertEquals(3500,model.getBetteryCapacity());
 		
 	}
 
 	@Test
 	public void testGetSpeed() {
 		model.setSpeed(1.23);
-		assertEquals(model.getSpeed(),1.23,0);
+		assertEquals(1.23,model.getSpeed(),0);
 	}
 
 	@Test
 	public void testSetSpeed() {
 		model.setSpeed(1.23);
-		assertEquals(model.getSpeed(),1.23,0);
+		assertEquals(1.23,model.getSpeed(),0);
 	}
 
 	@Test
 	public void testGetResolution() {
 
 		model.setResolution("1920*330");
-		assertEquals(model.getResolution(),"1920*330");
+		assertEquals("1920*330",model.getResolution());
 	
 	}
 
 	@Test
 	public void testSetResolution() {
 		model.setResolution("1920*330");
-		assertEquals(model.getResolution(),"1920*330");
+		assertEquals("1920*330",model.getResolution());
 	}
 
 	@Test
 	public void testGetReleaseYear() {
 
 		model.setReleaseYear(2019);
-		assertEquals(model.getReleaseYear(),2019);
+		assertEquals(2019,model.getReleaseYear());
 
 	
 	
@@ -227,14 +227,14 @@ public class ModelTest {
 	@Test
 	public void testSetReleaseYear() {
 		model.setReleaseYear(2019);
-		assertEquals(model.getReleaseYear(),2019);
+		assertEquals(2019,model.getReleaseYear());
 	}
 
 	@Test
 	public void testGetColor() {
 		
 		model.setColor("Red");
-		assertEquals(model.getColor(),"Red");
+		assertEquals("Red",model.getColor());
 
 		
 		
@@ -244,21 +244,21 @@ public class ModelTest {
 	@Test
 	public void testSetColor() {
 		model.setColor("Red");
-		assertEquals(model.getColor(),"Red");
+		assertEquals("Red",model.getColor());
 	}
 
 	@Test
 	public void testGetLink() {
 		
 		model.setColor("www.nbaver.com");
-		assertEquals(model.getColor(),"www.nbaver.com");
+		assertEquals("www.nbaver.com",model.getColor());
 
 	}
 
 	@Test
 	public void testSetLink() {
 		model.setColor("www.nbaver.com");
-		assertEquals(model.getColor(),"www.nbaver.com");
+		assertEquals("www.nbaver.com",model.getColor());
 
 	}
 
@@ -266,7 +266,7 @@ public class ModelTest {
 	public void testGetRecCount() {
 
 		model.setRecCount(50);
-		assertEquals(model.getRecCount(),50);
+		assertEquals(50,model.getRecCount());
 	
 	
 	}
@@ -274,7 +274,7 @@ public class ModelTest {
 	@Test
 	public void testSetRecCount() {
 		model.setRecCount(50);
-		assertEquals(model.getRecCount(),50);
+		assertEquals(50,model.getRecCount());
 	
 	
 	}
@@ -283,7 +283,7 @@ public class ModelTest {
 	public void testGetVideolink() {
 		
 		model.setVideolink("asdf.naver.com");
-		assertEquals(model.getVideolink(),"asdf.naver.com");
+		assertEquals("asdf.naver.com",model.getVideolink());
 	
 		
 	}
@@ -291,7 +291,7 @@ public class ModelTest {
 	@Test
 	public void testSetVideolink() {
 		model.setVideolink("asdf.naver.com");
-		assertEquals(model.getVideolink(),"asdf.naver.com");
+		assertEquals("asdf.naver.com",model.getVideolink());
 	}
 
 }

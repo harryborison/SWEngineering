@@ -22,6 +22,7 @@ public class PlanControlDB {
 	         try {
 	            Statement statement = connection.createStatement();
 	            int res = statement.executeUpdate(str);
+	            statement.close();
 	         } catch (Exception e) {
 	            // TODO Auto-generated catch block
 	            e.printStackTrace();
@@ -43,6 +44,7 @@ public class PlanControlDB {
 	      try {
 	         Statement statement = connection.createStatement();
 	         statement.executeUpdate(query);
+	         statement.close();
 	      } catch (Exception e) 
 	      {
 	         // TODO Auto-generated catch block

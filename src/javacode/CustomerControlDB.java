@@ -38,17 +38,24 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
       String tmp;
       query = "SELECT * from testdb.customerInfo where ID = '"+ hashname +"' ";
       System.out.println(query);
-      
+	 
+    
+
       try {
     	  
          try {
 			Statement statement = connection.createStatement();
-			 
+			
 			 result = statement.executeQuery(query);
+			 statement.close();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+         if(result == null)
+         {
+        	 return 0;
+         }
          while(result.next())
         	 {
         		 if(result.getString(2).equals(hashpwd))
@@ -84,10 +91,15 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
             try {
 				Statement statement = connection.createStatement();
 				result = statement.executeQuery(query);
+				statement.close();
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+            if(result == null)
+            {
+            	return 0;
+            }
             while(result.next()) // 데이터존재
                {
                  return 1;
@@ -121,10 +133,15 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
             try {
 				Statement statement = connection.createStatement();
 				result = statement.executeQuery(query);
+				statement.close();
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+            if(result == null)
+            {
+            	return null;
+            }
             while(result.next()) // 데이터존재
                {
                resultname = result.getString(3);

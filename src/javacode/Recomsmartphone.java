@@ -8,7 +8,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.*;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 /**
  * Servlet implementation class Recomsmartphone
  */
@@ -38,11 +39,16 @@ public class Recomsmartphone extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		 Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
+		   
+	       logger.log(Level.INFO, "Start Logging");
 		try {
 			request.setCharacterEncoding("utf-8");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+
+       	 logger.log(Level.SEVERE, "error, {0}", e.toString());
+
 		}
 
 		ModelControlDB mdb = new ModelControlDB();
@@ -60,14 +66,16 @@ public class Recomsmartphone extends HttpServlet {
 			minP = Integer.parseInt(minPrice) * 10000;
 		} catch (NumberFormatException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+
+       	 logger.log(Level.SEVERE, "error, {0}", e.toString());
 		}
 		int maxP=0;
 		try {
 			maxP = Integer.parseInt(maxPrice) * 10000;
 		} catch (NumberFormatException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+
+       	 logger.log(Level.SEVERE, "error, {0}", e.toString());
 		}
 		
 		
@@ -94,7 +102,8 @@ public class Recomsmartphone extends HttpServlet {
 			dispatcher.forward(request, response);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+
+       	 logger.log(Level.SEVERE, "error, {0}", e.toString());
 		}
 	}
 }
