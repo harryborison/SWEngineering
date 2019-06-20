@@ -4,8 +4,8 @@ package javacode;
 import java.util.ArrayList;
 
 public class RecomPlan {
-    ArrayList<Plan> planlist = new ArrayList<Plan>();
-	public void makepaln_list()
+    ArrayList<Plan> planlist = new ArrayList<>();
+	public void makepalnList()
 	{
 
 		DBTest db = new DBTest();
@@ -13,7 +13,7 @@ public class RecomPlan {
 		planlist=db.getPlanDB();
 	}
 	
-	public Plan[] recPlan(String telecom[], String type[] , int lowprice,int highprice , int data, String option[])
+	public Plan[] recPlan(String[] telecom, String[] type , int lowprice,int highprice , int data, String[] option)
 	{
 		int Length = planlist.size();
 		int[] count = new int[Length];
@@ -49,7 +49,7 @@ public class RecomPlan {
 		
 	}
 	
-	public int matchtelecom(String tel, String wanttel[])
+	public int matchtelecom(String tel, String[] wanttel)
 	{
 		for(int i=0;i<(wanttel).length;i++)
 		{
@@ -61,7 +61,7 @@ public class RecomPlan {
 		return 0;
 	}
 	
-	public int matchtype(String type , String wanttype[])
+	public int matchtype(String type , String[] wanttype)
 	{
 		for(int i=0;i<(wanttype).length;i++)
 		{
@@ -86,13 +86,13 @@ public class RecomPlan {
 			return matchdiff(diff);
 			
 		}
-		else if (planprice > highprice)
+		else
 		{
 			diff = planprice - highprice;
 			return matchdiff(diff);
 
 		}
-		return 0;
+		
 	}
 	
 	public int matchdiff(int diff)
@@ -162,77 +162,64 @@ public class RecomPlan {
 		}
 		return 0;
 	}
-	public int matchoption(String option[], Plan plan )
+	public int matchoption(String[] option, Plan plan )
 	{
 		int sum = 0;
 		for(int i=0; i< option.length; i++)
 		{
 			
-			if(option[i].equals("soldier"))
+			if(option[i].equals("soldier") && plan.getOption().matches(".*군인.*"))
 			{
-				if(plan.getOption().matches(".*군인.*"))
-				{
-					sum = sum + 3;
-				}
+				sum = sum + 3;
+				
 					
 			}
-			if(option[i].equals("nextmonth"))
+			if(option[i].equals("nextmonth") && plan.getOption().matches(".*이월.*"))
 			{
-				if(plan.getOption().matches(".*이월.*"))
-				{
-					sum =sum + 3;
-				}
+				sum =sum + 3;
+			
+			}
+			if(option[i].equals("vip") && plan.getOption().matches("(?!).*vip.*"))
+			{
+				sum = sum + 3;
+			
+			}
+			if(option[i].equals("feature") && plan.getOption().matches(".*피쳐.*"))
+			{
+				
+					sum = sum + 3;
 				
 			}
-			if(option[i].equals("vip"))
+			if(option[i].equals("notsee") && plan.getOption().matches(".*시각.*"))
 			{
-				if(plan.getOption().matches("(?!).*vip.*"))
-				{
+				
 					sum = sum + 3;
-				}
+				
 			}
-			if(option[i].equals("feature"))
+			if(option[i].equals("notlisten") && plan.getOption().matches(".*청각.*"))
 			{
-				if(plan.getOption().matches(".*피쳐.*"))
-				{
+				
 					sum = sum + 3;
-				}
+				
 			}
-			if(option[i].equals("notsee"))
+			if(option[i].equals("diabled") && plan.getOption().matches(".*장애.*"))
 			{
-				if(plan.getOption().matches(".*시각.*"))
-				{
+				
 					sum = sum + 3;
-				}
-			}
-			if(option[i].equals("notlisten"))
-			{
-				if(plan.getOption().matches(".*청각.*"))
-				{
-					sum = sum + 3;
-				}
-			}
-			if(option[i].equals("diabled"))
-			{
-				if(plan.getOption().matches(".*장애.*"))
-				{
-					sum = sum + 3;
-				}
+				
 			}
 			
-			if(option[i].equals("old"))
+			if(option[i].equals("old") && plan.getOption().matches(".*65세.*"))
 			{
-				if(plan.getOption().matches(".*65세.*"))
-				{
+				
 					sum = sum + 3;
-				}
+				
 			}
-			if(option[i].equals("young"))
+			if(option[i].equals("young") && (plan.getOption().matches(getOptStr("youngnum")) || plan.getOption().matches(getOptStr("teenager"))))
 			{
-				if(plan.getOption().matches(".*18세.*") || plan.getOption().matches(".*청소년.*"))
-				{
+				
 					sum = sum + 6;
-				}
+				
 			}
 			
 			

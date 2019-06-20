@@ -17,10 +17,7 @@ public class ModelControlDB {
    Statement statement = null;
    
 
-   public void makeDB()
-   {
-      
-   }
+   
    public void deleteDB()
    {   
 	   Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
@@ -35,15 +32,15 @@ public class ModelControlDB {
          statement.executeQuery(query);
       } catch (SQLException e) 
       {
-         // TODO Auto-generated catch block
+        
     	  logger.log(Level.SEVERE, "error, {0}", e);
       }   
      
       try {
 		statement.close();
 	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		logger.log(Level.SEVERE, "error, {0}", e);
+		
+		logger.log(Level.SEVERE, "error, {1}", e);
 	}
       
    }
@@ -61,15 +58,15 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
             statement = connection.createStatement();
             statement.executeUpdate(str);
          } catch (Exception e) {
-            // TODO Auto-generated catch block
-        	 logger.log(Level.SEVERE, "error, {0}", e);
+            
+        	 logger.log(Level.SEVERE, "error, {2}", e);
          }
         
 	        try {
 				statement.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				logger.log(Level.SEVERE, "error, {0}", e);
+				
+				logger.log(Level.SEVERE, "error, {3}", e);
 			}
       
       }
@@ -89,15 +86,15 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
             statement = connection.createStatement();
            statement.executeUpdate(str);
          } catch (Exception e) {
-            // TODO Auto-generated catch block
-        	 logger.log(Level.SEVERE, "error, {0}", e);
+           
+        	 logger.log(Level.SEVERE, "error, {4}", e);
          }
         
 	        try {
 				statement.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				logger.log(Level.SEVERE, "error, {0}", e);
+				
+				logger.log(Level.SEVERE, "error, {5}", e);
 			}
       
    }
@@ -118,8 +115,8 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
             statement = connection.createStatement();
             result = statement.executeQuery(str);
          } catch (SQLException e) {
-            // TODO Auto-generated catch block
-        	 logger.log(Level.SEVERE, "error, {0}", e);
+            
+        	 logger.log(Level.SEVERE, "error, {6}", e);
          }
          try {
             while(result.next())
@@ -133,15 +130,15 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
                
             }
          } catch (Exception e) {
-            // TODO Auto-generated catch block
-        	 logger.log(Level.SEVERE, "error, {0}", e);
+            
+        	 logger.log(Level.SEVERE, "error, {7}", e);
          }
          try {
 			result.close();
 			    statement.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			logger.log(Level.SEVERE, "error, {0}", e);
+			
+			logger.log(Level.SEVERE, "error, {8}", e);
 		}
       }
       return finaleresult;
@@ -165,7 +162,7 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
             statement = connection.createStatement();
             result = statement.executeQuery(str);
          } catch (Exception e) {
-            // TODO Auto-generated catch block
+            
         	 logger.log(Level.SEVERE, "error, {0}", e);
          }
          try {
@@ -179,7 +176,7 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
               
             }
          } catch (Exception e) {
-            // TODO Auto-generated catch block
+            
         	 logger.log(Level.SEVERE, "error, {0}", e);
          }
          
@@ -188,7 +185,7 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
 	        statement.close();
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			logger.log(Level.SEVERE, "error, {0}", e);
 		}
       }
@@ -203,20 +200,20 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
 
       query = "INSERT INTO testdb.phoneInfo VALUES ('"+model.getPhoneName()+"',"
       		+ "'"+model.getCompany()+"', '"+model.getPhonePrice()+"', '"+model.getScreenSize()+"', '"+model.getOs()+"',"
-            + "'"+model.getCapacity()+"', '"+model.getRAM()+"', '"+model.getFrontCamera()+"' , '"+model.getRearCamera()+"',"
-                  + " '"+model.getWeight()+"' , '"+model.getPhoneSize()+"', '"+model.getBetteryCapacity()+"'"
+            + "'"+model.getCapacity()+"', '"+model.getRAM()+"', '"+model.getFrontCamera()+"', '"+model.getRearCamera()+"',"
+                  + " '"+model.getWeight()+"', '"+model.getPhoneSize()+"', '"+model.getBetteryCapacity()+"'"
                         + " '"+model.getSpeed()+"' , '"+model.getResolution()+"', '"+model.getReleaseYear()+"'"
                               + " '"+model.getColor()+"', '"+model.getLink()+"', '"+model.getRecCount()+"','"+model.getVideolink()+"' )";
-      System.out.printf("%s",query);
+     
       DBCon con = new DBCon();
       connection  = con.getmyConnection();
       
       try {
-         Statement statement = connection.createStatement();
+         statement = connection.createStatement();
          statement.executeUpdate(query);
       } catch (Exception e) 
       {
-         // TODO Auto-generated catch block
+         
     	  logger.log(Level.SEVERE, "error, {0}", e);
       }   
       

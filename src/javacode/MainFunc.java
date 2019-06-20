@@ -2,11 +2,11 @@ package javacode;
 
 public class MainFunc {
 
-		public static void main(String args[])
+		public static void main(String[] args)
 		{
 			DBTest db = new DBTest();
 			db.connectDB();
-			//db.loadData();
+			
 		}
 	
 	

@@ -57,25 +57,25 @@ public class Recomsmartphone extends HttpServlet {
 		String minPrice = request.getParameter("minPrice");
 		String maxPrice = request.getParameter("maxPrice");
 		String[] purpose = request.getParameterValues("purpose");
-		Model[] result = new Model[3];
-		String[] str = new String[3];
+		Model result[] = {};
+		String str[] = {};
 		
 		
 		int minP=0;
 		try {
 			minP = Integer.parseInt(minPrice) * 10000;
 		} catch (NumberFormatException e) {
-			// TODO Auto-generated catch block
+			
 
-       	 logger.log(Level.SEVERE, "error, {0}", e);
+       	 logger.log(Level.SEVERE, "error, {1}", e);
 		}
 		int maxP=0;
 		try {
 			maxP = Integer.parseInt(maxPrice) * 10000;
 		} catch (NumberFormatException e) {
-			// TODO Auto-generated catch block
+			
 
-       	 logger.log(Level.SEVERE, "error, {0}", e);
+       	 logger.log(Level.SEVERE, "error, {2}", e);
 		}
 		
 		
@@ -101,9 +101,9 @@ public class Recomsmartphone extends HttpServlet {
 		try {
 			dispatcher.forward(request, response);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 
-       	 logger.log(Level.SEVERE, "error, {0}", e);
+       	 logger.log(Level.SEVERE, "error, {3}", e);
 		}
 	}
 }

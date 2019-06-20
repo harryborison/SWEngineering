@@ -67,7 +67,7 @@ public class RecomPlanServlet extends HttpServlet {
             try {
                dataB = Double.parseDouble(dataAmount);
             } catch (NumberFormatException e) {
-               // TODO Auto-generated catch block
+               
                logger.log(Level.INFO, "Start Logging");
 
                   logger.log(Level.SEVERE, "error, {0}", e);
@@ -95,7 +95,7 @@ public class RecomPlanServlet extends HttpServlet {
       db.connectDB();
       
       RecomPlan rep = new RecomPlan();
-      rep.makepaln_list();
+      rep.makepalnList();
       
       try {
          result = rep.recPlan(company, type, Integer.parseInt(minPrice), Integer.parseInt(maxPrice), dataA, option);

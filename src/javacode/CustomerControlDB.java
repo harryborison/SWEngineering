@@ -33,7 +33,7 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
       connection = con.getmyConnection();
       String hashname = sec.encryptSHA256(name);
       String hashpwd  = sec.encryptSHA256(pwd);
-      System.out.println(query);
+     
 	 
     
 
@@ -56,8 +56,8 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
          }
          
       } catch (SQLException e) {
-         // TODO Auto-generated catch block
-    	  logger.log(Level.SEVERE, "error, {123}", e);
+         
+    	  logger.log(Level.SEVERE, "error, {1}", e);
       }
       
       
@@ -65,8 +65,8 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
 			statement.close();
 			result.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			logger.log(Level.SEVERE, "error, {123}", e);
+			
+			logger.log(Level.SEVERE, "error, {2}", e);
 		}
 
       return 0;
@@ -85,14 +85,11 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
          query = "SELECT * from testdb.customerInfo where ID = '"+ hashname +"' ";
          result = null;
          try {
-            try {
+            
 				statement = connection.createStatement();
 				result = statement.executeQuery(query);
 				
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				logger.log(Level.SEVERE, "error, {123}", e);
-			}
+			
             if(result == null)
             {
             	return 0;
@@ -104,16 +101,16 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
                }
             
          } catch (SQLException e) {
-            // TODO Auto-generated catch block
-        	 logger.log(Level.SEVERE, "error, {0}", e);
+            
+        	 logger.log(Level.SEVERE, "error, {3}", e);
          }
          
          try {
 			statement.close();
 			result.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			logger.log(Level.SEVERE, "error, {123}", e);
+		
+			logger.log(Level.SEVERE, "error, {4}", e);
 		}
      
          
@@ -137,27 +134,27 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
 				result = statement.executeQuery(query);
 				
 			
-            if(result == null)
-            {
-            	return null;
-            }
+           
             while(result.next()) // 데이터존재
                {
                resultname = result.getString(3);
                }
             
          } catch (SQLException e) {
-            // TODO Auto-generated catch block
-        	 logger.log(Level.SEVERE, "error, {0}", e);
+            
+        	 logger.log(Level.SEVERE, "error, {5}", e);
          }
         
          
          try {
 			statement.close();
+			if(result!=null)
+			{
 			result.close();
+			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			logger.log(Level.SEVERE, "error, {123}", e);
+			
+			logger.log(Level.SEVERE, "error, {6}", e);
 		}
          return resultname;
       

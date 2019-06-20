@@ -13,10 +13,10 @@ public class RecomPhone {
 	}
 	public Model[] recom(String[] companyname, int lowprice, int highprice, String[]  purpose )
 	{
-		int Length = phonelist.size();
-		int[] count = new int[Length];
+		int length = phonelist.size();
+		int[] count = new int[length];
 		Model[] resultPhone = new Model[3];
-		for(int i=0; i< Length;i++)
+		for(int i=0; i< length;i++)
 		{
 			count[i] = count[i] + matchcompany(phonelist.get(i).getCompany(),companyname);
 			count[i] = count[i] + matchprice(phonelist.get(i).getPhonePrice(),lowprice , highprice);

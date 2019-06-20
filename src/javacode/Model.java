@@ -8,7 +8,7 @@ public class Model {
 	private double screenSize ;
 	private String os ;
 	private int capacity ;
-	private int RAM ;
+	private int ram ;
 	private int frontCamera;
 	private int rearCamera;
 	private int weight;
@@ -59,10 +59,10 @@ public class Model {
 		this.capacity = capacity;
 	}
 	public int getRAM() {
-		return RAM;
+		return ram;
 	}
 	public void setRAM(int rAM) {
-		RAM = rAM;
+		ram = rAM;
 	}
 	public int getFrontCamera() {
 		return frontCamera;
