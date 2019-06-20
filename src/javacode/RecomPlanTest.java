@@ -6,15 +6,6 @@ import org.junit.Test;
 
 public class RecomPlanTest {
 
-	@Test
-	public void testMakepaln_list() {
-	
-	}
-
-	@Test
-	public void testRecPlan() {
-	
-	}
 
 	@Test
 	public void testMatchtelecom() {
@@ -71,29 +62,6 @@ public class RecomPlanTest {
 	
 	}
 
-	@Test
-	public void testMatchprice() {
-	
-	
-	
-	}
 
-	@Test
-	public void testMatchdiff() {
-	
-	}
-
-	@Test
-	public void testMatchdata() {
-	
-	
-	}
-
-	@Test
-	public void testMatchoption() {
-	
-	
-	
-	}
 
 }

@@ -20,7 +20,6 @@ public class DBCon {
 			// 드라이버에 로드
 			Class.forName("com.mysql.jdbc.Driver"); 
 
-			//System.out.println("after forName");
 			String name = getName();
 			String pw = getPwd();
 			// 연결 
@@ -28,16 +27,13 @@ public class DBCon {
 
 			conn = DriverManager.getConnection(url,name, pw);
 
-			//System.out.println("DB 서버에 연결되었습니다.");
 
 
 		} 
-		catch(ClassNotFoundException e){
-			logger.log(Level.SEVERE, "error, {0}", e.toString());
+		catch(ClassNotFoundException|SQLException e){
+			logger.log(Level.SEVERE, "error, {0}", e);
 		}
-		catch(SQLException e){
-			logger.log(Level.SEVERE, "error, {0}", e.toString());
-		}
+		
 		return conn;
 
 	}

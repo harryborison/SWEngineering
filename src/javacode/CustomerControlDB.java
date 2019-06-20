@@ -5,10 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Logger;
-import java.util.logging.FileHandler;
 import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
 
 
 
@@ -35,7 +32,6 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
       connection = con.getmyConnection();
       String hashname = sec.encryptSHA256(name);
       String hashpwd  = sec.encryptSHA256(pwd);
-      String tmp;
       query = "SELECT * from testdb.customerInfo where ID = '"+ hashname +"' ";
       System.out.println(query);
 	 
@@ -84,7 +80,6 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
 	   DBCon con = new DBCon();
          connection = con.getmyConnection();
          String hashname = sec.encryptSHA256(name);
-         String tmp;
          query = "SELECT * from testdb.customerInfo where ID = '"+ hashname +"' ";
          result = null;
          try {
@@ -125,7 +120,6 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
       DBCon con = new DBCon();
        connection = con.getmyConnection();
          String hashname = sec.encryptSHA256(id);
-         String tmp;
          String resultname = null;
          query = "SELECT * from testdb.customerInfo where ID = '"+ hashname +"' ";
          result = null;
