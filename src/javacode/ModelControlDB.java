@@ -43,7 +43,7 @@ public class ModelControlDB {
          try {
             Statement statement = connection.createStatement();
             int res = statement.executeUpdate(str);
-         } catch (SQLException e) {
+         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
          }
@@ -63,7 +63,7 @@ public class ModelControlDB {
          try {
             Statement statement = connection.createStatement();
             int res = statement.executeUpdate(str);
-         } catch (SQLException e) {
+         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
          }
@@ -102,7 +102,7 @@ public class ModelControlDB {
                   e.printStackTrace();
                }
             }
-         } catch (SQLException e) {
+         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
          }
@@ -124,7 +124,7 @@ public class ModelControlDB {
          try {
             Statement statement = connection.createStatement();
             result = statement.executeQuery(str);
-         } catch (SQLException e) {
+         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
          }
@@ -143,7 +143,7 @@ public class ModelControlDB {
                   e.printStackTrace();
                }
             }
-         } catch (SQLException e) {
+         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
          }
@@ -168,7 +168,7 @@ public class ModelControlDB {
       try {
          Statement statement = connection.createStatement();
          statement.executeUpdate(query);
-      } catch (SQLException e) 
+      } catch (Exception e) 
       {
          // TODO Auto-generated catch block
          e.printStackTrace();

@@ -41,9 +41,14 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
       
       try {
     	  
-         Statement statement = connection.createStatement();
-         
-         result = statement.executeQuery(query);
+         try {
+			Statement statement = connection.createStatement();
+			 
+			 result = statement.executeQuery(query);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
          while(result.next())
         	 {
         		 if(result.getString(2).equals(hashpwd))
@@ -56,14 +61,7 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
          // TODO Auto-generated catch block
     	  logger.log(Level.SEVERE, "error, {0}", e.toString());
       }
-      finally{
-    	  try {
-			result.close();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			logger.log(Level.SEVERE, "error, {0}", e.toString());
-		}
-      }
+      
   
       
       return 0;
@@ -83,8 +81,13 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
          query = "SELECT * from testdb.customerInfo where ID = '"+ hashname +"' ";
          result = null;
          try {
-            Statement statement = connection.createStatement();
-            result = statement.executeQuery(query);
+            try {
+				Statement statement = connection.createStatement();
+				result = statement.executeQuery(query);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
             while(result.next()) // 데이터존재
                {
                  return 1;
@@ -95,14 +98,7 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
             // TODO Auto-generated catch block
         	 logger.log(Level.SEVERE, "error, {0}", e.toString());
          }
-         finally {
-        	 try {
-				result.close();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				logger.log(Level.SEVERE, "error, {0}", e.toString());
-			}
-         }
+         
          
      
          
@@ -122,8 +118,13 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
          query = "SELECT * from testdb.customerInfo where ID = '"+ hashname +"' ";
          result = null;
          try {
-            Statement statement = connection.createStatement();
-            result = statement.executeQuery(query);
+            try {
+				Statement statement = connection.createStatement();
+				result = statement.executeQuery(query);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
             while(result.next()) // 데이터존재
                {
                resultname = result.getString(3);
@@ -133,14 +134,7 @@ Logger logger = Logger.getLogger(CustomerControlDB.class.getName());
             // TODO Auto-generated catch block
         	 logger.log(Level.SEVERE, "error, {0}", e.toString());
          }
-         finally {
-        	 try {
-				result.close();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				logger.log(Level.SEVERE, "error, {0}", e.toString());
-			}
-         }
+        
          return resultname;
       
    }
